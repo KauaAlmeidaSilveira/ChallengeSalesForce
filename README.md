@@ -8,6 +8,8 @@ O objetivo central deste desafio é desenvolver um portal Salesforce que não ap
 ## Estrutura do Repositório
 Este repositório está organizado da seguinte forma:
 
+A estrutura sera divididas em sprints, serão 4 sprints no total.
+
 1. **Documentação:** Nesta pasta, você encontrará documentos que descrevem o processo de desenvolvimento, a arquitetura, as decisões de design e a documentação de acessibilidade.
 2. **Código-Fonte:** Aqui, estão os arquivos de código e recursos utilizados para construir o portal Salesforce.
 3. **Recursos Multimídia:** Qualquer recurso de mídia, como imagens, vídeos ou outros, que tenha sido usado na criação do portal.
