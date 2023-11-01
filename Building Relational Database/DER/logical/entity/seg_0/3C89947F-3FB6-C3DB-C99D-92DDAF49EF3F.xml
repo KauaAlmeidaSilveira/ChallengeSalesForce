@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3C89947F-3FB6-C3DB-C99D-92DDAF49EF3F" name="Pessoa">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:11:02 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Pessoa" id="43DE73D7-EDB3-9C61-C0A3-98655C17263D">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:11:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: Utilizar UUID gera 36 caracteres aleatórios;]]></commentInRDBMS>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>36 CHAR</dataTypeSize>
+<ownDataTypeParameters>36 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nome" id="64648A10-E4EC-43C1-EDE8-35D81281BAB3">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:12:25 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Apelido" id="75405CB4-5FBB-42E9-79FA-84B7D537EB7A">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:18:48 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefone" id="CB101BB5-CA73-B037-2DB0-36C21DD58A4B">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:19:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 9999-9999 ou 99999999]]></commentInRDBMS>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9 CHAR</dataTypeSize>
+<ownDataTypeParameters>9 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Celular" id="FC3910C3-7194-9F9D-BE61-71822204A397">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:26:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: +55 (11) 96368-9880]]></commentInRDBMS>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>19 CHAR</dataTypeSize>
+<ownDataTypeParameters>19 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="RG" id="444F3F87-BEB4-083A-786E-4679F46D1D57">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-09 13:57:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 55.555.555-5 ou 555555555]]></commentInRDBMS>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12 CHAR</dataTypeSize>
+<ownDataTypeParameters>12 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Endereco" id="8A191498-07A3-5259-5155-C7FE565A175E">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-16 12:04:10 UTC</createdTime>
+<generatorID>190D072E-BDAE-2AB8-8FEC-457106D57FCC</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<referedAttribute>2C3C4E61-E2BE-9E55-7169-AC47BF21E08C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Empresa" id="68A427A8-DD44-0DD6-CC2E-E26839356D8B">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-16 13:00:02 UTC</createdTime>
+<generatorID>7D4DCCD3-53C8-93DC-3435-BE5DDA54639D</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<referedAttribute>66B444CF-95F9-FB4F-894A-C7550235E7CD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A0AE4AF7-9DA5-3E1E-820F-65FB39BA2BFE" name="Pessoa PK">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:12:46 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>43DE73D7-EDB3-9C61-C0A3-98655C17263D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

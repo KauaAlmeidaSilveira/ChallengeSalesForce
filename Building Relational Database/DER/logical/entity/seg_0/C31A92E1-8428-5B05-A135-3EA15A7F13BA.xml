@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C31A92E1-8428-5B05-A135-3EA15A7F13BA" name="Endereco">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:11:08 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Endereco" id="2C3C4E61-E2BE-9E55-7169-AC47BF21E08C">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:38:16 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rua" id="7C469056-F129-F420-DCA3-FC9A2A9FDE62">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:41:36 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cidade" id="077222D4-C2E2-3B02-DBBC-252CE6ECC32C">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:44:02 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EstadoProvincia" id="3DD2E2BD-A893-502F-72CF-0B30752FFF10">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:44:25 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CEP" id="FC30D87C-A725-8A74-E906-4BF33D88EBA2">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:44:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[99999999 ou 99999-999]]></commentInRDBMS>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9 CHAR</dataTypeSize>
+<ownDataTypeParameters>9 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Pais" id="91ED8285-B9A8-609C-334A-00431E800516">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:45:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[USA
+BR
+]]></commentInRDBMS>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3 CHAR</dataTypeSize>
+<ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6D0ABFED-671C-193D-024B-0CA5C67008AA" name="Endereco PK">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:41:33 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2C3C4E61-E2BE-9E55-7169-AC47BF21E08C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

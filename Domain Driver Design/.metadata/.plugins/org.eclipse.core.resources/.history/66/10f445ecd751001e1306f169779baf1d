@@ -1,0 +1,95 @@
+package br.com.fiap.beans;
+
+public class Address {
+
+	private String logradouro;
+	private int num;
+	private int cep;
+	private String bairro;
+	private String municipio;
+	private String cidade;
+	private String nacionalidade;
+	
+	public Address(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
+	public Address(String logradouro, int num, int cep, String bairro, String municipio, String cidade,
+			String nacionalidade) {
+		this.logradouro = logradouro;
+		this.num = num;
+		this.cep = cep;
+		this.bairro = bairro;
+		this.municipio = municipio;
+		this.cidade = cidade;
+		this.nacionalidade = nacionalidade;
+	}
+
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+	public int getCep() {
+		return cep;
+	}
+
+	public void setCep(int cep) {
+		this.cep = cep;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public String getMunicipio() {
+		return municipio;
+	}
+
+	public void setMunicipio(String municipio) {
+		this.municipio = municipio;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getNacionalidade() {
+		return nacionalidade;
+	}
+
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
+	}
+	
+    @Override
+    public String toString() {
+        return "Logradouro: " + logradouro + "\n" +
+               "Número: " + num + "\n" +
+               "CEP: " + cep + "\n" +
+               "Bairro: " + bairro + "\n" +
+               "Município: " + municipio + "\n" +
+               "Cidade: " + cidade + "\n" +
+               "Nacionalidade: " + nacionalidade;
+    }
+	
+}

@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9E21035B-B7E6-C652-03CC-E5561738F237" name="Pessoa">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>3C89947F-3FB6-C3DB-C99D-92DDAF49EF3F</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Pessoa" id="235F7D31-E305-0592-ADC5-94B2886A5279">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: Utilizar UUID gera 36 caracteres aleatórios;]]></commentInRDBMS>
+<generatorID>43DE73D7-EDB3-9C61-C0A3-98655C17263D</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>36 CHAR</dataTypeSize>
+<ownDataTypeParameters>36 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="CBD15432-244B-3310-9321-5FBC838DB0E0">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>64648A10-E4EC-43C1-EDE8-35D81281BAB3</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Apelido" id="7F17C3A7-026B-86E1-30FD-052C4D2E61BA">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>75405CB4-5FBB-42E9-79FA-84B7D537EB7A</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Telefone" id="D92522FD-E166-ED01-AD40-E6E2F70DFCD6">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 9999-9999 ou 99999999]]></commentInRDBMS>
+<generatorID>CB101BB5-CA73-B037-2DB0-36C21DD58A4B</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9 CHAR</dataTypeSize>
+<ownDataTypeParameters>9 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Celular" id="097D2550-4400-B967-02FF-94B1E5836A7C">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: +55 (11) 96368-9880]]></commentInRDBMS>
+<generatorID>FC3910C3-7194-9F9D-BE61-71822204A397</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>19 CHAR</dataTypeSize>
+<ownDataTypeParameters>19 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RG" id="D0BB1B70-F347-33D0-9352-984308601E0C">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 55.555.555-5 ou 555555555]]></commentInRDBMS>
+<generatorID>444F3F87-BEB4-083A-786E-4679F46D1D57</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12 CHAR</dataTypeSize>
+<ownDataTypeParameters>12 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="718B02FB-0099-71BF-90F1-E144C3EDE230" name="Pessoa_PK">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>A0AE4AF7-9DA5-3E1E-820F-65FB39BA2BFE</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="235F7D31-E305-0592-ADC5-94B2886A5279"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

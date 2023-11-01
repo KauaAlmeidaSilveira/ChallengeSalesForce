@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0E305DB8-9823-AC18-8F44-82248543E912" name="Pagamento">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-09 00:30:35 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Pagamento" id="6DC6F2A9-797A-D14F-DF71-A0CEFA7A66C6">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-09 00:30:53 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data_Pagamento" id="1099E315-2D0C-04E9-651E-3D5FD1B991D1">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-09 00:31:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 22/11/2004 19:23:10]]></commentInRDBMS>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Valor_Total" id="DB37750C-9C53-2C89-3352-3627D10B0D34">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-09 00:36:21 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Metodo" id="16790408-3E1E-5BAB-8098-39B31E1FAA0D">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-09 00:39:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cartão Debito
+Boleto
+Pix]]></commentInRDBMS>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Parcelas" id="EB1D60EB-7374-9BF2-CD4D-342324FE2491">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:23:39 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Valor_Parcelas" id="402E50DB-25A3-D188-AF64-EE52744E6BAE">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:23:57 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Descricao" id="F0C7DD13-D7B9-14B3-EC30-0313910674B4">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-09 00:31:06 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Status" id="8D264B8B-F64A-38F2-9738-BDBC1DC036BF">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-09 00:38:42 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="59CC8E2F-0D34-053D-5C95-C172535B4938" name="Pagamento PK">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-09 00:31:03 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6DC6F2A9-797A-D14F-DF71-A0CEFA7A66C6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

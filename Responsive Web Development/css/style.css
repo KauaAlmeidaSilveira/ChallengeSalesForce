@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+
+a{
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: rgb(70, 103, 194);
+}
+  
+.header, .titlePages, .freeTest{
+    font-family: 'Playpen Sans', cursive;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+.logoSalesForce{
+    width: 110px;
+    height: 80px;
+}
+
+.linksHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.wrapperLogoLinks{
+    display: flex;
+    gap: 50px;
+    padding: 10px;
+}
+
+.register{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.freeTest{
+    background-color: rgb(32, 167, 32);
+    border-radius: 2px;
+    padding: 15px;
+    cursor: pointer;
+
+    border: none;
+}
+
+.freeTest a{
+    color: white;
+}
+
+.main{
+    display: flex;
+}
+
+.asidePages{
+    padding: 10px;
+    width: 15%;
+    background-color: silver;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.titlePages{
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.pages{ 
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+}
+
+.backgroundSF img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+  

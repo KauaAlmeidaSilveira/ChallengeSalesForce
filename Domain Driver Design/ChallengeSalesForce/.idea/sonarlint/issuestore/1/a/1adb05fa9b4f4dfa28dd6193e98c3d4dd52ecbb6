@@ -1,0 +1,21 @@
+
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾³Ò8ª¶İ¸1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾³Ò8ª¶İ¸1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾³Ò8ª¶İ¸1
+r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷œé ûÿÿÿÿ8ª¶İ¸1
+r	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğœîöøÿÿÿÿ8ª¶İ¸1
+r	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õñ£•úÿÿÿÿ8ª¶İ¸1
+{	java:S116
+"ZRename this field "ID_ServicoConta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İæõ…ùÿÿÿÿ8 ª¶İ¸1
+q	java:S116"URename this field "ID_Servico" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş¦„¸8 ª¶İ¸1
+o	java:S116"SRename this field "ID_Conta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âŸ¾8 ª¶İ¸1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Ëõ´8¤ª¶İ¸1
+o	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷œé ûÿÿÿÿ8¥ª¶İ¸1
+o	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÁÇåüÿÿÿÿ8¥ª¶İ¸1
+o	java:S100("NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğœîöøÿÿÿÿ8¥ª¶İ¸1
+o	java:S100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô¨ÕÁûÿÿÿÿ8¦ª¶İ¸1
+o	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õñ£•úÿÿÿÿ8¦ª¶İ¸1
+T
+java:S1128"7Remove this unused import 'java.text.SimpleDateFormat'.(ú¡ÙÛ8©ª¶İ¸1
+;
+java:S1128"Remove this duplicated import.(‰÷÷ª8ªª¶İ¸1

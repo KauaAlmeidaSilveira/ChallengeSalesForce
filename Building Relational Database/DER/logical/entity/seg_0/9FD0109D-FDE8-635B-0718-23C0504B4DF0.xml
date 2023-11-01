@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9FD0109D-FDE8-635B-0718-23C0504B4DF0" name="Empresa">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:11:16 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Empresa" id="66B444CF-95F9-FB4F-894A-C7550235E7CD">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:49:35 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nome" id="335F968B-7EC6-3453-2EF3-719FD1FD456D">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:50:10 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cargo" id="1FDB421B-FC94-EA30-E0BD-7AB794F4E64F">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:50:56 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Departamento" id="E1D2DF05-5A85-3B88-EE2B-373F4B0A1A7E">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:51:09 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Divisao" id="3A27FC2B-1959-E8B2-59E4-364B57D78A50">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:51:27 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NumFuncionario" id="90BB6120-43BF-31CA-E21B-2C4197C08C9A">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:51:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[9999999999]]></commentInRDBMS>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="InicioJornada" id="DD8EA99D-16DC-96C2-9D82-6B6153D41BF6">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:52:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[06:00]]></commentInRDBMS>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FimJornada" id="F9351626-4ACB-0B5D-C58C-C3C7D8DE1944">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:52:54 UTC</createdTime>
+<commentInRDBMS><![CDATA[23:00]]></commentInRDBMS>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FB323A7C-37C7-D8EA-EA86-2B0F690B2ED5" name="Empresa PK">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:50:07 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>66B444CF-95F9-FB4F-894A-C7550235E7CD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

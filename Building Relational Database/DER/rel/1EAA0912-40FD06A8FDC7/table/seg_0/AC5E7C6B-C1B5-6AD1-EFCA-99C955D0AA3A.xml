@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AC5E7C6B-C1B5-6AD1-EFCA-99C955D0AA3A" name="Empresa">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>9FD0109D-FDE8-635B-0718-23C0504B4DF0</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Empresa" id="3BAFB41F-2E6F-312B-2A1F-FE1384050120">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>66B444CF-95F9-FB4F-894A-C7550235E7CD</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="D76322A5-E01B-5D4A-5586-053646A96E3D">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>335F968B-7EC6-3453-2EF3-719FD1FD456D</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cargo" id="F1142063-0E65-85E0-283E-FCD048A9BF9A">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>1FDB421B-FC94-EA30-E0BD-7AB794F4E64F</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Departamento" id="E778EE5F-D7F2-AFAE-A163-BA383264BF90">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>E1D2DF05-5A85-3B88-EE2B-373F4B0A1A7E</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Divisao" id="1872E7EB-008C-9156-C4A8-A4823F4415C7">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>3A27FC2B-1959-E8B2-59E4-364B57D78A50</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NumFuncionario" id="80FC8C3A-5F48-3334-5B1D-F67A74E6875C">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[9999999999]]></commentInRDBMS>
+<generatorID>90BB6120-43BF-31CA-E21B-2C4197C08C9A</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="InicioJornada" id="37267641-7BC6-78A8-AFF5-CE086822A96D">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[06:00]]></commentInRDBMS>
+<generatorID>DD8EA99D-16DC-96C2-9D82-6B6153D41BF6</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FimJornada" id="8D2711F6-E940-D024-AECD-1F07803B3F88">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[23:00]]></commentInRDBMS>
+<generatorID>F9351626-4ACB-0B5D-C58C-C3C7D8DE1944</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Pessoa_ID_Pessoa" id="EDA63428-E436-654D-0F52-700DF5660E82">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>D0B7F02F-4B0E-6CD3-68D1-72FAA72B80BF</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>36 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E3EDCA30-BA82-D0ED-5FC7-DBFA707EF300" referredColumn="235F7D31-E305-0592-ADC5-94B2886A5279"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B12E4463-AF0D-9295-49FF-AA33FDEBAC18" name="Empresa_PK">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>FB323A7C-37C7-D8EA-EA86-2B0F690B2ED5</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3BAFB41F-2E6F-312B-2A1F-FE1384050120"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75417A58-C441-637D-C70E-956666EE78B4" name="Empresa__IDX">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>EFAB707B-A7D4-9D24-6B8C-AD0FE302D5B9</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="EDA63428-E436-654D-0F52-700DF5660E82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3D74B1D0-06F5-5585-C4EE-F587FDCC6099" name="Empresa_Pessoa_FK">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-11 11:29:55 UTC</createdTime>
+<generatorID>EFAB707B-A7D4-9D24-6B8C-AD0FE302D5B9</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EDA63428-E436-654D-0F52-700DF5660E82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
