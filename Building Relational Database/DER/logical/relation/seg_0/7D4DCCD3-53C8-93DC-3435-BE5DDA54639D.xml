@@ -4,8 +4,9 @@
 <createdTime>2023-10-16 13:00:02 UTC</createdTime>
 <ownerDesignName>DER</ownerDesignName>
 <sourcePk>FB323A7C-37C7-D8EA-EA86-2B0F690B2ED5</sourcePk>
+<targetPk>A0AE4AF7-9DA5-3E1E-820F-65FB39BA2BFE</targetPk>
 <identifying>false</identifying>
-<optionalSource>true</optionalSource>
+<optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>9FD0109D-FDE8-635B-0718-23C0504B4DF0</sourceEntity>

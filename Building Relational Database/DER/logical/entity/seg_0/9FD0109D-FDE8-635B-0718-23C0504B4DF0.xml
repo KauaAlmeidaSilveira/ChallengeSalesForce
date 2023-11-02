@@ -99,6 +99,18 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ID_Pessoa" id="2C679C52-157B-B287-D0F4-49669B06E798">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-01 22:46:27 UTC</createdTime>
+<generatorID>7D4DCCD3-53C8-93DC-3435-BE5DDA54639D</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<referedAttribute>43DE73D7-EDB3-9C61-C0A3-98655C17263D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>36 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="FB323A7C-37C7-D8EA-EA86-2B0F690B2ED5" name="Empresa PK">

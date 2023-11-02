@@ -1,14 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Tem" directorySegmentName="seg_0" id="264D180A-F6C4-86A5-A263-016053A415A2">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_14" directorySegmentName="seg_0" id="5A92A395-046D-1B77-E0E4-33EF6DB2968D">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-10-09 00:40:27 UTC</createdTime>
+<createdTime>2023-11-01 22:37:47 UTC</createdTime>
 <ownerDesignName>DER</ownerDesignName>
-<engineerTo>
-<item key="139CB80B-3E46-F29E-51AF-CDDA0FBB1E54" value="true"/>
-</engineerTo>
 <sourcePk>A0AE4AF7-9DA5-3E1E-820F-65FB39BA2BFE</sourcePk>
+<targetPk>1C1E2795-8C3B-4742-8CB3-F8B878B5EDB2</targetPk>
 <identifying>false</identifying>
-<optionalSource>true</optionalSource>
+<optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>3C89947F-3FB6-C3DB-C99D-92DDAF49EF3F</sourceEntity>

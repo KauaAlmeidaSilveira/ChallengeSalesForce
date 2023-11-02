@@ -78,18 +78,6 @@
 <dataTypeSize>12 CHAR</dataTypeSize>
 <ownDataTypeParameters>12 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Endereco" id="8A191498-07A3-5259-5155-C7FE565A175E">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-10-16 12:04:10 UTC</createdTime>
-<generatorID>190D072E-BDAE-2AB8-8FEC-457106D57FCC</generatorID>
-<ownerDesignName>DER</ownerDesignName>
-<referedAttribute>2C3C4E61-E2BE-9E55-7169-AC47BF21E08C</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="ID_Empresa" id="68A427A8-DD44-0DD6-CC2E-E26839356D8B">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-16 13:00:02 UTC</createdTime>
@@ -100,7 +88,19 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Conta" id="4F391B2C-4995-C074-B12F-EBC1D73DBD05">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-01 22:40:11 UTC</createdTime>
+<generatorID>5A92A395-046D-1B77-E0E4-33EF6DB2968D</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<referedAttribute>B224B6F0-E57D-12A3-FB86-A0F82AABC00D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

@@ -54,6 +54,17 @@
 <dataTypeSize>12 CHAR</dataTypeSize>
 <ownDataTypeParameters>12 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Status" id="9F0A7D4C-E6DC-BC17-1E15-B14F9F64FADB">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-01 22:39:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[ATIVO, INATIVO]]></commentInRDBMS>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="DataRegistro" id="3703B102-26A7-6C91-09E5-67D270F82253">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-09 00:00:36 UTC</createdTime>
@@ -75,17 +86,17 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Pessoa" id="05D29884-FAF8-0FB7-4366-9F2F5B017893">
+<Attribute name="ID_Pessoa" id="E64B4D04-ED0B-612B-0624-9207ACE29163">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-10-09 00:40:27 UTC</createdTime>
-<generatorID>264D180A-F6C4-86A5-A263-016053A415A2</generatorID>
+<createdTime>2023-11-01 22:37:47 UTC</createdTime>
+<generatorID>5A92A395-046D-1B77-E0E4-33EF6DB2968D</generatorID>
 <ownerDesignName>DER</ownerDesignName>
 <referedAttribute>43DE73D7-EDB3-9C61-C0A3-98655C17263D</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>36 CHAR</dataTypeSize>
-<ownDataTypeParameters>36 CHAR,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

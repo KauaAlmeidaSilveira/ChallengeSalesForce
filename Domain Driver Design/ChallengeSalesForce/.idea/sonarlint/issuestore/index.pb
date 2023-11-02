@@ -54,7 +54,5 @@ N
 src/Repository/Repository.java,c\b\cb9d13d0b0ff14226d47ffd09cd42423b8f9ca5f
 R
 "src/model/Entity/ServicoConta.java,1\a\1adb05fa9b4f4dfa28dd6193e98c3d4dd52ecbb6
-C
-src/main/Teste.java,d\6\d60f65630d00b96f5405f4441ff3019a085a75f2
 H
 src/main/NewProgram.java,7\a\7a884d514a855d9e30b56f3b90528572b6ef4f55
