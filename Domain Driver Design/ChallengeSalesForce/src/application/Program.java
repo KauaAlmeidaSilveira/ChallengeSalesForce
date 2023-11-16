@@ -128,25 +128,39 @@ public class Program {
             System.out.print("Digite seu email: ");
             String email = sc.nextLine();
 
-            System.out.print("Digite sua senha: ");
-            String senha = sc.nextLine();
-
             Conta conta = null;
 
             for (Conta item : repository.getContas()) {
-                if (item.getEmail().equals(email) && item.getSenha().equals(senha)) {
+                if (item.getEmail().equals(email)) {
                     conta = item;
                 }
             }
 
             if (conta != null) {
-                System.out.println("\nLogin realizado com sucesso !!");
-                break;
+
+                System.out.print("Digite sua senha: ");
+                String senha = sc.nextLine();
+
+                if (conta.getSenha().equals(senha)) {
+                    System.out.println("\nLogin realizado com sucesso !!");
+                    break;
+                } else {
+                    while (true) {
+                        System.out.print("Digite sua senha novamente: ");
+                        senha = sc.nextLine();
+
+                        if (conta.getSenha().equals(senha)) {
+                            System.out.println("\nLogin realizado com sucesso !!");
+                            break;
+                        }
+                    }
+                    break;
+                }
+
             } else {
                 System.out.println("\nCadastro não encontrado. Tente novamente !");
             }
         }
     }
-
 
 }
