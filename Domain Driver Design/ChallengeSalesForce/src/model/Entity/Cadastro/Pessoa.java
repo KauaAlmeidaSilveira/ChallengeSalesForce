@@ -12,26 +12,28 @@ public class Pessoa {
     private String telefone;
     private String celular;
     private String RG;
+    private String cargo;
 
     private Empresa empresa;
     private Endereco endereco;
 
-    public Pessoa(String nome, String celular, String RG, Empresa empresa, Endereco endereco) {
+    public Pessoa(String nome, String celular, String cargo, Empresa empresa, Endereco endereco) {
         id = UUID.randomUUID();
         this.nome = nome;
         this.celular = celular;
-        this.RG = RG;
+        this.cargo = cargo;
         this.empresa = empresa;
         this.endereco = endereco;
     }
 
-    public Pessoa(String nome, String apelido, String telefone, String celular, String RG, Empresa empresa, Endereco endereco) {
+    public Pessoa(String nome, String apelido, String telefone, String celular, String RG, String cargo, Empresa empresa, Endereco endereco) {
         id = UUID.randomUUID();
         this.nome = nome;
         this.apelido = apelido;
         this.telefone = telefone;
         this.celular = celular;
         this.RG = RG;
+        this.cargo = cargo;
         this.empresa = empresa;
         this.endereco = endereco;
     }
@@ -78,6 +80,14 @@ public class Pessoa {
 
     public void setRG(String RG) {
         this.RG = RG;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
     public Empresa getEmpresa() {

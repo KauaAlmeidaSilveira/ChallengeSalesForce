@@ -28,7 +28,7 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="3C89947F-3FB6-C3DB-C99D-92DDAF49EF3F" otype="Entity" vid="04195B0B-6763-112B-DF0A-16B8313606D6">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="359" y="18" width="204" height="172"/>
+<bounds x="359" y="18" width="204" height="186"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="9FD0109D-FDE8-635B-0718-23C0504B4DF0" otype="Entity" vid="FDA0C291-F526-D168-6276-8EB03B84CBB8">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -44,15 +44,6 @@
 </OView>
 </objectViews>
 <connectors>
-<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="190D072E-BDAE-2AB8-8FEC-457106D57FCC" otype="Relation" vid_source="180578A6-2CD8-547C-E0D9-5373B0356595" vid_target="04195B0B-6763-112B-DF0A-16B8313606D6">
-<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<backgroundColor>-16777216</backgroundColor>
-<lineWidth>1</lineWidth>
-<points>
-<point x="235" y="88"/>
-<point x="359" y="88"/>
-</points>
-</Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="5A92A395-046D-1B77-E0E4-33EF6DB2968D" otype="Relation" vid_source="04195B0B-6763-112B-DF0A-16B8313606D6" vid_target="C4AD5106-53C5-752B-28B5-1CD06A48951D">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <backgroundColor>-16777216</backgroundColor>
@@ -68,7 +59,7 @@
 <lineWidth>1</lineWidth>
 <points>
 <point x="461" y="258"/>
-<point x="461" y="190"/>
+<point x="461" y="204"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="9E84E43A-14AA-544E-F86D-1B10EE3AFD0B" otype="Relation" vid_source="1BC1313C-DAB6-532C-7251-4E096DA7DDBB" vid_target="ACB9CE0D-9A2E-5475-3386-CEF6FF003F06">
@@ -96,6 +87,15 @@
 <points>
 <point x="744" y="177"/>
 <point x="744" y="235"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="FC5685AE-F2F5-3C0B-07B3-628785F359B2" otype="Relation" vid_source="04195B0B-6763-112B-DF0A-16B8313606D6" vid_target="180578A6-2CD8-547C-E0D9-5373B0356595">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="359" y="103"/>
+<point x="235" y="103"/>
 </points>
 </Connector>
 </connectors>

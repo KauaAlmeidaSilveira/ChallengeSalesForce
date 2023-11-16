@@ -67,11 +67,22 @@
 <dataTypeSize>19 CHAR</dataTypeSize>
 <ownDataTypeParameters>19 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Cargo" id="FB635121-E4F5-6813-E48C-BAE5EE86072D">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-16 15:07:55 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="RG" id="444F3F87-BEB4-083A-786E-4679F46D1D57">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-09 13:57:49 UTC</createdTime>
 <commentInRDBMS><![CDATA[Ex: 55.555.555-5 ou 555555555]]></commentInRDBMS>
 <ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -88,7 +99,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ID_Conta" id="4F391B2C-4995-C074-B12F-EBC1D73DBD05">
 <createdBy>Kauã</createdBy>
@@ -100,7 +111,19 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Endereco" id="967B96E0-4220-726B-75E8-A6AA7CF363ED">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-16 11:40:24 UTC</createdTime>
+<generatorID>FC5685AE-F2F5-3C0B-07B3-628785F359B2</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<referedAttribute>2C3C4E61-E2BE-9E55-7169-AC47BF21E08C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

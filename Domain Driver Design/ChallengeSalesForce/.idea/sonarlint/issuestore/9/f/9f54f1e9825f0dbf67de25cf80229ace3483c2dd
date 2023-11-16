@@ -1,5 +1,5 @@
 
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹×Ñ8Îë³Ü¸1
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç½ı´ÿÿÿÿÿ8Ûë³Ü¸1
-r	java:S117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ôõ¥ùÿÿÿÿ8Üë³Ü¸1
-i	java:S116"MRename this field "RG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•šÀË8®ì³Ü¸1
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô¾¶Óüÿÿÿÿ8ûû¶Å½1
+r	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ôõ¥ùÿÿÿÿ8üû¶Å½1
+i	java:S116"MRename this field "RG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•šÀË8ˆü¶Å½1
+b	java:S107"AConstructor has 8 parameters, which is greater than 7 authorized.(Ô¾¶Óüÿÿÿÿ8‹ü¶Å½1

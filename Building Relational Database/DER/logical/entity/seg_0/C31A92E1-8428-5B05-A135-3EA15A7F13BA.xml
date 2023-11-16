@@ -26,6 +26,7 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:41:36 UTC</createdTime>
 <ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -36,6 +37,7 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:44:02 UTC</createdTime>
 <ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -46,6 +48,7 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:44:25 UTC</createdTime>
 <ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -57,6 +60,7 @@
 <createdTime>2023-10-08 23:44:46 UTC</createdTime>
 <commentInRDBMS><![CDATA[99999999 ou 99999-999]]></commentInRDBMS>
 <ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -76,10 +80,10 @@ BR
 <dataTypeSize>3 CHAR</dataTypeSize>
 <ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Pessoa" id="AD5F310E-8FBA-1A74-AF4E-D94F20083681">
+<Attribute name="ID_Pessoa" id="333D5C33-2E93-29FF-43E8-7C214BB5D9BC">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-01 22:44:44 UTC</createdTime>
-<generatorID>190D072E-BDAE-2AB8-8FEC-457106D57FCC</generatorID>
+<createdTime>2023-11-16 11:40:12 UTC</createdTime>
+<generatorID>FC5685AE-F2F5-3C0B-07B3-628785F359B2</generatorID>
 <ownerDesignName>DER</ownerDesignName>
 <referedAttribute>43DE73D7-EDB3-9C61-C0A3-98655C17263D</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>

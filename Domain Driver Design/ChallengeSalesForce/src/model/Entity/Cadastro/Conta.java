@@ -19,10 +19,16 @@ public class Conta {
 
     private Pessoa pessoa;
 
+    public Conta(Integer id, String email, Pessoa pessoa) {
+        this.id = id;
+        this.email = email;
+        this.pessoa = pessoa;
+        this.usuario = pessoa.getNome()+"@force.com";
+    }
 
     public Conta(Integer id, String email, String senha, Pessoa pessoa) {
         this.id = id;
-        this.usuario = pessoa.getApelido()+"@force.com";
+        this.usuario = pessoa.getNome()+"@force.com";
         this.email = email;
         this.senha = senha;
         this.dataRegistro = LocalDate.now();
@@ -100,7 +106,7 @@ public class Conta {
 
     @Override
     public String toString() {
-        return "Conta " + "\n" +
+        return "\nConta " + "\n" +
                 "Id: "+ id + "\n" +
                 "Proprietario: " + pessoa.getId() + "\n" +
                 "Usuario: "+ usuario + "\n" +

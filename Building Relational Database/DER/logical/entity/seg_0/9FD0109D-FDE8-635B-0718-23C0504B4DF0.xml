@@ -32,17 +32,6 @@
 <dataTypeSize>25 CHAR</dataTypeSize>
 <ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Cargo" id="1FDB421B-FC94-EA30-E0BD-7AB794F4E64F">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-10-08 23:50:56 UTC</createdTime>
-<ownerDesignName>DER</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25 CHAR</dataTypeSize>
-<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Departamento" id="E1D2DF05-5A85-3B88-EE2B-373F4B0A1A7E">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:51:09 UTC</createdTime>

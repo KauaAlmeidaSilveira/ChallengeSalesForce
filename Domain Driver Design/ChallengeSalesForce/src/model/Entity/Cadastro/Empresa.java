@@ -6,21 +6,18 @@ public class Empresa {
 
     private Integer id;
     private String nome;
-    private String cargo;
     private String departamento;
     private String divisao;
     private String numFuncionario;
     private LocalDateTime inicioDia;
     private LocalDateTime fimDia;
 
-    public Empresa(String nome, String cargo) {
+    public Empresa(String nome) {
         this.nome = nome;
-        this.cargo = cargo;
     }
 
-    public Empresa(String nome, String cargo, String departamento, String divisao, String numFuncionario, LocalDateTime inicioDia, LocalDateTime fimDia) {
+    public Empresa(String nome, String departamento, String divisao, String numFuncionario, LocalDateTime inicioDia, LocalDateTime fimDia) {
         this.nome = nome;
-        this.cargo = cargo;
         this.departamento = departamento;
         this.divisao = divisao;
         this.numFuncionario = numFuncionario;
@@ -34,14 +31,6 @@ public class Empresa {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
     }
 
     public String getDepartamento() {
@@ -88,7 +77,6 @@ public class Empresa {
     public String toString() {
         return "\nId: "+ id + "\n" +
                 "Nome: "+ nome + "\n" +
-                "Cargo: " + cargo + "\n" +
                 "Departamento: " + departamento + "\n" +
                 "Divisão: " + divisao + "\n" +
                 "NumFuncionario: " + numFuncionario + "\n" +
