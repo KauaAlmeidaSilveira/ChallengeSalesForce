@@ -19,13 +19,6 @@ public class Conta {
 
     private Pessoa pessoa;
 
-    public Conta(Integer id, String email, Pessoa pessoa) {
-        this.id = id;
-        this.email = email;
-        this.pessoa = pessoa;
-        this.usuario = pessoa.getNome()+"@force.com";
-    }
-
     public Conta(Integer id, String email, String senha, Pessoa pessoa) {
         this.id = id;
         this.usuario = pessoa.getNome()+"@force.com";

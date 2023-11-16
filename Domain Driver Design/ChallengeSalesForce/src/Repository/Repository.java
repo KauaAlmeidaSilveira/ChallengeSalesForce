@@ -45,16 +45,4 @@ public class Repository {
         this.servicoContas.add(servicoConta);
     }
 
-    public List<Conta> listContas() {
-        return this.contas;
-    }
-
-    public List<Servico> listServicos() {
-        return this.servicos;
-    }
-
-    public List<ServicoConta> listServicoContas() {
-        return this.servicoContas;
-    }
-
 }
