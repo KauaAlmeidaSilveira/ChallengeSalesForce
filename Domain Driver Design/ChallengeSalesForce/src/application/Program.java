@@ -110,6 +110,8 @@ public class Program {
 
         repository.addConta(conta);
 
+        System.out.printf("Cadastro realizado com sucesso !!");
+
     }
 
     private static void listarContas(Repository repository) {
