@@ -1,4 +1,4 @@
-package model.Entity.Servico;
+package model.entities;
 
 import java.util.Objects;
 

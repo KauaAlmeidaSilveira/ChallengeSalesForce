@@ -1,7 +1,4 @@
-package model.Entity;
-
-import model.Entity.Cadastro.Conta;
-import model.Entity.Servico.Servico;
+package model.entities;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -1,4 +1,4 @@
-package model.Entity.Cadastro;
+package model.entities;
 
 import java.util.Objects;
 import java.util.UUID;

@@ -1,9 +1,9 @@
-package Repository;
+package repository;
 
-import model.Entity.Cadastro.Conta;
-import model.Entity.Servico.Pagamento;
-import model.Entity.Servico.Servico;
-import model.Entity.ServicoConta;
+import model.entities.Conta;
+import model.entities.Pagamento;
+import model.entities.Servico;
+import model.entities.ServicoConta;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -14,7 +14,6 @@ public class Repository {
     private List<Conta> contas = new ArrayList<>();
     private List<Servico> servicos = new ArrayList<>();
     private List<ServicoConta> servicoContas = new ArrayList<>();
-
 
     public Repository() {
         servicos.add(new Servico(1, "IA Eistein", "Servico de IA", "IA", new Pagamento(LocalDateTime.now(), 1000.0, "Débito", 2, "pag servico ia")));
@@ -33,16 +32,12 @@ public class Repository {
         return servicoContas;
     }
 
-    public void addConta(Conta conta) {
-        this.contas.add(conta);
-    }
-
-    public void addServico(Servico servico) {
-        this.servicos.add(servico);
-    }
-
-    public void addServicoConta(ServicoConta servicoConta) {
-        this.servicoContas.add(servicoConta);
+    public static void listarContas(Repository repository) {
+        repository.getContas().forEach(conta -> {
+            System.out.println(conta);
+            System.out.println(conta.getPessoa());
+            System.out.println("\n===");
+        });
     }
 
 }

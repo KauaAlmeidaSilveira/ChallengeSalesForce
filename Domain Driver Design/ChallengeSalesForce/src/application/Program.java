@@ -1,10 +1,10 @@
 package application;
 
-import Repository.Repository;
-import model.Entity.Cadastro.Conta;
-import model.Entity.Cadastro.Empresa;
-import model.Entity.Cadastro.Endereco;
-import model.Entity.Cadastro.Pessoa;
+import repository.Repository;
+import model.entities.Conta;
+import model.entities.Empresa;
+import model.entities.Endereco;
+import model.entities.Pessoa;
 
 import java.util.Scanner;
 
@@ -41,17 +41,19 @@ public class Program {
     }
 
     private static void menu(Scanner sc, Repository repository) {
+
         while (true) {
             System.out.println("\nMenu:\n" +
                     "1 - Login\n" +
                     "2 - Cadastrar\n" +
                     "3 - Listar todos os cadastros\n" +
+                    "3 - Adicionar um servico\n" +
                     "4 - Sair");
             System.out.print("Informe o que deseja fazer de acordo com o número das opções: ");
             int opcao = sc.nextInt();
             sc.nextLine();
 
-            if (opcao == 4) {
+            if (opcao == 5) {
                 System.out.print("\nTudo bem, até a próxima! Bye");
                 break;
             }
@@ -66,8 +68,12 @@ public class Program {
                     break;
 
                 case 3:
-                    listarContas(repository);
+                    repository.listarContas(repository);
                     break;
+
+                case 4:
+                repository.listarContas(repository);
+                break;
 
                 default:
                     System.out.print("Opção não reconhecida");
@@ -108,18 +114,10 @@ public class Program {
 
         Conta conta = new Conta(1, email, senha, pessoa);
 
-        repository.addConta(conta);
+        repository.getContas().add(conta);
 
         System.out.printf("Cadastro realizado com sucesso !!");
 
-    }
-
-    private static void listarContas(Repository repository) {
-        repository.getContas().forEach(conta -> {
-            System.out.println(conta);
-            System.out.println(conta.getPessoa());
-            System.out.println("\n===");
-        });
     }
 
     private static void login(Repository repository, Scanner sc) {
