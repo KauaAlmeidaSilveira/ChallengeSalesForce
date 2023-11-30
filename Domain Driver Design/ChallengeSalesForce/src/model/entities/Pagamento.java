@@ -1,11 +1,13 @@
 package model.entities;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
+import java.util.UUID;
 
 public class Pagamento {
 
-    private Integer id;
+    private UUID id;
     private LocalDateTime dataPagamento;
     private Double valorTotal;
     private String metodo;
@@ -14,22 +16,24 @@ public class Pagamento {
     private String descricao;
     private String status;
 
+    DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
-    public Pagamento(LocalDateTime dataPagamento, Double valorTotal, String metodo, Integer parcelas, String descricao) {
-        this.dataPagamento = dataPagamento;
+    public Pagamento(Double valorTotal, String metodo, Integer parcelas, String descricao) {
+        this.dataPagamento = LocalDateTime.now();
         this.valorTotal = valorTotal;
         this.metodo = metodo;
         this.parcelas = parcelas;
-        this.descricao = descricao;
+        this.descricao = "Pagamento do serviço " + descricao;
         this.status = "Processando";
         this.valorParcelas = valorTotal/parcelas;
+        this.id = UUID.randomUUID();
     }
 
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -104,9 +108,8 @@ public class Pagamento {
 
     @Override
     public String toString() {
-        return "\nPagamento: " + "\n" +
-                "Id: "+ id + "\n" +
-                "Data do Pagamento: "+ dataPagamento + "\n" +
+        return "\nId: "+ id + "\n" +
+                "Data do Pagamento: "+ dataPagamento.format(fmt) + "\n" +
                 "Valor total: " + valorTotal + "\n" +
                 "Metodo: " + metodo + "\n" +
                 "Parcelas: " + parcelas + "\n" +

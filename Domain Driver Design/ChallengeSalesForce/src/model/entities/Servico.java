@@ -7,18 +7,15 @@ public class Servico {
     private Integer id;
     private String nome;
     private String descricao;
-    private String status;
     private String categoria;
+    private Double valor;
 
-    private Pagamento pagamento;
-
-    public Servico(Integer id, String nome, String descricao, String categoria, Pagamento pagamento) {
+    public Servico(Integer id, String nome, String descricao, String categoria, Double valor) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.categoria = categoria;
-        status = "Ativo";
-        this.pagamento = pagamento;
+        this.valor = valor;
     }
 
     public Integer getId() {
@@ -45,14 +42,6 @@ public class Servico {
         this.descricao = descricao;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     public String getCategoria() {
         return categoria;
     }
@@ -61,12 +50,12 @@ public class Servico {
         this.categoria = categoria;
     }
 
-    public Pagamento getPagamento() {
-        return pagamento;
+    public Double getValor() {
+        return valor;
     }
 
-    public void setPagamento(Pagamento pagamento) {
-        this.pagamento = pagamento;
+    public void setValor(Double valor) {
+        this.valor = valor;
     }
 
     @Override
@@ -88,9 +77,14 @@ public class Servico {
                 "Id: "+ id + "\n" +
                 "Nome: "+ nome + "\n" +
                 "Descrição: " + descricao + "\n" +
-                "Status: " + status + "\n" +
                 "Categoria: " + categoria + "\n" +
-                pagamento;
+                "Valor: " + valor;
+    }
 
+    public String toStringMeuServico() {
+        return "Serviço: "+ "\n" +
+                "Nome: "+ nome + "\n" +
+                "Descrição: " + descricao + "\n" +
+                "Categoria: " + categoria;
     }
 }

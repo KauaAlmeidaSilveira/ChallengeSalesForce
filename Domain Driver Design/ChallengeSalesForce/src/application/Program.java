@@ -10,8 +10,6 @@ import java.util.Scanner;
 
 public class Program {
 
-    // ARRUMAR LÓGICA DE PAGAMENTO E SERVICO
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -48,12 +46,13 @@ public class Program {
                     "1 - Todos nossos serviços\n" +
                     "2 - Assinar um serviço\n" +
                     "3 - Listar meus serviços\n" +
-                    "4 - Sair");
+                    "4 - Histórico de pedidos\n" +
+                    "5 - Sair");
             System.out.print("Informe o que deseja fazer de acordo com o número das opções: ");
             int opcao = sc.nextInt();
             sc.nextLine();
 
-            if (opcao == 4) {
+            if (opcao == 5) {
                 System.out.print("\nTudo bem, até a próxima! Bye");
                 break;
             }
@@ -68,7 +67,11 @@ public class Program {
                     break;
 
                 case 3:
-                    repository.listarMeusServicos(repository);
+                    repository.listarMeusServicos();
+                    break;
+
+                case 4:
+                    repository.listarMeusPedidos();
                     break;
 
                 default:

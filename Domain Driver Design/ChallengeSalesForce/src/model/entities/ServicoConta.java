@@ -14,11 +14,11 @@ public class ServicoConta {
 
     DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
-    public ServicoConta(Integer ID_ServicoConta, Servico servico, Conta conta, LocalDateTime dataInicio) {
+    public ServicoConta(Integer ID_ServicoConta, Servico servico, Conta conta) {
         this.ID_ServicoConta = ID_ServicoConta;
         this.servico = servico;
         this.conta = conta;
-        this.dataInicio = dataInicio;
+        this.dataInicio = LocalDateTime.now();
         this.status = "Ativo";
     }
 
@@ -75,13 +75,9 @@ public class ServicoConta {
 
         String dataTerminoStr = (dataTermino != null) ? dataTermino.format(fmt) : "N/A";
 
-        return "ServicoConta: {\n" +
-                "ID_ServicoConta= " + ID_ServicoConta + "\n" +
-                "ID_Conta= " + conta.getId() + "\n" +
-                "ID_Servico= " + servico.getId() + "\n" +
+        return  servico.toStringMeuServico()+ "\n" +
                 "Status= " + status + "\n" +
                 "Data de Inicio= " + dataInicio.format(fmt) + "\n" +
-                "Data de Termino= " + dataTerminoStr + "\n" +
-                "}";
+                "Data de Termino= " + dataTerminoStr;
     }
 }
