@@ -91,7 +91,7 @@ public class Repository {
         System.out.println("Todos serviços: ");
         listarTodosServicos(repository);
 
-        System.out.print("Digite o nome do serviço que deseja assinar: ");
+        System.out.print("\nDigite o nome do serviço que deseja assinar: ");
         String nomeServico = sc.nextLine();
 
         Servico servico = verificarServicoExiste(repository, nomeServico);
