@@ -80,18 +80,6 @@ BR
 <dataTypeSize>3 CHAR</dataTypeSize>
 <ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Pessoa" id="333D5C33-2E93-29FF-43E8-7C214BB5D9BC">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-11-16 11:40:12 UTC</createdTime>
-<generatorID>FC5685AE-F2F5-3C0B-07B3-628785F359B2</generatorID>
-<ownerDesignName>DER</ownerDesignName>
-<referedAttribute>43DE73D7-EDB3-9C61-C0A3-98655C17263D</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>36 CHAR</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="6D0ABFED-671C-193D-024B-0CA5C67008AA" name="Endereco PK">

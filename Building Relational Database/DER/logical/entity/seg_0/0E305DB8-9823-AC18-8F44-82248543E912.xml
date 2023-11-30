@@ -96,12 +96,12 @@ Pix]]></commentInRDBMS>
 <dataTypeSize>20 CHAR</dataTypeSize>
 <ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Servico" id="EC7DE31A-C1E2-F2B8-DA50-061D39A53657">
+<Attribute name="ID_Pedido" id="67E56FA7-182C-0198-00E4-3C0216A67277">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-01 22:37:06 UTC</createdTime>
-<generatorID>CF533550-0B36-46A1-0426-ED506F1D3C40</generatorID>
+<createdTime>2023-11-30 13:55:52 UTC</createdTime>
+<generatorID>2C789025-685D-EC64-2B2F-BC6860A7AA7B</generatorID>
 <ownerDesignName>DER</ownerDesignName>
-<referedAttribute>34AAE957-055D-4763-DC98-64EF4DAB562B</referedAttribute>
+<referedAttribute>DEBFD672-584B-326D-7E7D-C2BD38E27CD0</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>

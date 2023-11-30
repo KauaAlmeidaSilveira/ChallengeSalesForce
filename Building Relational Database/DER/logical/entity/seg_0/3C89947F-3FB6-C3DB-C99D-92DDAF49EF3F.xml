@@ -89,36 +89,24 @@
 <dataTypeSize>12 CHAR</dataTypeSize>
 <ownDataTypeParameters>12 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Empresa" id="68A427A8-DD44-0DD6-CC2E-E26839356D8B">
+<Attribute name="ID_Endereco" id="06B569B6-3899-10D3-275E-E5327EB9ACD5">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-10-16 13:00:02 UTC</createdTime>
-<generatorID>7D4DCCD3-53C8-93DC-3435-BE5DDA54639D</generatorID>
-<ownerDesignName>DER</ownerDesignName>
-<referedAttribute>66B444CF-95F9-FB4F-894A-C7550235E7CD</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ID_Conta" id="4F391B2C-4995-C074-B12F-EBC1D73DBD05">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-11-01 22:40:11 UTC</createdTime>
-<generatorID>5A92A395-046D-1B77-E0E4-33EF6DB2968D</generatorID>
-<ownerDesignName>DER</ownerDesignName>
-<referedAttribute>B224B6F0-E57D-12A3-FB86-A0F82AABC00D</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ID_Endereco" id="967B96E0-4220-726B-75E8-A6AA7CF363ED">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-11-16 11:40:24 UTC</createdTime>
-<generatorID>FC5685AE-F2F5-3C0B-07B3-628785F359B2</generatorID>
+<createdTime>2023-11-30 14:02:25 UTC</createdTime>
+<generatorID>96436D97-88DF-DC74-4103-9884FE50CCF8</generatorID>
 <ownerDesignName>DER</ownerDesignName>
 <referedAttribute>2C3C4E61-E2BE-9E55-7169-AC47BF21E08C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Empresa" id="9C167DD9-40AC-93E1-BC37-EDD2EDA3AF1E">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-30 14:03:07 UTC</createdTime>
+<generatorID>A8985BC0-CF21-584B-0A19-915EDCC56C10</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<referedAttribute>66B444CF-95F9-FB4F-894A-C7550235E7CD</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>

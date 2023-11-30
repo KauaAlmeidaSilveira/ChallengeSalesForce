@@ -55,12 +55,10 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Pagamento" id="64B60D4C-7D3D-85CF-E48D-817C7E7E2105">
+<Attribute name="Valor" id="6BAFF7FA-5061-A370-0DD6-D3C4472DA948">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-01 22:36:55 UTC</createdTime>
-<generatorID>CF533550-0B36-46A1-0426-ED506F1D3C40</generatorID>
+<createdTime>2023-11-30 15:32:21 UTC</createdTime>
 <ownerDesignName>DER</ownerDesignName>
-<referedAttribute>6DC6F2A9-797A-D14F-DF71-A0CEFA7A66C6</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>

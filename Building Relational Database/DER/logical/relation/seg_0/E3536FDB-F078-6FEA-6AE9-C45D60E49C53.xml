@@ -1,15 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_13" directorySegmentName="seg_0" id="CF533550-0B36-46A1-0426-ED506F1D3C40">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_19" directorySegmentName="seg_0" id="E3536FDB-F078-6FEA-6AE9-C45D60E49C53">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-01 22:36:55 UTC</createdTime>
+<createdTime>2023-11-30 14:00:43 UTC</createdTime>
 <ownerDesignName>DER</ownerDesignName>
-<sourcePk>59CC8E2F-0D34-053D-5C95-C172535B4938</sourcePk>
+<sourcePk>A15C01E3-4F58-C6AD-2D80-2886F6C595D3</sourcePk>
 <targetPk>AC0A5857-2286-9880-2899-DDC4F9C868C9</targetPk>
+<dominantRole>03B65199-25E1-ED03-F223-8EEDC5744F3A</dominantRole>
 <identifying>false</identifying>
 <optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>0E305DB8-9823-AC18-8F44-82248543E912</sourceEntity>
+<sourceEntity>49D746F1-2439-405C-F09F-E52C6898EB48</sourceEntity>
 <targetCardinalityString>1</targetCardinalityString>
 <targetEntity>03B65199-25E1-ED03-F223-8EEDC5744F3A</targetEntity>
 <transferable>true</transferable>
