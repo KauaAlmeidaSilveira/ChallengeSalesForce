@@ -10,30 +10,31 @@ import java.util.Scanner;
 
 public class Program {
 
-    public static void main(String[] args) {
+    // ARRUMAR LÓGICA DE PAGAMENTO E SERVICO
 
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         Repository repository = new Repository();
 
         System.out.println("Bem vindo, somos a SalesForce !!");
-        System.out.print("Deseja acessar nosso menu ? (Sim/Não): ");
-        String acessarMenu = sc.nextLine();
+        System.out.print("Ja possui uma conta ? (Sim/Não): ");
+        String temConta = sc.nextLine();
 
         while (true) {
 
-            if (acessarMenu.toUpperCase().charAt(0) == 'S') {
-                menu(sc, repository);
+            if (temConta.toUpperCase().charAt(0) == 'S') {
+                login(repository, sc);
                 break;
 
-            } else if (acessarMenu.toUpperCase().charAt(0) == 'N') {
-                System.out.print("\nTudo bem, até a proxima! Bye");
+            } else if (temConta.toUpperCase().charAt(0) == 'N') {
+                cadastrar(repository, sc);
                 break;
 
             } else {
                 System.out.println("\nDesculpa não entendi.");
-                System.out.print("Deseja acessar o nosso menu ? (Sim/Não): ");
-                acessarMenu = sc.nextLine();
+                System.out.print("Ja possui uma conta ? (Sim/Não): ");
+                temConta = sc.nextLine();
             }
         }
 
@@ -44,39 +45,76 @@ public class Program {
 
         while (true) {
             System.out.println("\nMenu:\n" +
-                    "1 - Login\n" +
-                    "2 - Cadastrar\n" +
-                    "3 - Listar todos os cadastros\n" +
-                    "3 - Adicionar um servico\n" +
+                    "1 - Todos nossos serviços\n" +
+                    "2 - Assinar um serviço\n" +
+                    "3 - Listar meus serviços\n" +
                     "4 - Sair");
             System.out.print("Informe o que deseja fazer de acordo com o número das opções: ");
             int opcao = sc.nextInt();
             sc.nextLine();
 
-            if (opcao == 5) {
+            if (opcao == 4) {
                 System.out.print("\nTudo bem, até a próxima! Bye");
                 break;
             }
 
             switch (opcao) {
                 case 1:
-                    login(repository, sc);
+                    repository.listarTodosServicos();
                     break;
 
                 case 2:
-                    cadastrar(repository, sc);
+                    repository.assinarServico(repository, sc);
                     break;
 
                 case 3:
-                    repository.listarContas(repository);
+                    repository.listarMeusServicos(repository);
                     break;
-
-                case 4:
-                repository.listarContas(repository);
-                break;
 
                 default:
                     System.out.print("Opção não reconhecida");
+            }
+        }
+    }
+
+    private static void login(Repository repository, Scanner sc) {
+
+
+        System.out.println("\n=== Login ===");
+
+        while (true) {
+
+            System.out.print("Digite seu email: ");
+            String email = sc.nextLine();
+
+            Conta conta = repository.verificarContaExiste(repository, email);
+
+            if (conta != null) {
+
+                System.out.print("Digite sua senha: ");
+                String senha = sc.nextLine();
+
+                if (conta.getSenha().equals(senha)) {
+                    repository.setContaAtual(conta);
+                    System.out.println("\nLogin realizado com sucesso !!");
+                    menu(sc, repository);
+                    break;
+                } else {
+                    while (true) {
+                        System.out.print("Digite sua senha novamente: ");
+                        senha = sc.nextLine();
+
+                        if (conta.getSenha().equals(senha)) {
+                            System.out.println("\nLogin realizado com sucesso !!");
+                            menu(sc, repository);
+                            break;
+                        }
+                    }
+                    break;
+                }
+
+            } else {
+                System.out.println("\nCadastro não encontrado. Tente novamente !");
             }
         }
     }
@@ -118,49 +156,9 @@ public class Program {
 
         System.out.printf("Cadastro realizado com sucesso !!");
 
-    }
+        login(repository, sc);
 
-    private static void login(Repository repository, Scanner sc) {
-        System.out.println("\n=== Login ===");
-
-        while (true) {
-
-            System.out.print("Digite seu email: ");
-            String email = sc.nextLine();
-
-            Conta conta = null;
-
-            for (Conta item : repository.getContas()) {
-                if (item.getEmail().equals(email)) {
-                    conta = item;
-                }
-            }
-
-            if (conta != null) {
-
-                System.out.print("Digite sua senha: ");
-                String senha = sc.nextLine();
-
-                if (conta.getSenha().equals(senha)) {
-                    System.out.println("\nLogin realizado com sucesso !!");
-                    break;
-                } else {
-                    while (true) {
-                        System.out.print("Digite sua senha novamente: ");
-                        senha = sc.nextLine();
-
-                        if (conta.getSenha().equals(senha)) {
-                            System.out.println("\nLogin realizado com sucesso !!");
-                            break;
-                        }
-                    }
-                    break;
-                }
-
-            } else {
-                System.out.println("\nCadastro não encontrado. Tente novamente !");
-            }
-        }
     }
 
 }
+

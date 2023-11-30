@@ -18,7 +18,7 @@ public class Pessoa {
     private Endereco endereco;
 
     public Pessoa(String nome, String celular, String cargo, Empresa empresa, Endereco endereco) {
-        id = UUID.randomUUID();
+        this.id = UUID.randomUUID();
         this.nome = nome;
         this.celular = celular;
         this.cargo = cargo;
@@ -27,7 +27,7 @@ public class Pessoa {
     }
 
     public Pessoa(String nome, String apelido, String telefone, String celular, String RG, String cargo, Empresa empresa, Endereco endereco) {
-        id = UUID.randomUUID();
+        this.id = UUID.randomUUID();
         this.nome = nome;
         this.apelido = apelido;
         this.telefone = telefone;
