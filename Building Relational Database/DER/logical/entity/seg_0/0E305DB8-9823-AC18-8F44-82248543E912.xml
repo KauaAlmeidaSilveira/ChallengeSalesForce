@@ -22,7 +22,7 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Data_Pagamento" id="1099E315-2D0C-04E9-651E-3D5FD1B991D1">
+<Attribute name="DataPagamento" id="1099E315-2D0C-04E9-651E-3D5FD1B991D1">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-09 00:31:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[Ex: 22/11/2004 19:23:10]]></commentInRDBMS>
@@ -32,7 +32,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Valor_Total" id="DB37750C-9C53-2C89-3352-3627D10B0D34">
+<Attribute name="ValorTotal" id="DB37750C-9C53-2C89-3352-3627D10B0D34">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-09 00:36:21 UTC</createdTime>
 <ownerDesignName>DER</ownerDesignName>
@@ -40,8 +40,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Metodo" id="16790408-3E1E-5BAB-8098-39B31E1FAA0D">
 <createdBy>Kauã</createdBy>
@@ -65,7 +64,7 @@ Pix]]></commentInRDBMS>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Valor_Parcelas" id="402E50DB-25A3-D188-AF64-EE52744E6BAE">
+<Attribute name="ValorParcelas" id="402E50DB-25A3-D188-AF64-EE52744E6BAE">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-11 11:23:57 UTC</createdTime>
 <ownerDesignName>DER</ownerDesignName>
@@ -73,8 +72,7 @@ Pix]]></commentInRDBMS>
 <use>1</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Descricao" id="F0C7DD13-D7B9-14B3-EC30-0313910674B4">
 <createdBy>Kauã</createdBy>
@@ -106,7 +104,7 @@ Pix]]></commentInRDBMS>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
