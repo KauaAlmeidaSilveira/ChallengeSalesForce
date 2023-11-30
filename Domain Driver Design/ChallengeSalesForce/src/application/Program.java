@@ -47,19 +47,20 @@ public class Program {
                     "2 - Assinar um serviço\n" +
                     "3 - Listar meus serviços\n" +
                     "4 - Histórico de pedidos\n" +
-                    "5 - Sair");
+                    "5 - Listar cadastros\n\n" +
+                    "6 - Sair");
             System.out.print("Informe o que deseja fazer de acordo com o número das opções: ");
             int opcao = sc.nextInt();
             sc.nextLine();
 
-            if (opcao == 5) {
+            if (opcao == 6) {
                 System.out.print("\nTudo bem, até a próxima! Bye");
                 break;
             }
 
             switch (opcao) {
                 case 1:
-                    repository.listarTodosServicos();
+                    repository.listarTodosServicos(repository);
                     break;
 
                 case 2:
@@ -67,11 +68,15 @@ public class Program {
                     break;
 
                 case 3:
-                    repository.listarMeusServicos();
+                    repository.listarMeusServicos(repository);
                     break;
 
                 case 4:
-                    repository.listarMeusPedidos();
+                    repository.listarMeusPedidos(repository);
+                    break;
+
+                case 5:
+                    repository.listarCadastros(repository);
                     break;
 
                 default:

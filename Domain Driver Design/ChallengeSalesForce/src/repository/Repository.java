@@ -65,6 +65,10 @@ public class Repository {
         this.contaAtual = contaAtual;
     }
 
+    public void listarCadastros(Repository repository){
+        repository.contas.forEach(System.out::println);
+    }
+
     public Conta verificarContaExiste(Repository repository, String email) {
         for (Conta conta : repository.getContas()) {
             if (conta.getEmail().toUpperCase().trim().equals(email.toUpperCase().trim())) {
@@ -85,7 +89,7 @@ public class Repository {
 
     public void assinarServico(Repository repository, Scanner sc) {
         System.out.println("Todos serviços: ");
-        listarTodosServicos();
+        listarTodosServicos(repository);
 
         System.out.print("Digite o nome do serviço que deseja assinar: ");
         String nomeServico = sc.nextLine();
@@ -123,23 +127,23 @@ public class Repository {
 
     }
 
-    public void listarMeusPedidos(){
-        pedidos.forEach(pedido -> {
+    public void listarMeusPedidos(Repository repository){
+        repository.pedidos.forEach(pedido -> {
             if(pedido.getConta() == contaAtual){
                 System.out.println(pedido);
             }
         });
     }
 
-    public void listarTodosServicos() {
-        servicos.forEach(servico -> {
+    public void listarTodosServicos(Repository repository) {
+        repository.servicos.forEach(servico -> {
             System.out.println("=================");
             System.out.println(servico);
         });
     }
 
-    public void listarMeusServicos() {
-        servicoContas.forEach(servicoConta -> {
+    public void listarMeusServicos(Repository repository) {
+        repository.servicoContas.forEach(servicoConta -> {
             if (servicoConta.getConta() == contaAtual) {
                 System.out.println(servicoConta);
             }
