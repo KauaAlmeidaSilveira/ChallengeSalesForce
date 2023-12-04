@@ -32,19 +32,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ID_Servico" id="224D6689-9494-B960-AF47-C1DDC39CD7F9">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-11-30 14:00:49 UTC</createdTime>
-<generatorID>E3536FDB-F078-6FEA-6AE9-C45D60E49C53</generatorID>
-<ownerDesignName>DER</ownerDesignName>
-<referedAttribute>34AAE957-055D-4763-DC98-64EF4DAB562B</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ID_Pagamento" id="AF4D8382-45E9-B528-55E1-6DE9EDC88906">
 <createdBy>Kauã</createdBy>
@@ -56,7 +44,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="DataPedido" id="CA289325-BD6D-9E7D-13F0-1BC44468316D">
 <createdBy>Kauã</createdBy>

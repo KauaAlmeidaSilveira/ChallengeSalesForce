@@ -8,8 +8,8 @@
 <dominantRole>03B65199-25E1-ED03-F223-8EEDC5744F3A</dominantRole>
 <identifying>false</identifying>
 <optionalSource>false</optionalSource>
-<optionalTarget>false</optionalTarget>
-<sourceCardinality>1</sourceCardinality>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
 <sourceEntity>49D746F1-2439-405C-F09F-E52C6898EB48</sourceEntity>
 <targetCardinalityString>1</targetCardinalityString>
 <targetEntity>03B65199-25E1-ED03-F223-8EEDC5744F3A</targetEntity>
