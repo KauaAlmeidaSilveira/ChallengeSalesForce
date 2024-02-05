@@ -9,16 +9,16 @@ public class EnderecoDTO {
     private String numero;
     private String cidade;
     private String estadoProvincia;
-    private String CEP;
+    private String cep;
     private String pais;
 
-    public EnderecoDTO(Long id, String rua, String numero, String cidade, String estadoProvincia, String CEP, String pais) {
+    public EnderecoDTO(Long id, String rua, String numero, String cidade, String estadoProvincia, String cep, String pais) {
         this.id = id;
         this.rua = rua;
         this.numero = numero;
         this.cidade = cidade;
         this.estadoProvincia = estadoProvincia;
-        this.CEP = CEP;
+        this.cep = cep;
         this.pais = pais;
     }
 
@@ -28,7 +28,7 @@ public class EnderecoDTO {
         numero = endereco.getNumero();
         cidade = endereco.getCidade();
         estadoProvincia = endereco.getEstadoProvincia();
-        CEP = endereco.getCEP();
+        cep = endereco.getCep();
         pais = endereco.getPais();
     }
 
@@ -52,8 +52,8 @@ public class EnderecoDTO {
         return estadoProvincia;
     }
 
-    public String getCEP() {
-        return CEP;
+    public String getCep() {
+        return cep;
     }
 
     public String getPais() {

@@ -2,7 +2,7 @@ package com.fiap.challengeSalesForce.dto;
 
 import com.fiap.challengeSalesForce.entities.Pessoa;
 
-public class PessoaDTO {
+public class PessoaComEnderecoDTO {
 
     private Long id;
     private String nome;
@@ -12,7 +12,9 @@ public class PessoaDTO {
     private String cargo;
     private String rg;
 
-    public PessoaDTO(Long id, String nome, String apelido, String telefone, String celular, String cargo, String rg) {
+    private EnderecoDTO endereco;
+
+    public PessoaComEnderecoDTO(Long id, String nome, String apelido, String telefone, String celular, String cargo, String rg, EnderecoDTO endereco) {
         this.id = id;
         this.nome = nome;
         this.apelido = apelido;
@@ -20,9 +22,10 @@ public class PessoaDTO {
         this.celular = celular;
         this.cargo = cargo;
         this.rg = rg;
+        this.endereco = endereco;
     }
 
-    public PessoaDTO(Pessoa pessoa) {
+    public PessoaComEnderecoDTO(Pessoa pessoa) {
         id = pessoa.getId();
         nome = pessoa.getNome();
         apelido = pessoa.getApelido();
@@ -30,6 +33,7 @@ public class PessoaDTO {
         celular = pessoa.getCelular();
         cargo = pessoa.getCargo();
         rg = pessoa.getRg();
+        endereco = new EnderecoDTO(pessoa.getEndereco());
     }
 
     public Long getId() {
@@ -58,5 +62,9 @@ public class PessoaDTO {
 
     public String getRg() {
         return rg;
+    }
+
+    public EnderecoDTO getEndereco() {
+        return endereco;
     }
 }

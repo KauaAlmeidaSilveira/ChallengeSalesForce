@@ -1,5 +1,6 @@
 package com.fiap.challengeSalesForce.entities;
 
+import com.fiap.challengeSalesForce.dto.EnderecoDTO;
 import jakarta.persistence.*;
 
 @Entity
@@ -13,7 +14,7 @@ public class Endereco {
     private String numero;
     private String cidade;
     private String estadoProvincia;
-    private String CEP;
+    private String cep;
     private String pais;
 
     @OneToOne(mappedBy = "endereco")
@@ -22,15 +23,14 @@ public class Endereco {
     public Endereco() {
     }
 
-    public Endereco(Long id, String rua, String numero, String cidade, String estadoProvincia, String CEP, String pais, Pessoa pessoa) {
+    public Endereco(Long id, String rua, String numero, String cidade, String estadoProvincia, String cep, String pais) {
         this.id = id;
         this.rua = rua;
         this.numero = numero;
         this.cidade = cidade;
         this.estadoProvincia = estadoProvincia;
-        this.CEP = CEP;
+        this.cep = cep;
         this.pais = pais;
-        this.pessoa = pessoa;
     }
 
     public Long getId() {
@@ -65,12 +65,12 @@ public class Endereco {
         this.estadoProvincia = estadoProvincia;
     }
 
-    public String getCEP() {
-        return CEP;
+    public String getCep() {
+        return cep;
     }
 
-    public void setCEP(String CEP) {
-        this.CEP = CEP;
+    public void setCep(String cep) {
+        this.cep = cep;
     }
 
     public String getPais() {

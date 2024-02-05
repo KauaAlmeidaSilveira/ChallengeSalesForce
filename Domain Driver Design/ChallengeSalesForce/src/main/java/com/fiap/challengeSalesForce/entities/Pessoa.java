@@ -17,7 +17,7 @@ public class Pessoa {
     private String rg;
 
     @OneToOne
-    @JoinColumn(name = "endereco_id")
+    @MapsId
     private Endereco endereco;
 
     @OneToOne(mappedBy = "pessoa")
