@@ -17,7 +17,6 @@ public class Pessoa {
     private String rg;
 
     @OneToOne
-    @MapsId
     private Endereco endereco;
 
     @OneToOne(mappedBy = "pessoa")
