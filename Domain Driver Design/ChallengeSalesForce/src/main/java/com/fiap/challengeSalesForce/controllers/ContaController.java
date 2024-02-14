@@ -1,25 +1,38 @@
 package com.fiap.challengeSalesForce.controllers;
 
 import com.fiap.challengeSalesForce.dto.ContaDTO;
-import com.fiap.challengeSalesForce.entities.Conta;
 import com.fiap.challengeSalesForce.services.ContaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/conta")
+@RequestMapping(value = "/contas")
 public class ContaController {
 
     @Autowired
     private ContaService service;
 
     @GetMapping
-    public List<ContaDTO> getTest(){
-        return service.getTest();
+    public ResponseEntity<List<ContaDTO>> findAll() {
+        return ResponseEntity.ok(service.findAll());
+    }
+
+    @GetMapping(path = "/{id}")
+    public ResponseEntity<ContaDTO> findById(@PathVariable Long id) {
+        return ResponseEntity.ok(service.findById(id));
+    }
+
+    @PostMapping
+    public ResponseEntity<ContaDTO> insert(@RequestBody ContaDTO contaDTO){
+        ContaDTO result = service.insert(contaDTO);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+                .buildAndExpand(result.getId()).toUri();
+        return ResponseEntity.created(uri).body(result);
     }
 
 }

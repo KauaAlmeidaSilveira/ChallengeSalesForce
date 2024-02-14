@@ -1,7 +1,10 @@
 package com.fiap.challengeSalesForce.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fiap.challengeSalesForce.dto.ContaDTO;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
@@ -16,7 +19,11 @@ public class Conta {
     private String email;
     private String senha;
     private String status;
-    private LocalTime dataRegistro;
+    @Column(columnDefinition = "TIMESTAMP")
+    @JsonFormat(pattern="yyyy-MM-dd")
+    private LocalDate dataRegistro;
+    @Column(columnDefinition = "TIMESTAMP")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm")
     private LocalDateTime ultimoAcesso;
 
     @OneToOne
@@ -25,7 +32,7 @@ public class Conta {
     public Conta() {
     }
 
-    public Conta(Long id, String usuario, String email, String senha, String status, LocalTime dataRegistro, LocalDateTime ultimoAcesso, Pessoa pessoa) {
+    public Conta(Long id, String usuario, String email, String senha, String status, LocalDate dataRegistro, LocalDateTime ultimoAcesso, Pessoa pessoa) {
         this.id = id;
         this.usuario = usuario;
         this.email = email;
@@ -34,6 +41,16 @@ public class Conta {
         this.dataRegistro = dataRegistro;
         this.ultimoAcesso = ultimoAcesso;
         this.pessoa = pessoa;
+    }
+
+    public Conta(ContaDTO contaDTO) {
+        id = contaDTO.getId();
+        usuario = contaDTO.getUsuario();
+        email = contaDTO.getEmail();
+        senha = contaDTO.getSenha();
+        status = contaDTO.getStatus();
+        dataRegistro = contaDTO.getDataRegistro();
+        ultimoAcesso = contaDTO.getUltimoAcesso();
     }
 
     public Long getId() {
@@ -76,11 +93,11 @@ public class Conta {
         this.status = status;
     }
 
-    public LocalTime getDataRegistro() {
+    public LocalDate getDataRegistro() {
         return dataRegistro;
     }
 
-    public void setDataRegistro(LocalTime dataRegistro) {
+    public void setDataRegistro(LocalDate dataRegistro) {
         this.dataRegistro = dataRegistro;
     }
 

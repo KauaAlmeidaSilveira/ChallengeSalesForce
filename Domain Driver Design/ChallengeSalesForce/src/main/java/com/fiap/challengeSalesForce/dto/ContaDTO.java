@@ -2,6 +2,9 @@ package com.fiap.challengeSalesForce.dto;
 
 import com.fiap.challengeSalesForce.entities.Conta;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class ContaDTO {
 
     private Long id;
@@ -9,6 +12,8 @@ public class ContaDTO {
     private String email;
     private String senha;
     private String status;
+    private LocalDate dataRegistro;
+    private LocalDateTime ultimoAcesso;
 
     public ContaDTO() {
     }
@@ -27,6 +32,8 @@ public class ContaDTO {
         email = conta.getEmail();
         senha = conta.getSenha();
         status = conta.getStatus();
+        dataRegistro = conta.getDataRegistro();
+        ultimoAcesso = conta.getUltimoAcesso();
     }
 
     public Long getId() {
@@ -47,5 +54,13 @@ public class ContaDTO {
 
     public String getStatus() {
         return status;
+    }
+
+    public LocalDate getDataRegistro() {
+        return dataRegistro;
+    }
+
+    public LocalDateTime getUltimoAcesso() {
+        return ultimoAcesso;
     }
 }
