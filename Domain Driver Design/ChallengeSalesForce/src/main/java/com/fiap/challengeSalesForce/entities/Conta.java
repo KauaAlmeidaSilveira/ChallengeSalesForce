@@ -19,7 +19,7 @@ public class Conta {
     private String email;
     private String senha;
     private String status;
-    @Column(columnDefinition = "TIMESTAMP")
+    @Column(columnDefinition = "DATE")
     @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate dataRegistro;
     @Column(columnDefinition = "TIMESTAMP")
@@ -43,15 +43,6 @@ public class Conta {
         this.pessoa = pessoa;
     }
 
-    public Conta(ContaDTO contaDTO) {
-        id = contaDTO.getId();
-        usuario = contaDTO.getUsuario();
-        email = contaDTO.getEmail();
-        senha = contaDTO.getSenha();
-        status = contaDTO.getStatus();
-        dataRegistro = contaDTO.getDataRegistro();
-        ultimoAcesso = contaDTO.getUltimoAcesso();
-    }
 
     public Long getId() {
         return id;

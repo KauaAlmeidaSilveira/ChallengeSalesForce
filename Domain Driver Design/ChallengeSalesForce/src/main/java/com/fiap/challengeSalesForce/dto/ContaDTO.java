@@ -15,15 +15,18 @@ public class ContaDTO {
     private LocalDate dataRegistro;
     private LocalDateTime ultimoAcesso;
 
+    private Long pessoaId;
+
     public ContaDTO() {
     }
 
-    public ContaDTO(Long id, String usuario, String email, String senha, String status) {
+    public ContaDTO(Long id, String usuario, String email, String senha, String status, Long pessoaId) {
         this.id = id;
         this.usuario = usuario;
         this.email = email;
         this.senha = senha;
         this.status = status;
+        this.pessoaId = pessoaId;
     }
 
     public ContaDTO(Conta conta) {
@@ -34,6 +37,7 @@ public class ContaDTO {
         status = conta.getStatus();
         dataRegistro = conta.getDataRegistro();
         ultimoAcesso = conta.getUltimoAcesso();
+        pessoaId = conta.getPessoa().getId();
     }
 
     public Long getId() {
@@ -62,5 +66,9 @@ public class ContaDTO {
 
     public LocalDateTime getUltimoAcesso() {
         return ultimoAcesso;
+    }
+
+    public Long getPessoaId() {
+        return pessoaId;
     }
 }
