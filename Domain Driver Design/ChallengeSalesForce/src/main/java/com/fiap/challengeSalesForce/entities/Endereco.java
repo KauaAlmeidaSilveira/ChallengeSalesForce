@@ -1,6 +1,5 @@
 package com.fiap.challengeSalesForce.entities;
 
-import com.fiap.challengeSalesForce.dto.EnderecoDTO;
 import jakarta.persistence.*;
 
 @Entity

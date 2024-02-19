@@ -1,8 +1,8 @@
 package com.fiap.challengeSalesForce.controllers;
 
-import com.fiap.challengeSalesForce.dto.PessoaComEnderecoDTO;
-import com.fiap.challengeSalesForce.dto.PessoaDTO;
+import com.fiap.challengeSalesForce.dto.PessoaAllAttributesDTO;
 import com.fiap.challengeSalesForce.services.PessoaService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,7 +30,7 @@ public class PessoaController {
     }
 
     @PostMapping
-    public ResponseEntity<PessoaComEnderecoDTO> insert(@RequestBody PessoaComEnderecoDTO pessoa){
+    public ResponseEntity<PessoaAllAttributesDTO> insert(@Valid @RequestBody PessoaAllAttributesDTO pessoa){
         pessoa = pessoaService.insert(pessoa);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(pessoa.getId())

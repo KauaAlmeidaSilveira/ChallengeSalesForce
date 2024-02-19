@@ -1,6 +1,8 @@
 package com.fiap.challengeSalesForce.dto;
 
 import com.fiap.challengeSalesForce.entities.Endereco;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 
 public class EnderecoDTO {
 
@@ -9,7 +11,12 @@ public class EnderecoDTO {
     private String numero;
     private String cidade;
     private String estadoProvincia;
+
+    @NotBlank(message = "CEP é obrigatório")
+    @Pattern(regexp = "\\d{8}", message = "CEP deve ter no mínimo 8 caracteres")
     private String cep;
+
+    @NotBlank(message = "PAIS é obrigatório")
     private String pais;
 
     public EnderecoDTO(Long id, String rua, String numero, String cidade, String estadoProvincia, String cep, String pais) {

@@ -19,13 +19,16 @@ public class Pessoa {
     @OneToOne
     private Endereco endereco;
 
+    @OneToOne
+    private Empresa empresa;
+
     @OneToOne(mappedBy = "pessoa")
     private Conta conta;
 
     public Pessoa() {
     }
 
-    public Pessoa(Long id, String nome, String apelido, String telefone, String celular, String cargo, String rg, Endereco endereco, Conta conta) {
+    public Pessoa(Long id, String nome, String apelido, String telefone, String celular, String cargo, String rg, Endereco endereco, Empresa empresa, Conta conta) {
         this.id = id;
         this.nome = nome;
         this.apelido = apelido;
@@ -34,6 +37,7 @@ public class Pessoa {
         this.cargo = cargo;
         this.rg = rg;
         this.endereco = endereco;
+        this.empresa = empresa;
         this.conta = conta;
     }
 
@@ -107,5 +111,13 @@ public class Pessoa {
 
     public void setConta(Conta conta) {
         this.conta = conta;
+    }
+
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
     }
 }
