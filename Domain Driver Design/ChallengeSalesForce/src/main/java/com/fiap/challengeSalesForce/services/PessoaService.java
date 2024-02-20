@@ -33,10 +33,10 @@ public class PessoaService {
     private EmpresaRepository empresaRepository;
 
     @Transactional(readOnly = true)
-    public <T> List<T> findAll(String pessoaComEndereco, Class<T> returnType) {
+    public <T> List<T> findAll(String withAllAttributes, Class<T> returnType) {
         List<T> resultList;
 
-        if (pessoaComEndereco.toLowerCase().trim().equals("true")) {
+        if (withAllAttributes.toLowerCase().trim().equals("true")) {
             resultList = pessoaRepository.findAll().stream()
                     .map(entity -> returnType.cast(new PessoaAllAttributesDTO(entity)))
                     .toList();
@@ -49,8 +49,8 @@ public class PessoaService {
     }
 
     @Transactional(readOnly = true)
-    public <T> T findById(Long id, String pessoaComEndereco, Class<T> returnType) {
-        if (pessoaComEndereco.toLowerCase().trim().equals("true")) {
+    public <T> T findById(Long id, String withAllAttributes, Class<T> returnType) {
+        if (withAllAttributes.toLowerCase().trim().equals("true")) {
             return returnType.cast(new PessoaAllAttributesDTO(pessoaRepository.findById(id).get()));
         }else {
             return returnType.cast(new PessoaDTO(pessoaRepository.findById(id).get()));

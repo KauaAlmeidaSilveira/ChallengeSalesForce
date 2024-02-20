@@ -2,6 +2,7 @@ package com.fiap.challengeSalesForce.services;
 
 import com.fiap.challengeSalesForce.dto.ContaDTO;
 import com.fiap.challengeSalesForce.entities.Conta;
+import com.fiap.challengeSalesForce.entities.enums.AccountStatus;
 import com.fiap.challengeSalesForce.repositories.ContaRepository;
 import com.fiap.challengeSalesForce.repositories.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +47,7 @@ public class ContaService {
         conta.setUsuario(contaDTO.getUsuario());
         conta.setEmail(contaDTO.getEmail());
         conta.setSenha(contaDTO.getSenha());
-        conta.setStatus(contaDTO.getStatus());
+        conta.setStatus(AccountStatus.ATIVO);
         conta.setDataRegistro(LocalDate.now());
         conta.setUltimoAcesso(LocalDateTime.now());
         conta.setPessoa(pessoaRepository.getReferenceById(contaDTO.getPessoaId()));

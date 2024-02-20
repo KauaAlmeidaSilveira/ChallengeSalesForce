@@ -2,6 +2,7 @@ package com.fiap.challengeSalesForce.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fiap.challengeSalesForce.dto.ContaDTO;
+import com.fiap.challengeSalesForce.entities.enums.AccountStatus;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -18,7 +19,7 @@ public class Conta {
     private String usuario;
     private String email;
     private String senha;
-    private String status;
+    private AccountStatus status;
     @Column(columnDefinition = "DATE")
     @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate dataRegistro;
@@ -32,7 +33,7 @@ public class Conta {
     public Conta() {
     }
 
-    public Conta(Long id, String usuario, String email, String senha, String status, LocalDate dataRegistro, LocalDateTime ultimoAcesso, Pessoa pessoa) {
+    public Conta(Long id, String usuario, String email, String senha, AccountStatus status, LocalDate dataRegistro, LocalDateTime ultimoAcesso, Pessoa pessoa) {
         this.id = id;
         this.usuario = usuario;
         this.email = email;
@@ -76,11 +77,11 @@ public class Conta {
         this.senha = senha;
     }
 
-    public String getStatus() {
+    public AccountStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(AccountStatus status) {
         this.status = status;
     }
 

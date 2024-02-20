@@ -20,13 +20,13 @@ public class PessoaController {
     private PessoaService pessoaService;
 
     @GetMapping
-    public ResponseEntity<List<?>> findAll(@RequestParam(name = "withAddress", defaultValue = "false") String pessoaComEndereco) {
-        return ResponseEntity.ok(pessoaService.findAll(pessoaComEndereco, Object.class));
+    public ResponseEntity<List<?>> findAll(@RequestParam(name = "withAllAttributes", defaultValue = "false") String withAllAttributes) {
+        return ResponseEntity.ok(pessoaService.findAll(withAllAttributes, Object.class));
     }
 
     @GetMapping(path = "/{id}")
-    public ResponseEntity<?> findById(@PathVariable Long id, @RequestParam(name = "withAddress", defaultValue = "false") String pessoaComEndereco) {
-        return ResponseEntity.ok(pessoaService.findById(id, pessoaComEndereco, Object.class));
+    public ResponseEntity<?> findById(@PathVariable Long id, @RequestParam(name = "withAllAttributes", defaultValue = "false") String withAllAttributes) {
+        return ResponseEntity.ok(pessoaService.findById(id, withAllAttributes, Object.class));
     }
 
     @PostMapping

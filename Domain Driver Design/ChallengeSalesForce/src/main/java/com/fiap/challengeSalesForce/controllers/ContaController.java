@@ -2,6 +2,7 @@ package com.fiap.challengeSalesForce.controllers;
 
 import com.fiap.challengeSalesForce.dto.ContaDTO;
 import com.fiap.challengeSalesForce.services.ContaService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +29,7 @@ public class ContaController {
     }
 
     @PostMapping
-    public ResponseEntity<ContaDTO> insert(@RequestBody ContaDTO contaDTO){
+    public ResponseEntity<ContaDTO> insert(@Valid @RequestBody ContaDTO contaDTO){
         ContaDTO result = service.insert(contaDTO);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(result.getId()).toUri();
