@@ -27,7 +27,7 @@ public class ContaService {
         return repository.findAll().stream().map(ContaDTO::new).toList();
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ContaDTO findById(Long id) {
         Conta conta = repository.findById(id).get();
         conta.setUltimoAcesso(LocalDateTime.now());
@@ -42,6 +42,18 @@ public class ContaService {
         return new ContaDTO(conta);
     }
 
+    @Transactional
+    public void deleteById(Long id){
+        repository.deleteById(id);
+    }
+
+    public ContaDTO update(Long id, ContaDTO contaDTO){
+        Conta conta = repository.findById(id).get();
+        updateDtoToEntity(contaDTO, conta);
+        repository.save(conta);
+        return new ContaDTO(conta);
+    }
+
     private void copyDtoToEntity(ContaDTO contaDTO, Conta conta){
         conta.setId(contaDTO.getId());
         conta.setUsuario(contaDTO.getUsuario());
@@ -51,5 +63,18 @@ public class ContaService {
         conta.setDataRegistro(LocalDate.now());
         conta.setUltimoAcesso(LocalDateTime.now());
         conta.setPessoa(pessoaRepository.getReferenceById(contaDTO.getPessoaId()));
+    }
+
+    private void updateDtoToEntity(ContaDTO contaDTO, Conta conta){
+        if (contaDTO.getUsuario() != null) {
+            conta.setUsuario(contaDTO.getUsuario());
+        }
+        if (contaDTO.getEmail() != null){
+            conta.setEmail(contaDTO.getEmail());
+        }
+        if (contaDTO.getSenha() != null){
+            conta.setSenha(contaDTO.getSenha());
+        }
+        conta.setUltimoAcesso(LocalDateTime.now());
     }
 }

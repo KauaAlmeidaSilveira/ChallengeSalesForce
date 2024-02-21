@@ -36,4 +36,14 @@ public class ContaController {
         return ResponseEntity.created(uri).body(result);
     }
 
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable Long id) {
+        service.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PatchMapping(path = "/{id}")
+    public ResponseEntity<ContaDTO> update(@PathVariable Long id, @Valid @RequestBody ContaDTO contaDTO){
+        return ResponseEntity.ok(service.update(id, contaDTO));
+    }
 }
