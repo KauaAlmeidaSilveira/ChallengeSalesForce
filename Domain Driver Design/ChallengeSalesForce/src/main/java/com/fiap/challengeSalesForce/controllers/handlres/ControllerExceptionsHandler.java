@@ -4,8 +4,7 @@ import com.fiap.challengeSalesForce.dto.exceptions.CustomError;
 import com.fiap.challengeSalesForce.dto.exceptions.ValidationError;
 import com.fiap.challengeSalesForce.services.exceptions.ResourceNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
-import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -21,12 +20,12 @@ public class ControllerExceptionsHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<CustomError> methodArgumentNotValidation(MethodArgumentNotValidException e,
-                                                                   HttpServletRequest request){
+                                                                   HttpServletRequest request) {
         HttpStatus status = HttpStatus.UNPROCESSABLE_ENTITY;
         ValidationError validationError = new ValidationError(Instant.now(),
                 status.value(), "Dados inválidos", request.getRequestURI());
 
-        for (FieldError f : e.getBindingResult().getFieldErrors()){
+        for (FieldError f : e.getBindingResult().getFieldErrors()) {
             validationError.addError(f.getField(), f.getDefaultMessage());
         }
 
@@ -34,8 +33,26 @@ public class ControllerExceptionsHandler {
     }
 
     @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<CustomError> resourceNotFound(ResourceNotFoundException e, HttpServletRequest request){
+    public ResponseEntity<CustomError> resourceNotFound(ResourceNotFoundException e, HttpServletRequest request) {
         HttpStatus status = HttpStatus.NOT_FOUND;
+        CustomError error = new CustomError(Instant.now(), status.value(),
+                e.getMessage(),
+                request.getRequestURI());
+        return ResponseEntity.status(status).body(error);
+    }
+
+    @ExceptionHandler(NoSuchElementException.class)
+    public ResponseEntity<CustomError> noSuchElement(NoSuchElementException e, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.NOT_FOUND;
+        CustomError error = new CustomError(Instant.now(), status.value(),
+                e.getMessage(),
+                request.getRequestURI());
+        return ResponseEntity.status(status).body(error);
+    }
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<CustomError> dataIntegrityViolation(DataIntegrityViolationException e, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.BAD_REQUEST;
         CustomError error = new CustomError(Instant.now(), status.value(),
                 e.getMessage(),
                 request.getRequestURI());

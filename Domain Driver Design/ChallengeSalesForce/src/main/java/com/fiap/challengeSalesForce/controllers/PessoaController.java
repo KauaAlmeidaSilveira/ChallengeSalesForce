@@ -1,6 +1,7 @@
 package com.fiap.challengeSalesForce.controllers;
 
 import com.fiap.challengeSalesForce.dto.PessoaAllAttributesDTO;
+import com.fiap.challengeSalesForce.dto.PessoaDTO;
 import com.fiap.challengeSalesForce.services.PessoaService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,17 @@ public class PessoaController {
                 .path("/{id}").buildAndExpand(pessoa.getId())
                 .toUri();
         return ResponseEntity.created(uri).body(pessoa);
+    }
+
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        pessoaService.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PatchMapping(path = "/{id}")
+    public ResponseEntity<PessoaDTO> update(@PathVariable Long id, @Valid @RequestBody PessoaDTO pessoa){
+        return ResponseEntity.ok(pessoaService.update(id, pessoa));
     }
 
 }

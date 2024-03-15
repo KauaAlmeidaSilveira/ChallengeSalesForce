@@ -49,6 +49,7 @@ public class ContaService {
         repository.deleteById(id);
     }
 
+    @Transactional
     public ContaDTO update(Long id, ContaDTO contaDTO) {
         Conta conta = repository.findById(id).get();
         updateDtoToEntity(contaDTO, conta);
