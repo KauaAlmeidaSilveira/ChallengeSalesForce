@@ -1,7 +1,6 @@
 package com.fiap.challengeSalesForce.dto;
 
 import com.fiap.challengeSalesForce.entities.Conta;
-import com.fiap.challengeSalesForce.entities.enums.AccountStatus;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
@@ -38,7 +37,7 @@ public class ContaDTO {
         id = conta.getId();
         usuario = conta.getUsuario() + "@salesforce.com";
         email = conta.getEmail();
-        senha = conta.getSenha();
+        senha = conta.getPassword();
         dataRegistro = conta.getDataRegistro();
         ultimoAcesso = conta.getUltimoAcesso();
         pessoaId = conta.getPessoa().getId();

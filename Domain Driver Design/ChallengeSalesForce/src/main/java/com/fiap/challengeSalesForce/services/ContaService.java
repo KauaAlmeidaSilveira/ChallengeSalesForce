@@ -2,11 +2,17 @@ package com.fiap.challengeSalesForce.services;
 
 import com.fiap.challengeSalesForce.dto.ContaDTO;
 import com.fiap.challengeSalesForce.entities.Conta;
+import com.fiap.challengeSalesForce.entities.Role;
 import com.fiap.challengeSalesForce.entities.enums.AccountStatus;
+import com.fiap.challengeSalesForce.projections.UserDetailsProjection;
 import com.fiap.challengeSalesForce.repositories.ContaRepository;
 import com.fiap.challengeSalesForce.repositories.PessoaRepository;
 import com.fiap.challengeSalesForce.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,7 +21,10 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-public class ContaService {
+public class ContaService implements UserDetailsService {
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Autowired
     private ContaRepository repository;
@@ -40,6 +49,7 @@ public class ContaService {
     public ContaDTO insert(ContaDTO contaDTO) {
         Conta conta = new Conta();
         copyDtoToEntity(contaDTO, conta);
+        conta.setPassword(passwordEncoder.encode(contaDTO.getSenha()));
         conta = repository.save(conta);
         return new ContaDTO(conta);
     }
@@ -61,7 +71,7 @@ public class ContaService {
         conta.setId(contaDTO.getId());
         conta.setUsuario(contaDTO.getUsuario());
         conta.setEmail(contaDTO.getEmail());
-        conta.setSenha(contaDTO.getSenha());
+        conta.setPassword(contaDTO.getSenha());
         conta.setStatus(AccountStatus.ATIVO);
         conta.setDataRegistro(LocalDate.now());
         conta.setUltimoAcesso(LocalDateTime.now());
@@ -76,8 +86,25 @@ public class ContaService {
             conta.setEmail(contaDTO.getEmail());
         }
         if (contaDTO.getSenha() != null) {
-            conta.setSenha(contaDTO.getSenha());
+            conta.setPassword(contaDTO.getSenha());
         }
         conta.setUltimoAcesso(LocalDateTime.now());
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        List<UserDetailsProjection> result = repository.searchUserAndRolesByEmail(username);
+        if (result.isEmpty()) {
+            throw new UsernameNotFoundException("Email not found");
+        }
+        Conta conta = new Conta();
+        conta.setEmail(result.get(0).getUsername());
+        conta.setPassword(result.get(0).getPassword());
+
+        for (UserDetailsProjection projection : result){
+            conta.addRole(new Role(projection.getRoleId(), projection.getAuthority()));
+        }
+
+        return conta;
     }
 }
