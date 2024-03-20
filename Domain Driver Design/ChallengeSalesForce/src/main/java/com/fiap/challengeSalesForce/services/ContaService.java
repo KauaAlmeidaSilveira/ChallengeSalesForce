@@ -7,6 +7,7 @@ import com.fiap.challengeSalesForce.entities.enums.AccountStatus;
 import com.fiap.challengeSalesForce.projections.UserDetailsProjection;
 import com.fiap.challengeSalesForce.repositories.ContaRepository;
 import com.fiap.challengeSalesForce.repositories.PessoaRepository;
+import com.fiap.challengeSalesForce.repositories.RoleRepository;
 import com.fiap.challengeSalesForce.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -32,6 +33,9 @@ public class ContaService implements UserDetailsService {
     @Autowired
     private PessoaRepository pessoaRepository;
 
+    @Autowired
+    private RoleRepository roleRepository;
+
     @Transactional(readOnly = true)
     public List<ContaDTO> findAll() {
         return repository.findAll().stream().map(ContaDTO::new).toList();
@@ -50,6 +54,7 @@ public class ContaService implements UserDetailsService {
         Conta conta = new Conta();
         copyDtoToEntity(contaDTO, conta);
         conta.setPassword(passwordEncoder.encode(contaDTO.getSenha()));
+        conta.addRole(roleRepository.getReferenceById(3L));
         conta = repository.save(conta);
         return new ContaDTO(conta);
     }

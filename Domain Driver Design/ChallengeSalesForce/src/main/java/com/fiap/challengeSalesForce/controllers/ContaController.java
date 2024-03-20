@@ -19,19 +19,19 @@ public class ContaController {
     @Autowired
     private ContaService service;
 
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_OPERATOR')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_OPERATOR', 'ROLE_USER')")
     @GetMapping
     public ResponseEntity<List<ContaDTO>> findAll() {
         return ResponseEntity.ok(service.findAll());
     }
 
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_OPERATOR')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_OPERATOR', 'ROLE_USER')")
     @GetMapping(path = "/{id}")
     public ResponseEntity<ContaDTO> findById(@PathVariable Long id) {
         return ResponseEntity.ok(service.findById(id));
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_OPERATOR')")
     @PostMapping
     public ResponseEntity<ContaDTO> insert(@Valid @RequestBody ContaDTO contaDTO){
         ContaDTO result = service.insert(contaDTO);
@@ -40,14 +40,14 @@ public class ContaController {
         return ResponseEntity.created(uri).body(result);
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_OPERATOR')")
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<Void> deleteById(@PathVariable Long id) {
         service.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_OPERATOR')")
     @PatchMapping(path = "/{id}")
     public ResponseEntity<ContaDTO> update(@PathVariable Long id, @Valid @RequestBody ContaDTO contaDTO){
         return ResponseEntity.ok(service.update(id, contaDTO));
