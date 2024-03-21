@@ -1,9 +1,6 @@
 package application;
 
-import dao.ContaDAO;
-import dao.EmpresaDAO;
-import dao.EnderecoDAO;
-import dao.PessoaDAO;
+import dao.*;
 import repository.Repository;
 import model.entities.Conta;
 import model.entities.Empresa;
@@ -13,11 +10,11 @@ import model.entities.Pessoa;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class Program {
+public class Program  {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         Scanner sc = new Scanner(System.in);
-
+        PrincipalDAO principalDAO = new PrincipalDAO();
         Repository repository = new Repository();
 
         System.out.println("Bem vindo, somos a SalesForce !!");
@@ -27,11 +24,11 @@ public class Program {
         while (true) {
 
             if (temConta.toUpperCase().charAt(0) == 'S') {
-//                login(repository, sc);
+                login(principalDAO, sc);
                 break;
 
             } else if (temConta.toUpperCase().charAt(0) == 'N') {
-                cadastrar(sc);
+                cadastrar(sc, principalDAO);
                 break;
 
             } else {
@@ -44,7 +41,7 @@ public class Program {
         sc.close();
     }
 
-    private static void menu(Scanner sc, Repository repository) {
+    private static void menu(Scanner sc, PrincipalDAO principalDAO) {
 
         while (true) {
             System.out.println("\nMenu:\n" +
@@ -65,23 +62,23 @@ public class Program {
 
             switch (opcao) {
                 case 1:
-                    repository.listarTodosServicos(repository);
+                    System.out.println("Todos nossos serviços: ");
                     break;
 
                 case 2:
-                    repository.assinarServico(repository, sc);
+                    System.out.println("Assinar um serviço: ");
                     break;
 
                 case 3:
-                    repository.listarMeusServicos(repository);
+                    System.out.println("Listar meus serviços: ");
                     break;
 
                 case 4:
-                    repository.listarMeusPedidos(repository);
+                    System.out.println("Histórico de pedidos: ");
                     break;
 
                 case 5:
-                    repository.listarCadastros(repository);
+                    System.out.println("Listar cadastros: ");
                     break;
 
                 default:
@@ -90,9 +87,7 @@ public class Program {
         }
     }
 
-    private static void login(Repository repository, Scanner sc) {
-
-
+    private static void login(PrincipalDAO principalDAO, Scanner sc) throws SQLException {
         System.out.println("\n=== Login ===");
 
         while (true) {
@@ -100,26 +95,25 @@ public class Program {
             System.out.print("Digite seu email: ");
             String email = sc.nextLine();
 
-            Conta conta = repository.verificarContaExiste(repository, email);
+            boolean contaExiste = principalDAO.getContaDAO().verificarContaExiste(email);
 
-            if (conta != null) {
+            if (contaExiste) {
 
                 System.out.print("Digite sua senha: ");
                 String senha = sc.nextLine();
 
-                if (conta.getSenha().equals(senha)) {
-                    repository.setContaAtual(conta);
+                if (principalDAO.getContaDAO().login(email, senha)){
                     System.out.println("\nLogin realizado com sucesso !!");
-                    menu(sc, repository);
+                    menu(sc, principalDAO);
                     break;
                 } else {
                     while (true) {
                         System.out.print("Digite sua senha novamente: ");
                         senha = sc.nextLine();
 
-                        if (conta.getSenha().equals(senha)) {
+                        if (principalDAO.getContaDAO().login(email, senha)) {
                             System.out.println("\nLogin realizado com sucesso !!");
-                            menu(sc, repository);
+                            menu(sc, principalDAO);
                             break;
                         }
                     }
@@ -132,7 +126,7 @@ public class Program {
         }
     }
 
-    private static void cadastrar(Scanner sc) throws SQLException, ClassNotFoundException {
+    private static void cadastrar(Scanner sc, PrincipalDAO principalDAO) throws SQLException {
 
         System.out.println("\nCerto, vou te fazer algumas perguntas sobre seus dados !!");
 
@@ -177,21 +171,15 @@ public class Program {
 
         Conta conta = new Conta( email, senha, pessoa);
 
-        EmpresaDAO empresaDAO = new EmpresaDAO();
-        empresaDAO.insert(empresa);
+        principalDAO.getEmpresaDAO().insert(empresa);
 
-        EnderecoDAO enderecoDAO = new EnderecoDAO();
-        enderecoDAO.insert(endereco);
+        principalDAO.getEnderecoDAO().insert(endereco);
 
-        PessoaDAO pessoaDAO = new PessoaDAO();
-        pessoaDAO.insert(pessoa);
+        principalDAO.getPessoaDAO().insert(pessoa);
 
-        ContaDAO contaDAO = new ContaDAO();
-        contaDAO.insert(conta);
+        principalDAO.getContaDAO().insert(conta);
 
-        System.out.printf("Cadastro realizado com sucesso !!");
-
-//        login(repository, sc);
+        System.out.print("Cadastro realizado com sucesso !!");
 
     }
 

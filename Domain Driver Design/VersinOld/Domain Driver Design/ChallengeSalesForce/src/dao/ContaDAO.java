@@ -11,7 +11,7 @@ import java.time.ZoneId;
 
 public class ContaDAO {
 
-    public Connection myConnection;
+    public final Connection myConnection;
 
     public ContaDAO() throws ClassNotFoundException, SQLException {
         this.myConnection = new ConnectionFactory().getConnection();
@@ -38,5 +38,28 @@ public class ContaDAO {
 //        return "Conta inserida com sucesso!";
     }
 
+    public boolean verificarContaExiste(String email) throws SQLException {
+        PreparedStatement stmt = myConnection.prepareStatement(
+                "SELECT * FROM TB_CONTA WHERE EMAIL = ?"
+        );
+
+        stmt.setString(1, email);
+        boolean result = stmt.execute();
+        stmt.close();
+        return result;
+    }
+
+    public boolean login(String email, String senha) throws SQLException {
+        PreparedStatement stmt = myConnection.prepareStatement(
+                "SELECT * FROM TB_CONTA WHERE EMAIL = ? AND SENHA = ?"
+        );
+
+        stmt.setString(1, email);
+        stmt.setString(2, senha);
+
+        boolean result = stmt.execute();
+        stmt.close();
+        return result;
+    }
 
 }

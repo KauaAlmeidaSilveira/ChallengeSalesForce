@@ -8,7 +8,7 @@ import model.entities.Endereco;
 
 public class EnderecoDAO {
 
-    private Connection myConnection;
+    private final Connection myConnection;
 
     public EnderecoDAO() throws ClassNotFoundException, SQLException {
         this.myConnection = new ConnectionFactory().getConnection();

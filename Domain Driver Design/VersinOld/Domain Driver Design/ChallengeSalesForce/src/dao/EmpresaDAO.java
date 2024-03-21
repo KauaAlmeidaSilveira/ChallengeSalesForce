@@ -9,7 +9,7 @@ import model.entities.Empresa;
 
 public class EmpresaDAO {
 
-    public Connection myConnection;
+    public final Connection myConnection;
 
     public EmpresaDAO() throws ClassNotFoundException, SQLException {
         this.myConnection = new ConnectionFactory().getConnection();
@@ -17,7 +17,7 @@ public class EmpresaDAO {
 
     public void insert(Empresa empresa) throws SQLException {
         PreparedStatement stmt = myConnection.prepareStatement(
-                "INSERT INTO TB_EMPRESA (ID, NOME, DEPARTAMENTO, DIVISAO, NUM_FUNCIONARIO, INICIO_DIA, FIM_DIA) " +
+                "INSERT INTO TB_EMPRESA (ID, NOME, DEPARTAMENTO, DIVISAO, NUM_FUNCIONARIO, INICIO_JORNADA, FIM_JORNADA) " +
                         "VALUES (?, ?, ?, ?, ?, ?, ?)"
         );
 
