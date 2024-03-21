@@ -18,6 +18,7 @@ public class Pessoa {
     private Endereco endereco;
 
     public Pessoa(String nome, String apelido, String telefone, String celular, String RG, String cargo, Empresa empresa, Endereco endereco) {
+        this.id = 1;
         this.nome = nome;
         this.apelido = apelido;
         this.telefone = telefone;

@@ -22,9 +22,9 @@ public class EnderecoDAO {
 
         stmt.setString(1, endereco.getRua());
         stmt.setString(2, endereco.getCidade());
-        stmt.setString(4, endereco.getEstado());
-        stmt.setString(5, endereco.getCep());
-        stmt.setString(6, endereco.getPais());
+        stmt.setString(3, endereco.getEstado());
+        stmt.setString(4, endereco.getCep());
+        stmt.setString(5, endereco.getPais());
 
         stmt.execute();
         stmt.close();

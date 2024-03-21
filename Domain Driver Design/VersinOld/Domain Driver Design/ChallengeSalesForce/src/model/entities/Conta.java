@@ -11,16 +11,16 @@ public class Conta {
     private String email;
     private String senha;
     private String status;
-    private LocalDate dataRegistro;
-    private LocalDateTime ultimoAcesso;
+    private String dataRegistro;
+    private String ultimoAcesso;
 
     private Pessoa pessoa;
 
     public Conta(String email, String senha, Pessoa pessoa) {
+        this.id = 1;
         this.usuario = pessoa.getNome()+"@force.com";
         this.email = email;
         this.senha = senha;
-        this.dataRegistro = LocalDate.now();
         this.pessoa = pessoa;
         this.status = "Ativo";
     }
@@ -57,19 +57,19 @@ public class Conta {
         this.senha = senha;
     }
 
-    public LocalDate getDataRegistro() {
+    public String getDataRegistro() {
         return dataRegistro;
     }
 
-    public void setDataRegistro(LocalDate dataRegistro) {
+    public void setDataRegistro(String dataRegistro) {
         this.dataRegistro = dataRegistro;
     }
 
-    public LocalDateTime getUltimoAcesso() {
+    public String getUltimoAcesso() {
         return ultimoAcesso;
     }
 
-    public void setUltimoAcesso(LocalDateTime ultimoAcesso) {
+    public void setUltimoAcesso(String ultimoAcesso) {
         this.ultimoAcesso = ultimoAcesso;
     }
 

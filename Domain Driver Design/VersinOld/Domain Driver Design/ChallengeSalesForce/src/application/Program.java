@@ -1,7 +1,7 @@
 package application;
 
 import dao.*;
-import repository.Repository;
+//import repository.Repository;
 import model.entities.Conta;
 import model.entities.Empresa;
 import model.entities.Endereco;
@@ -15,7 +15,7 @@ public class Program  {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         Scanner sc = new Scanner(System.in);
         PrincipalDAO principalDAO = new PrincipalDAO();
-        Repository repository = new Repository();
+//        Repository repository = new Repository();
 
         System.out.println("Bem vindo, somos a SalesForce !!");
         System.out.print("Ja possui uma conta ? (Sim/Não): ");
@@ -180,6 +180,8 @@ public class Program  {
         principalDAO.getContaDAO().insert(conta);
 
         System.out.print("Cadastro realizado com sucesso !!");
+
+        menu(sc, principalDAO);
 
     }
 

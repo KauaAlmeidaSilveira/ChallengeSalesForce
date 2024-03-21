@@ -9,14 +9,16 @@ public class Empresa {
     private String departamento;
     private String divisao;
     private Integer numFuncionario;
-    private Instant inicioJornada;
-    private Instant fimJornada;
+    private String inicioJornada;
+    private String fimJornada;
 
     public Empresa(String nome) {
+        this.id = 1;
         this.nome = nome;
+        this.numFuncionario = 1;
     }
 
-    public Empresa(String nome, String departamento, String divisao, Integer numFuncionario, Instant inicioJornada, Instant fimJornada) {
+    public Empresa(String nome, String departamento, String divisao, Integer numFuncionario, String inicioJornada, String fimJornada) {
         this.nome = nome;
         this.departamento = departamento;
         this.divisao = divisao;
@@ -65,19 +67,19 @@ public class Empresa {
         this.numFuncionario = numFuncionario;
     }
 
-    public Instant getInicioJornada() {
+    public String getInicioJornada() {
         return inicioJornada;
     }
 
-    public void setInicioJornada(Instant inicioJornada) {
+    public void setInicioJornada(String inicioJornada) {
         this.inicioJornada = inicioJornada;
     }
 
-    public Instant getFimJornada() {
+    public String getFimJornada() {
         return fimJornada;
     }
 
-    public void setFimJornada(Instant fimJornada) {
+    public void setFimJornada(String fimJornada) {
         this.fimJornada = fimJornada;
     }
 

@@ -4,12 +4,17 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+
 import Connection.ConnectionFactory;
 import model.entities.Empresa;
 
 public class EmpresaDAO {
 
     public final Connection myConnection;
+
+    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
     public EmpresaDAO() throws ClassNotFoundException, SQLException {
         this.myConnection = new ConnectionFactory().getConnection();
@@ -26,8 +31,8 @@ public class EmpresaDAO {
         stmt.setString(3, empresa.getDepartamento());
         stmt.setString(4, empresa.getDivisao());
         stmt.setInt(5, empresa.getNumFuncionario());
-        stmt.setDate(6, (Date) Date.from(empresa.getInicioJornada()));
-        stmt.setDate(7, (Date) Date.from(empresa.getFimJornada()));
+        stmt.setString(6 , empresa.getInicioJornada());
+        stmt.setString(7,  empresa.getFimJornada());
 
         stmt.execute();
         stmt.close();
