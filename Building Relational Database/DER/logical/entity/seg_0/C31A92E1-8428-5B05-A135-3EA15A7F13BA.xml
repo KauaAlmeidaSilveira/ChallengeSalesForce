@@ -26,7 +26,6 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:41:36 UTC</createdTime>
 <ownerDesignName>DER</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -37,14 +36,13 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:44:02 UTC</createdTime>
 <ownerDesignName>DER</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>30 CHAR</dataTypeSize>
 <ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EstadoProvincia" id="3DD2E2BD-A893-502F-72CF-0B30752FFF10">
+<Attribute name="Estado" id="3DD2E2BD-A893-502F-72CF-0B30752FFF10">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:44:25 UTC</createdTime>
 <ownerDesignName>DER</ownerDesignName>
@@ -74,6 +72,7 @@
 BR
 ]]></commentInRDBMS>
 <ownerDesignName>DER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>

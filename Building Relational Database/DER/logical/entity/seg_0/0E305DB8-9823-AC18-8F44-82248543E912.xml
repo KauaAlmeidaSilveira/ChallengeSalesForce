@@ -94,18 +94,6 @@ Pix]]></commentInRDBMS>
 <dataTypeSize>20 CHAR</dataTypeSize>
 <ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Pedido" id="67E56FA7-182C-0198-00E4-3C0216A67277">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-11-30 13:55:52 UTC</createdTime>
-<generatorID>2C789025-685D-EC64-2B2F-BC6860A7AA7B</generatorID>
-<ownerDesignName>DER</ownerDesignName>
-<referedAttribute>DEBFD672-584B-326D-7E7D-C2BD38E27CD0</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="59CC8E2F-0D34-053D-5C95-C172535B4938" name="Pagamento PK">

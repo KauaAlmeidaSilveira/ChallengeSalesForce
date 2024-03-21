@@ -34,17 +34,29 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Pagamento" id="AF4D8382-45E9-B528-55E1-6DE9EDC88906">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-11-30 13:42:54 UTC</createdTime>
-<generatorID>2C789025-685D-EC64-2B2F-BC6860A7AA7B</generatorID>
+<Attribute name="ID_Pagamento" id="1DF31BEF-FD1F-4815-46B7-70CC8DABD39F">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-21 12:40:27 UTC</createdTime>
+<generatorID>0CF26E9B-706C-3684-3592-0805F80B0645</generatorID>
 <ownerDesignName>DER</ownerDesignName>
 <referedAttribute>6DC6F2A9-797A-D14F-DF71-A0CEFA7A66C6</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Servico" id="008A69BA-E80D-342F-3716-B3F04DE1110B">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-21 12:36:52 UTC</createdTime>
+<generatorID>7ABE2433-DD46-2AFF-4456-72795BF702BD</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<referedAttribute>34AAE957-055D-4763-DC98-64EF4DAB562B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="DataPedido" id="CA289325-BD6D-9E7D-13F0-1BC44468316D">
 <createdBy>Kauã</createdBy>
