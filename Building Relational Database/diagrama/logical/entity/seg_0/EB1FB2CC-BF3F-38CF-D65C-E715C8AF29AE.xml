@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EB1FB2CC-BF3F-38CF-D65C-E715C8AF29AE" name="ServicoConta">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-01 14:30:44 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_ServicoConta" id="AE7F5DEE-5532-8C09-827B-A2C19737A9FD">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-01 14:35:18 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Servico" id="EAA957A1-48FD-5DBF-3DE4-619784100D81">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-01 14:31:52 UTC</createdTime>
+<generatorID>9E84E43A-14AA-544E-F86D-1B10EE3AFD0B</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<referedAttribute>34AAE957-055D-4763-DC98-64EF4DAB562B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Conta" id="B206D657-BBEA-E887-04D5-D780E4D73486">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-01 14:31:47 UTC</createdTime>
+<generatorID>D5242E0F-6132-8D6B-80CC-1CA79FDD0FB8</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<referedAttribute>B224B6F0-E57D-12A3-FB86-A0F82AABC00D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Status" id="BA95F75E-CAB6-5090-08EC-BDF028A4603D">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-01 14:38:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[ATIVO, INATIVO]]></commentInRDBMS>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DataInicio" id="E995D442-FC46-A79E-D0E6-928C9FCDBC3B">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-01 14:42:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 20/11/2004 19:50:52]]></commentInRDBMS>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DataTermino" id="A8D0F789-0F34-B586-7B87-3350D178B765">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-01 14:42:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 20/11/2004 19:50:52]]></commentInRDBMS>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="16D1D087-22FC-BB74-8B22-58438871E57D" name="ServicoConta PK">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-01 14:31:23 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AE7F5DEE-5532-8C09-827B-A2C19737A9FD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

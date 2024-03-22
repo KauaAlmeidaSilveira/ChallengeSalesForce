@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="164C2C74-11A8-4A72-D080-CB1C2332D223" name="Conta">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:11:20 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Conta" id="B224B6F0-E57D-12A3-FB86-A0F82AABC00D">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:56:26 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Usuario" id="E199A809-15ED-B7B7-EB23-8C9AC5613483">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:56:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: comecoEmail@force.com]]></commentInRDBMS>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Email" id="5A86F1A5-0C42-B880-2743-5EBF2EB1B269">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:58:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: email@gmail.com]]></commentInRDBMS>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Senha" id="B9779845-12E3-94F7-BE2F-A98AE0FE028F">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-09 00:00:19 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12 CHAR</dataTypeSize>
+<ownDataTypeParameters>12 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Status" id="9F0A7D4C-E6DC-BC17-1E15-B14F9F64FADB">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-01 22:39:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[ATIVO, INATIVO]]></commentInRDBMS>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DataRegistro" id="3703B102-26A7-6C91-09E5-67D270F82253">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-09 00:00:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 20/11/2004 19:50:52]]></commentInRDBMS>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="UltimoAcesso" id="4114CAE2-42EE-2478-F8DB-D878249A9ECF">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-09 00:01:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 25/11/2004 19:50:52]]></commentInRDBMS>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Pessoa" id="D9DB0236-3AE1-34AA-C560-347377134F3B">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-30 14:04:52 UTC</createdTime>
+<generatorID>E5F97B6E-5295-2F5E-9853-0F97ACFD852C</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<referedAttribute>43DE73D7-EDB3-9C61-C0A3-98655C17263D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1C1E2795-8C3B-4742-8CB3-F8B878B5EDB2" name="Conta PK">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-10-08 23:56:37 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B224B6F0-E57D-12A3-FB86-A0F82AABC00D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
