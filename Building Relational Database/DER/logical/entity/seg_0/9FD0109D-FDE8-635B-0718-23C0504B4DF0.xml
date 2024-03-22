@@ -54,7 +54,7 @@
 <dataTypeSize>15</dataTypeSize>
 <ownDataTypeParameters>15,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="NumFuncionario" id="90BB6120-43BF-31CA-E21B-2C4197C08C9A">
+<Attribute name="Num_Funcionario" id="90BB6120-43BF-31CA-E21B-2C4197C08C9A">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:51:42 UTC</createdTime>
 <commentInRDBMS><![CDATA[9999999999]]></commentInRDBMS>
@@ -66,7 +66,7 @@
 <dataTypeSize>10 CHAR</dataTypeSize>
 <ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="InicioJornada" id="DD8EA99D-16DC-96C2-9D82-6B6153D41BF6">
+<Attribute name="Inicio_Jornada" id="DD8EA99D-16DC-96C2-9D82-6B6153D41BF6">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:52:25 UTC</createdTime>
 <commentInRDBMS><![CDATA[06:00]]></commentInRDBMS>
@@ -77,7 +77,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="FimJornada" id="F9351626-4ACB-0B5D-C58C-C3C7D8DE1944">
+<Attribute name="Fim_Jornada" id="F9351626-4ACB-0B5D-C58C-C3C7D8DE1944">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:52:54 UTC</createdTime>
 <commentInRDBMS><![CDATA[23:00]]></commentInRDBMS>

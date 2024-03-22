@@ -53,7 +53,7 @@
 <dataTypeSize>30 CHAR</dataTypeSize>
 <ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="CEP" id="FC30D87C-A725-8A74-E906-4BF33D88EBA2">
+<Attribute name="cep" id="FC30D87C-A725-8A74-E906-4BF33D88EBA2">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:44:46 UTC</createdTime>
 <commentInRDBMS><![CDATA[99999999 ou 99999-999]]></commentInRDBMS>
