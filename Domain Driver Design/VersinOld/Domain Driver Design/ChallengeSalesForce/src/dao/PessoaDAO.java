@@ -11,6 +11,9 @@ public  class  PessoaDAO {
 
     private final Connection myConnection;
 
+    private final EnderecoDAO enderecoDAO = new EnderecoDAO();
+    private final EmpresaDAO empresaDAO = new EmpresaDAO();
+
     public PessoaDAO() throws ClassNotFoundException, SQLException {
         this.myConnection = new ConnectionFactory().getConnection();
     }
@@ -18,23 +21,43 @@ public  class  PessoaDAO {
     public void insert(Pessoa pessoa) throws SQLException {
 
         PreparedStatement stmt = myConnection.prepareStatement(
-                "insert into tb_pessoa (id, nome, apelido, telefone, celular, RG, cargo, empresa_id, endereco_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                "INSERT INTO tb_pessoa (nome, celular, cargo, rg, id_endereco, id_empresa) " +
+                        "VALUES (?, ?, ?, ?, ?, ?)"
         );
 
-        stmt.setInt(1, pessoa.getId());
-        stmt.setString(2, pessoa.getNome());
-        stmt.setString(3, pessoa.getApelido());
-        stmt.setString(4, pessoa.getTelefone());
-        stmt.setString(5, pessoa.getCelular());
-        stmt.setString(6, pessoa.getRG());
-        stmt.setString(7, pessoa.getCargo());
-        stmt.setInt(8, pessoa.getEmpresa().getId());
-        stmt.setInt(9, pessoa.getEndereco().getId());
+        stmt.setString(1, pessoa.getNome());
+        stmt.setString(2, pessoa.getCelular());
+        stmt.setString(3, pessoa.getCargo());
+        stmt.setString(4, pessoa.getRg());
+        stmt.setInt(5, enderecoDAO.getId(pessoa.getEndereco()));
+        stmt.setInt(6, empresaDAO.getId(pessoa.getEmpresa()));
+
 
         stmt.execute();
         stmt.close();
 
 //        return "Pessoa inserida com sucesso!";
+    }
+
+    public Integer getId(Pessoa pessoa) throws SQLException {
+        PreparedStatement stmt = myConnection.prepareStatement(
+                "SELECT id_pessoa FROM tb_pessoa WHERE nome = ? AND rg = ?"
+        );
+
+        stmt.setString(1, pessoa.getNome());
+        stmt.setString(2, pessoa.getRg());
+
+        Integer id = null;
+        try {
+            var rs = stmt.executeQuery();
+            if (rs.next()) {
+                id = rs.getInt("id_pessoa");
+            }
+        } finally {
+            stmt.close();
+        }
+
+        return id;
     }
 
 }

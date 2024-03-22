@@ -12,9 +12,15 @@ public class Endereco {
     private String pais;
 
     public Endereco(String rua, String cidade) {
-        this.id = 1;
         this.rua = rua;
         this.cidade = cidade;
+    }
+
+    public Endereco(String rua, String cidade, String estado, String cep) {
+        this.rua = rua;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.cep = cep;
     }
 
     public Integer getId() {

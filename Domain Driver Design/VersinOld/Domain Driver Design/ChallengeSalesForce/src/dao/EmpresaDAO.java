@@ -14,30 +14,40 @@ public class EmpresaDAO {
 
     public final Connection myConnection;
 
-    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-
     public EmpresaDAO() throws ClassNotFoundException, SQLException {
         this.myConnection = new ConnectionFactory().getConnection();
     }
 
     public void insert(Empresa empresa) throws SQLException {
         PreparedStatement stmt = myConnection.prepareStatement(
-                "INSERT INTO TB_EMPRESA (ID, NOME, DEPARTAMENTO, DIVISAO, NUM_FUNCIONARIO, INICIO_JORNADA, FIM_JORNADA) " +
-                        "VALUES (?, ?, ?, ?, ?, ?, ?)"
+                "INSERT INTO tb_empresa (nome) VALUES (?)"
         );
-
-        stmt.setInt(1, empresa.getId());
-        stmt.setString(2, empresa.getNome());
-        stmt.setString(3, empresa.getDepartamento());
-        stmt.setString(4, empresa.getDivisao());
-        stmt.setInt(5, empresa.getNumFuncionario());
-        stmt.setString(6 , empresa.getInicioJornada());
-        stmt.setString(7,  empresa.getFimJornada());
+        stmt.setString(1, empresa.getNome());
 
         stmt.execute();
         stmt.close();
 
 //        return "Empresa inserida com sucesso!";
+    }
+
+    public Integer getId(Empresa empresa) throws SQLException {
+        PreparedStatement stmt = myConnection.prepareStatement(
+                "SELECT id_empresa FROM tb_empresa WHERE nome = ?"
+        );
+
+        stmt.setString(1, empresa.getNome());
+
+        Integer id = null;
+        try {
+            var rs = stmt.executeQuery();
+            if (rs.next()) {
+                id = rs.getInt("id_empresa");
+            }
+        } finally {
+            stmt.close();
+        }
+
+        return id;
     }
 
 }

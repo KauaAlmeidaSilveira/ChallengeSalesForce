@@ -17,19 +17,41 @@ public class EnderecoDAO {
     public void insert(Endereco endereco) throws SQLException {
 
         PreparedStatement stmt = myConnection.prepareStatement(
-                "insert into tb_endereco (rua, cidade, estado, cep, pais) values (?, ?, ?, ?, ?)"
+                "INSERT INTO tb_endereco (rua, cidade, estado, cep) values (?, ?, ?, ?)"
         );
 
         stmt.setString(1, endereco.getRua());
         stmt.setString(2, endereco.getCidade());
         stmt.setString(3, endereco.getEstado());
         stmt.setString(4, endereco.getCep());
-        stmt.setString(5, endereco.getPais());
 
         stmt.execute();
         stmt.close();
 
 //        return "Endereço inserido com sucesso!";
+    }
+
+    public Integer getId(Endereco endereco) throws SQLException {
+        PreparedStatement stmt = myConnection.prepareStatement(
+                "SELECT id_endereco FROM tb_endereco WHERE rua = ? AND cidade = ? AND estado = ? AND cep = ?"
+        );
+
+        stmt.setString(1, endereco.getRua());
+        stmt.setString(2, endereco.getCidade());
+        stmt.setString(3, endereco.getEstado());
+        stmt.setString(4, endereco.getCep());
+
+        Integer id = null;
+        try {
+            var rs = stmt.executeQuery();
+            if (rs.next()) {
+                id = rs.getInt("id_endereco");
+            }
+        } finally {
+            stmt.close();
+        }
+
+        return id;
     }
 
 

@@ -133,11 +133,8 @@ public class Program  {
         System.out.print("Digite seu nome: ");
         String nome = sc.nextLine();
 
-        System.out.print("Digite seu apelido: ");
-        String apelido = sc.nextLine();
-
-        System.out.print("Digite seu cargo: ");
-        String cargo = sc.nextLine();
+        System.out.print("Digite seu rg: ");
+        String rg = sc.nextLine();
 
         System.out.print("Digite seu email: ");
         String email = sc.nextLine();
@@ -145,17 +142,14 @@ public class Program  {
         System.out.print("Digite sua senha: ");
         String senha = sc.nextLine();
 
-        System.out.print("Digite seu telefone: ");
-        String telefone = sc.nextLine();
-
         System.out.print("Digite seu celular: ");
         String celular = sc.nextLine();
 
-        System.out.print("Digite seu RG: ");
-        String RG = sc.nextLine();
-
-        System.out.print("Digite sua empresa: ");
+        System.out.print("Digite o nome da sua empresa: ");
         String nomeEmpresa = sc.nextLine();
+
+        System.out.print("Digite seu cargo: ");
+        String cargo = sc.nextLine();
 
         System.out.print("Digite seu endereço: ");
         String rua = sc.nextLine();
@@ -163,11 +157,17 @@ public class Program  {
         System.out.print("Digite sua cidade: ");
         String cidade = sc.nextLine();
 
+        System.out.print("Digite seu estado: ");
+        String estado = sc.nextLine();
+
+        System.out.print("Digite seu cep: ");
+        String cep = sc.nextLine();
+
         Empresa empresa = new Empresa(nomeEmpresa);
 
-        Endereco endereco = new Endereco(rua, cidade);
+        Endereco endereco = new Endereco(rua, cidade, estado, cep);
 
-        Pessoa pessoa = new Pessoa(nome, apelido, telefone, celular, RG, cargo, empresa, endereco);
+        Pessoa pessoa = new Pessoa(nome, celular, cargo, rg, empresa, endereco);
 
         Conta conta = new Conta( email, senha, pessoa);
 
