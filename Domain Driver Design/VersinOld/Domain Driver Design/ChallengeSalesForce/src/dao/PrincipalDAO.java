@@ -8,7 +8,7 @@ public class  PrincipalDAO {
     private final EmpresaDAO empresaDAO = new EmpresaDAO();
     private final EnderecoDAO enderecoDAO = new EnderecoDAO();
     private final PessoaDAO pessoaDAO = new PessoaDAO();
-
+    private final ServicoDAO servicoDAO = new ServicoDAO();
 
     public PrincipalDAO() throws SQLException, ClassNotFoundException {
     }
@@ -28,4 +28,9 @@ public class  PrincipalDAO {
     public PessoaDAO getPessoaDAO() {
         return pessoaDAO;
     }
+
+    public ServicoDAO getServicoDAO() {
+        return servicoDAO;
+    }
+
 }

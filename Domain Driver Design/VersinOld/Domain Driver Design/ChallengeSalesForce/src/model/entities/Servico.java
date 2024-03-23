@@ -10,6 +10,15 @@ public class Servico {
     private String categoria;
     private Double valor;
 
+    public Servico() {
+    }
+
+    public Servico(String nome, String categoria, Double valor) {
+        this.nome = nome;
+        this.categoria = categoria;
+        this.valor = valor;
+    }
+
     public Servico(Integer id, String nome, String descricao, String categoria, Double valor) {
         this.id = id;
         this.nome = nome;
@@ -63,28 +72,20 @@ public class Servico {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Servico servico = (Servico) o;
-        return Objects.equals(nome, servico.nome) && Objects.equals(categoria, servico.categoria);
+        return Objects.equals(nome, servico.nome) && Objects.equals(descricao, servico.descricao) && Objects.equals(categoria, servico.categoria) && Objects.equals(valor, servico.valor);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, categoria);
+        return Objects.hash(nome, descricao, categoria, valor);
     }
 
     @Override
     public String toString() {
-        return "Serviço: "+ "\n" +
-                "Id: "+ id + "\n" +
-                "Nome: "+ nome + "\n" +
-                "Descrição: " + descricao + "\n" +
-                "Categoria: " + categoria + "\n" +
+        return "Servico: \n" +
+                "Nome: " + nome + '\n' +
+                "Descricao: " + descricao + '\n' +
+                "Categoria: " + categoria + '\n' +
                 "Valor: " + valor;
-    }
-
-    public String toStringMeuServico() {
-        return "Serviço: "+ "\n" +
-                "Nome: "+ nome + "\n" +
-                "Descrição: " + descricao + "\n" +
-                "Categoria: " + categoria;
     }
 }

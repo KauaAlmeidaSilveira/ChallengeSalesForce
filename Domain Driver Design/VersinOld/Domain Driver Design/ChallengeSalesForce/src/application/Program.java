@@ -2,12 +2,10 @@ package application;
 
 import dao.*;
 //import repository.Repository;
-import model.entities.Conta;
-import model.entities.Empresa;
-import model.entities.Endereco;
-import model.entities.Pessoa;
+import model.entities.*;
 
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Program  {
@@ -41,7 +39,7 @@ public class Program  {
         sc.close();
     }
 
-    private static void menu(Scanner sc, PrincipalDAO principalDAO) {
+    private static void menu(Scanner sc, PrincipalDAO principalDAO) throws SQLException {
 
         while (true) {
             System.out.println("\nMenu:\n" +
@@ -62,7 +60,7 @@ public class Program  {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("Todos nossos serviços: ");
+                    principalDAO.getServicoDAO().findAll().forEach(System.out::println);
                     break;
 
                 case 2:

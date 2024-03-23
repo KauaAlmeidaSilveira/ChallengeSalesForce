@@ -1,13 +1,10 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 
-import Connection.ConnectionFactory;
+import connections.ConnectionFactory;
 import model.entities.Empresa;
 
 public class EmpresaDAO {

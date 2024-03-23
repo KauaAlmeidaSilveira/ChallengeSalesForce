@@ -1,6 +1,6 @@
 package dao;
 
-import Connection.ConnectionFactory;
+import connections.ConnectionFactory;
 import model.entities.Pessoa;
 
 import java.sql.Connection;

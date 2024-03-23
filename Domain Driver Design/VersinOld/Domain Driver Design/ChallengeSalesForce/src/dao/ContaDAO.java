@@ -1,10 +1,9 @@
 package dao;
 
-import Connection.ConnectionFactory;
+import connections.ConnectionFactory;
 import model.entities.Conta;
 
 import java.sql.*;
-import java.time.ZoneId;
 
 public class ContaDAO {
 
@@ -37,7 +36,6 @@ public class ContaDAO {
     public boolean verificarContaExiste(String email) throws SQLException {
         PreparedStatement stmt = null;
         ResultSet rs = null;
-        boolean contaExiste = false;
 
         try {
             stmt = myConnection.prepareStatement("SELECT * FROM TB_CONTA WHERE EMAIL = ?");
@@ -57,6 +55,7 @@ public class ContaDAO {
         }
         return false;
     }
+
 
     public boolean login(String email, String senha) throws SQLException {
         PreparedStatement stmt = null;

@@ -2,8 +2,12 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import Connection.ConnectionFactory;
+import java.util.ArrayList;
+import java.util.List;
+
+import connections.ConnectionFactory;
 import model.entities.Endereco;
 
 public class EnderecoDAO {
@@ -28,7 +32,6 @@ public class EnderecoDAO {
         stmt.execute();
         stmt.close();
 
-//        return "Endereço inserido com sucesso!";
     }
 
     public Integer getId(Endereco endereco) throws SQLException {
@@ -54,5 +57,29 @@ public class EnderecoDAO {
         return id;
     }
 
+    public List<Endereco> findAll() throws SQLException {
+        PreparedStatement stmt = myConnection.prepareStatement("SELECT * FROM tb_endereco");
+        ResultSet rs = stmt.executeQuery();
+
+        List<Endereco> enderecos = new ArrayList<>();
+
+        try {
+            while (rs.next()) {
+                enderecos.add(new Endereco(
+                        rs.getInt("id_endereco"),
+                        rs.getString("rua"),
+                        rs.getString("cidade"),
+                        rs.getString("estado"),
+                        rs.getString("cep"),
+                        rs.getString("pais")
+                ));
+            }
+        } finally {
+            stmt.close();
+            rs.close();
+        }
+
+        return enderecos;
+    }
 
 }
