@@ -32,7 +32,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ID_Conta" id="B206D657-BBEA-E887-04D5-D780E4D73486">
 <createdBy>Kauã</createdBy>
@@ -44,7 +44,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Status" id="BA95F75E-CAB6-5090-08EC-BDF028A4603D">
 <createdBy>Kauã</createdBy>
@@ -87,6 +87,8 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>AE7F5DEE-5532-8C09-827B-A2C19737A9FD</attributeRef>
+<attributeRef>EAA957A1-48FD-5DBF-3DE4-619784100D81</attributeRef>
+<attributeRef>B206D657-BBEA-E887-04D5-D780E4D73486</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
