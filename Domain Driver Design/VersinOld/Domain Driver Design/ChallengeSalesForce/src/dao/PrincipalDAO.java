@@ -9,6 +9,7 @@ public class  PrincipalDAO {
     private final EnderecoDAO enderecoDAO = new EnderecoDAO();
     private final PessoaDAO pessoaDAO = new PessoaDAO();
     private final ServicoDAO servicoDAO = new ServicoDAO();
+    private final ServicoContaDAO servicoContaDAO = new ServicoContaDAO();
 
     public PrincipalDAO() throws SQLException, ClassNotFoundException {
     }
@@ -31,6 +32,10 @@ public class  PrincipalDAO {
 
     public ServicoDAO getServicoDAO() {
         return servicoDAO;
+    }
+
+    public ServicoContaDAO getServicoContaDAO() {
+        return servicoContaDAO;
     }
 
 }

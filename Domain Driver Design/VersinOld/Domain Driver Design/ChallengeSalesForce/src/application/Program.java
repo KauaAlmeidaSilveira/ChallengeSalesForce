@@ -5,6 +5,7 @@ import dao.*;
 import model.entities.*;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,7 +14,6 @@ public class Program  {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         Scanner sc = new Scanner(System.in);
         PrincipalDAO principalDAO = new PrincipalDAO();
-//        Repository repository = new Repository();
 
         System.out.println("Bem vindo, somos a SalesForce !!");
         System.out.print("Ja possui uma conta ? (Sim/Não): ");
@@ -39,7 +39,7 @@ public class Program  {
         sc.close();
     }
 
-    private static void menu(Scanner sc, PrincipalDAO principalDAO) throws SQLException {
+    private static void menu(Scanner sc, PrincipalDAO principalDAO, Conta conta) throws SQLException, ClassNotFoundException {
 
         while (true) {
             System.out.println("\nMenu:\n" +
@@ -64,11 +64,22 @@ public class Program  {
                     break;
 
                 case 2:
-                    System.out.println("Assinar um serviço: ");
+                    System.out.println("Nossos serviços: \n");
+
+                    principalDAO.getServicoDAO().findAll().forEach(System.out::println);
+
+                    System.out.println("\nDigite o id do serviço que deseja assinar: ");
+                    int idServico = sc.nextInt();
+
+                    principalDAO.getServicoContaDAO().insert(new ServicoConta(idServico, conta.getId(), LocalDate.now().toString()));
+
+                    System.out.println("Servico assinado com sucesso !!");
                     break;
 
                 case 3:
-                    System.out.println("Listar meus serviços: ");
+                    List<Servico> servicos = principalDAO.getServicoContaDAO().getMyServices(conta.getId());
+                    System.out.println("Seus serviços: \n");
+                    servicos.forEach(System.out::println);
                     break;
 
                 case 4:
@@ -85,7 +96,7 @@ public class Program  {
         }
     }
 
-    private static void login(PrincipalDAO principalDAO, Scanner sc) throws SQLException {
+    private static void login(PrincipalDAO principalDAO, Scanner sc) throws SQLException, ClassNotFoundException {
         System.out.println("\n=== Login ===");
 
         while (true) {
@@ -102,7 +113,7 @@ public class Program  {
 
                 if (principalDAO.getContaDAO().login(email, senha)){
                     System.out.println("\nLogin realizado com sucesso !!");
-                    menu(sc, principalDAO);
+                    menu(sc, principalDAO, new Conta(principalDAO.getContaDAO().getIdByEmail(email), email, senha));
                     break;
                 } else {
                     while (true) {
@@ -111,7 +122,7 @@ public class Program  {
 
                         if (principalDAO.getContaDAO().login(email, senha)) {
                             System.out.println("\nLogin realizado com sucesso !!");
-                            menu(sc, principalDAO);
+                            menu(sc, principalDAO, new Conta(principalDAO.getContaDAO().getIdByEmail(email), email, senha));
                             break;
                         }
                     }
@@ -124,7 +135,7 @@ public class Program  {
         }
     }
 
-    private static void cadastrar(Scanner sc, PrincipalDAO principalDAO) throws SQLException {
+    private static void cadastrar(Scanner sc, PrincipalDAO principalDAO) throws SQLException, ClassNotFoundException {
 
         System.out.println("\nCerto, vou te fazer algumas perguntas sobre seus dados !!");
 
@@ -179,7 +190,7 @@ public class Program  {
 
         System.out.print("Cadastro realizado com sucesso !!");
 
-        menu(sc, principalDAO);
+        login(principalDAO, sc);
 
     }
 

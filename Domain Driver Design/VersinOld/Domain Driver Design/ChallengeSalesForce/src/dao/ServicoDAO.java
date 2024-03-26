@@ -81,4 +81,31 @@ public class ServicoDAO {
         return servicos;
     }
 
+    public Servico findById(int id) throws SQLException {
+        PreparedStatement stmt = myConnection.prepareStatement(
+                "SELECT * FROM tb_servico WHERE id_servico = ?"
+        );
+        stmt.setInt(1, id);
+
+        ResultSet rs = stmt.executeQuery();
+
+        Servico servico = null;
+
+        try {
+            if (rs.next()) {
+                servico = new Servico(
+                        rs.getInt("id_servico"),
+                        rs.getString("nome"),
+                        rs.getString("descricao"),
+                        rs.getString("categoria"),
+                        rs.getDouble("valor")
+                );
+            }
+        } finally {
+            stmt.close();
+            rs.close();
+        }
+
+        return servico;
+    }
 }

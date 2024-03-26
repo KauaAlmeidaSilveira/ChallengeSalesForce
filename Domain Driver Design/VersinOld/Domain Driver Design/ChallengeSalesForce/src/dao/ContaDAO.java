@@ -56,6 +56,28 @@ public class ContaDAO {
         return false;
     }
 
+    public Integer getIdByEmail(String email) throws SQLException {
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            stmt = myConnection.prepareStatement("SELECT * FROM TB_CONTA WHERE EMAIL = ?");
+            stmt.setString(1, email);
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                return rs.getInt("ID_CONTA");
+            }
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stmt != null) {
+                stmt.close();
+            }
+        }
+        return 0;
+    }
 
     public boolean login(String email, String senha) throws SQLException {
         PreparedStatement stmt = null;

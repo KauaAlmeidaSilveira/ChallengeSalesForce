@@ -17,12 +17,16 @@ public class Conta {
     private Pessoa pessoa;
 
     public Conta(String email, String senha, Pessoa pessoa) {
-        this.id = 1;
         this.usuario = pessoa.getNome()+"@force.com";
-        this.email = email;
-        this.senha = senha;
+
         this.pessoa = pessoa;
         this.status = "Ativo";
+    }
+
+    public Conta(Integer id, String email, String senha){
+        this.id = id;
+        this.email = email;
+        this.senha = senha;
     }
 
     public Integer getId() {
