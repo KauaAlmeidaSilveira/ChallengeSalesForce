@@ -68,7 +68,7 @@ public class Program {
                     break;
 
                 case 3:
-                    principalDAO.listarServicos(conta.getId());
+                    principalDAO.listarMeusServicos(conta.getId());
                     break;
 
                 case 4:

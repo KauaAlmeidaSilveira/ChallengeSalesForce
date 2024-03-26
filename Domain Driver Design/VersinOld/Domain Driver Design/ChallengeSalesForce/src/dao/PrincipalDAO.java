@@ -110,7 +110,7 @@ public class PrincipalDAO {
         contaDAO.findAll().forEach(System.out::println);
     }
 
-    public void listarServicos(Integer idConta) throws SQLException, ClassNotFoundException {
+    public void listarMeusServicos(Integer idConta) throws SQLException, ClassNotFoundException {
         List<Servico> servicos = servicoContaDAO.getMyServices(idConta);
         System.out.println("Seus serviços: \n");
 
