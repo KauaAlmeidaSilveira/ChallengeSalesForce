@@ -163,8 +163,6 @@ FOREIGN KEY (ID_SERVICO)
 REFERENCES TB_SERVICO(ID_SERVICO);
 
 ---
-
-
     
 SELECT * FROM TB_PESSOA;
 SELECT * FROM TB_CONTA;
@@ -182,5 +180,3 @@ VALUES ('Serviço 2', 'Descrição do Serviço 2', 'Categoria B', 150.50);
 
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
 VALUES ('Serviço 3', 'Descrição do Serviço 3', 'Categoria A', 200.00);
-
-delete from tb_pagamento where id_pagamento = 3
