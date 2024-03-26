@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Pedido {
 
-    private Integer id;
+    private Long id;
     private Conta conta;
     private Servico servico;
     private Pagamento pagamento;
@@ -14,7 +14,7 @@ public class Pedido {
     public Pedido() {
     }
 
-    public Pedido(Integer id, Conta conta, Servico servico, Pagamento pagamento, String dataPedido) {
+    public Pedido(Long id, Conta conta, Servico servico, Pagamento pagamento, String dataPedido) {
         this.id = id;
         this.conta = conta;
         this.servico = servico;
@@ -29,11 +29,11 @@ public class Pedido {
         this.dataPedido = LocalDate.now().toString();
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

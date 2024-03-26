@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Pagamento {
 
-    private Integer id;
+    private Long id;
     private String dataPagamento;
     private Double valorTotal;
     private String formaPagamento;
@@ -18,7 +18,7 @@ public class Pagamento {
     public Pagamento() {
     }
 
-    public Pagamento(Integer id, String dataPagamento, Double valorTotal, String formaPagamento, Integer parcelas, Double valorParcelas, String descricao, String status) {
+    public Pagamento(Long id, String dataPagamento, Double valorTotal, String formaPagamento, Integer parcelas, Double valorParcelas, String descricao, String status) {
         this.id = id;
         this.dataPagamento = dataPagamento;
         this.valorTotal = valorTotal;
@@ -39,11 +39,11 @@ public class Pagamento {
         this.status = "Ativo";
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -22,8 +22,7 @@ public class PagamentoDAO {
                 """
                             INSERT INTO TB_PAGAMENTO (data_pagamento, valor_total, forma_pagamento, parcelas, valor_parcelas, descricao, status)
                             VALUES (TO_DATE(?, 'YYYY-MM-DD'), ?, ?, ?, ?, ?, ?)
-                        """,
-                PreparedStatement.RETURN_GENERATED_KEYS
+                        """, new String[] {"id_pagamento"}
         );
 
         stmt.setString(1, pagamento.getDataPagamento());
@@ -37,9 +36,10 @@ public class PagamentoDAO {
         int rowsAffected = stmt.executeUpdate();
 
         if (rowsAffected == 1) {
+
             ResultSet generatedKeys = stmt.getGeneratedKeys();
             if (generatedKeys.next()) {
-                pagamento.setId(generatedKeys.getInt(1)); // Erro no getGeneratedKeys pois não está retornando o ID
+                 pagamento.setId(generatedKeys.getLong(1));
             } else {
                 throw new SQLException("Erro ao obter o ID do pagamento.");
             }

@@ -22,12 +22,11 @@ public class PedidoDAO {
                 """
                         INSERT INTO TB_PEDIDO (id_conta, id_pagamento, id_servico, data_pedido)
                         VALUES (?, ?, ?, TO_DATE(?, 'YYYY-MM-DD'))
-                    """,
-                PreparedStatement.RETURN_GENERATED_KEYS
+                    """, new String[] {"id_pedido"}
         );
 
         stmt.setInt(1, pedido.getConta().getId());
-        stmt.setInt(2, pedido.getPagamento().getId());
+        stmt.setLong(2, pedido.getPagamento().getId());
         stmt.setInt(3, pedido.getServico().getId());
         stmt.setString(4, pedido.getDataPedido());
 
@@ -36,7 +35,7 @@ public class PedidoDAO {
         if(rowsAffected == 1){
             ResultSet generatedKeys = stmt.getGeneratedKeys();
             if(generatedKeys.next()) {
-                pedido.setId(generatedKeys.getInt(1));
+                pedido.setId(generatedKeys.getLong(1));
             }else {
                 throw new SQLException("Erro ao obter o ID do pedido.");
             }
@@ -44,7 +43,6 @@ public class PedidoDAO {
             throw new SQLException("A inserção falhou.");
         }
 
-        stmt.execute();
         stmt.close();
 
     }
