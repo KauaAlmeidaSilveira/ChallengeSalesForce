@@ -18,7 +18,8 @@ public class Conta {
 
     public Conta(String email, String senha, Pessoa pessoa) {
         this.usuario = pessoa.getNome()+"@force.com";
-
+        this.email = email;
+        this.senha = senha;
         this.pessoa = pessoa;
         this.status = "Ativo";
     }
