@@ -1,13 +1,16 @@
 package dao;
 
 import connections.ConnectionFactory;
+import model.entities.Empresa;
+import model.entities.Endereco;
 import model.entities.Pessoa;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public  class  PessoaDAO {
+public class PessoaDAO {
 
     private final Connection myConnection;
 
@@ -58,6 +61,38 @@ public  class  PessoaDAO {
         }
 
         return id;
+    }
+
+    public Pessoa findById(Integer id) throws SQLException {
+        PreparedStatement stmt = myConnection.prepareStatement(
+                "SELECT * FROM tb_pessoa WHERE id_pessoa = ?"
+        );
+
+        stmt.setInt(1, id);
+
+        ResultSet rs = stmt.executeQuery();
+
+        try {
+            if (rs.next()) {
+                return new Pessoa(
+                        rs.getInt("id_pessoa"),
+                        rs.getString("nome"),
+                        rs.getString("apelido"),
+                        rs.getString("telefone"),
+                        rs.getString("celular"),
+                        rs.getString("rg"),
+                        rs.getString("cargo"),
+                        empresaDAO.findById(rs.getInt("id_empresa")),
+                        enderecoDAO.findById(rs.getInt("id_endereco"))
+                );
+            }
+        } finally {
+            stmt.close();
+            rs.close();
+        }
+
+
+        return null;
     }
 
 }

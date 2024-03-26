@@ -16,6 +16,18 @@ public class Pessoa {
     private Empresa empresa;
     private Endereco endereco;
 
+    public Pessoa(int id, String nome, String apelido, String telefone, String celular, String rg, String cargo, Empresa empresa, Endereco endereco) {
+        this.id = id;
+        this.nome = nome;
+        this.apelido = apelido;
+        this.telefone = telefone;
+        this.celular = celular;
+        this.rg = rg;
+        this.cargo = cargo;
+        this.empresa = empresa;
+        this.endereco = endereco;
+    }
+
     public Pessoa(String nome, String apelido, String telefone, String celular, String rg, String cargo, Empresa empresa, Endereco endereco) {
         this.nome = nome;
         this.apelido = apelido;

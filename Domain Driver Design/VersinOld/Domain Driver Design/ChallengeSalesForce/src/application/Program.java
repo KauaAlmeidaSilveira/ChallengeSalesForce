@@ -1,15 +1,15 @@
 package application;
 
-import dao.*;
-//import repository.Repository;
-import model.entities.*;
+import dao.PrincipalDAO;
+import model.entities.Conta;
+import model.entities.Empresa;
+import model.entities.Endereco;
+import model.entities.Pessoa;
 
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.util.List;
 import java.util.Scanner;
 
-public class Program  {
+public class Program {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         Scanner sc = new Scanner(System.in);
@@ -60,26 +60,15 @@ public class Program  {
 
             switch (opcao) {
                 case 1:
-                    principalDAO.getServicoDAO().findAll().forEach(System.out::println);
+                    principalDAO.findAllServicos();
                     break;
 
                 case 2:
-                    System.out.println("Nossos serviços: \n");
-
-                    principalDAO.getServicoDAO().findAll().forEach(System.out::println);
-
-                    System.out.println("\nDigite o id do serviço que deseja assinar: ");
-                    int idServico = sc.nextInt();
-
-                    principalDAO.getServicoContaDAO().insert(new ServicoConta(idServico, conta.getId(), LocalDate.now().toString()));
-
-                    System.out.println("Servico assinado com sucesso !!");
+                    principalDAO.assinarServico(sc, conta.getId());
                     break;
 
                 case 3:
-                    List<Servico> servicos = principalDAO.getServicoContaDAO().getMyServices(conta.getId());
-                    System.out.println("Seus serviços: \n");
-                    servicos.forEach(System.out::println);
+                    principalDAO.listarServicos(conta.getId());
                     break;
 
                 case 4:
@@ -87,7 +76,7 @@ public class Program  {
                     break;
 
                 case 5:
-                    System.out.println("Listar cadastros: ");
+                    principalDAO.listarCadastros();
                     break;
 
                 default:
@@ -111,7 +100,7 @@ public class Program  {
                 System.out.print("Digite sua senha: ");
                 String senha = sc.nextLine();
 
-                if (principalDAO.getContaDAO().login(email, senha)){
+                if (principalDAO.getContaDAO().login(email, senha)) {
                     System.out.println("\nLogin realizado com sucesso !!");
                     menu(sc, principalDAO, new Conta(principalDAO.getContaDAO().getIdByEmail(email), email, senha));
                     break;
@@ -178,7 +167,7 @@ public class Program  {
 
         Pessoa pessoa = new Pessoa(nome, celular, cargo, rg, empresa, endereco);
 
-        Conta conta = new Conta( email, senha, pessoa);
+        Conta conta = new Conta(email, senha, pessoa);
 
         principalDAO.getEmpresaDAO().insert(empresa);
 

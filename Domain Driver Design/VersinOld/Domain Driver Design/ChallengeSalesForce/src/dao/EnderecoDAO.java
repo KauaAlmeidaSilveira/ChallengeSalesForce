@@ -82,4 +82,31 @@ public class EnderecoDAO {
         return enderecos;
     }
 
+    public Endereco findById(Integer id) throws SQLException {
+        PreparedStatement stmt = myConnection.prepareStatement(
+                "SELECT * FROM tb_endereco WHERE id_endereco = ?"
+        );
+
+        stmt.setInt(1, id);
+        ResultSet rs = stmt.executeQuery();
+
+        try (stmt){
+
+            if (rs.next()) {
+            return new Endereco(
+                    rs.getInt("id_endereco"),
+                    rs.getString("rua"),
+                    rs.getString("cidade"),
+                    rs.getString("estado"),
+                    rs.getString("cep"),
+                    rs.getString("pais")
+            );
+        }
+        }finally {
+            stmt.close();
+            rs.close();
+        }
+
+        return null;
+    }
 }

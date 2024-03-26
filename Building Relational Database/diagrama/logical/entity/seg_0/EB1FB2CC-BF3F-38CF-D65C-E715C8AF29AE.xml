@@ -12,16 +12,6 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID_ServicoConta" id="AE7F5DEE-5532-8C09-827B-A2C19737A9FD">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-11-01 14:35:18 UTC</createdTime>
-<ownerDesignName>diagrama</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="ID_Servico" id="EAA957A1-48FD-5DBF-3DE4-619784100D81">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-11-01 14:31:52 UTC</createdTime>
@@ -32,7 +22,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ID_Conta" id="B206D657-BBEA-E887-04D5-D780E4D73486">
 <createdBy>Kauã</createdBy>
@@ -44,7 +34,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Status" id="BA95F75E-CAB6-5090-08EC-BDF028A4603D">
 <createdBy>Kauã</createdBy>
@@ -86,7 +76,6 @@
 <ownerDesignName>diagrama</ownerDesignName>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>AE7F5DEE-5532-8C09-827B-A2C19737A9FD</attributeRef>
 <attributeRef>EAA957A1-48FD-5DBF-3DE4-619784100D81</attributeRef>
 <attributeRef>B206D657-BBEA-E887-04D5-D780E4D73486</attributeRef>
 </usedAttributes>

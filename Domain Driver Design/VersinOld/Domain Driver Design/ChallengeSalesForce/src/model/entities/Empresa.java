@@ -16,6 +16,16 @@ public class Empresa {
         this.nome = nome;
     }
 
+    public Empresa(Integer id, String nome, String departamento, String divisao, Integer numFuncionario, String inicioJornada, String fimJornada) {
+        this.id = id;
+        this.nome = nome;
+        this.departamento = departamento;
+        this.divisao = divisao;
+        this.numFuncionario = numFuncionario;
+        this.inicioJornada = inicioJornada;
+        this.fimJornada = fimJornada;
+    }
+
     public Empresa(String nome, String departamento, String divisao, Integer numFuncionario, String inicioJornada, String fimJornada) {
         this.nome = nome;
         this.departamento = departamento;

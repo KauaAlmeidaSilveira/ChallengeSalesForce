@@ -30,6 +30,17 @@ public class Conta {
         this.senha = senha;
     }
 
+    public Conta(Integer id, String usuario, String email, String senha, String status, String dataRegistro, String ultimoAcesso, Pessoa pessoa) {
+        this.id = id;
+        this.usuario = usuario;
+        this.email = email;
+        this.senha = senha;
+        this.status = status;
+        this.dataRegistro = dataRegistro;
+        this.ultimoAcesso = ultimoAcesso;
+        this.pessoa = pessoa;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -109,11 +120,14 @@ public class Conta {
 
     @Override
     public String toString() {
+        int size = senha.length();
+        String senhaEscondida = "*".repeat(size);
+
         return "\nConta " + "\n" +
-                "Id: "+ id + "\n" +
-                "Proprietario: " + pessoa.getId() + "\n" +
+                "Id da conta: "+ id + "\n" +
+                "Id do proprietario: " + pessoa.getId() + "\n" +
                 "Usuario: "+ usuario + "\n" +
                 "Email: " + email + "\n" +
-                "Senha: " + senha;
+                "Senha: " + senhaEscondida;
     }
 }

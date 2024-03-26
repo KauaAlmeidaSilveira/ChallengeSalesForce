@@ -4,6 +4,8 @@ import connections.ConnectionFactory;
 import model.entities.Conta;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContaDAO {
 
@@ -103,6 +105,36 @@ public class ContaDAO {
             }
         }
         return false;
+    }
+
+    public List<Conta> findAll() throws SQLException {
+        PreparedStatement stmt = myConnection.prepareStatement(
+                "SELECT * FROM TB_CONTA"
+        );
+        ResultSet rs = stmt.executeQuery();
+
+        List<Conta> contas = new ArrayList<>();
+
+        try {
+            while (rs.next()) {
+                contas.add(new Conta(
+                        rs.getInt("ID_CONTA"),
+                        rs.getString("USUARIO"),
+                        rs.getString("EMAIL"),
+                        rs.getString("SENHA"),
+                        rs.getString("DATA_REGISTRO"),
+                        rs.getString("STATUS"),
+                        rs.getString("ULTIMO_ACESSO"),
+                        pessoaDAO.findById(rs.getInt("ID_PESSOA"))
+                ));
+            }
+
+        } finally {
+            stmt.close();
+            rs.close();
+        }
+
+        return contas;
     }
 
 }
