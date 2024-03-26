@@ -46,15 +46,6 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="DataPedido" id="CA289325-BD6D-9E7D-13F0-1BC44468316D">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-11-30 13:59:03 UTC</createdTime>
-<ownerDesignName>diagrama</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="ID_Pagamento" id="BBA58D93-E89D-C00F-CACC-AABED3057507">
 <createdBy>Kaua</createdBy>
 <createdTime>2024-03-25 18:36:58 UTC</createdTime>
@@ -65,6 +56,15 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DataPedido" id="CA289325-BD6D-9E7D-13F0-1BC44468316D">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-30 13:59:03 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

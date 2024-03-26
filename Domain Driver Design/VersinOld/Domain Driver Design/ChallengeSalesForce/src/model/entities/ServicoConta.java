@@ -4,7 +4,6 @@ import java.util.Objects;
 
 public class ServicoConta {
 
-    private Integer id;
     private Integer id_Servico;
     private Integer id_Conta;
     private String status;
@@ -14,11 +13,10 @@ public class ServicoConta {
     public ServicoConta() {
     }
 
-    public ServicoConta(Integer id, Integer id_Servico, Integer id_Conta, String dataInicio, String dataTermino) {
-        this.id = id;
+    public ServicoConta(Integer id_Servico, Integer id_Conta, String status, String dataInicio, String dataTermino) {
         this.id_Servico = id_Servico;
         this.id_Conta = id_Conta;
-        this.status = "ATIVO";
+        this.status = status;
         this.dataInicio = dataInicio;
         this.dataTermino = dataTermino;
     }
@@ -30,13 +28,6 @@ public class ServicoConta {
         this.dataInicio = dataInicio;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public Integer getId_Servico() {
         return id_Servico;
@@ -83,11 +74,11 @@ public class ServicoConta {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ServicoConta that = (ServicoConta) o;
-        return Objects.equals(id, that.id) && Objects.equals(id_Servico, that.id_Servico) && Objects.equals(id_Conta, that.id_Conta);
+        return Objects.equals(id_Servico, that.id_Servico) && Objects.equals(id_Conta, that.id_Conta);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, id_Servico, id_Conta);
+        return Objects.hash(id_Servico, id_Conta);
     }
 }

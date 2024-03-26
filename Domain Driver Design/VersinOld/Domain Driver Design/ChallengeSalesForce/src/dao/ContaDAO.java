@@ -137,4 +137,34 @@ public class ContaDAO {
         return contas;
     }
 
+    public Conta findById(Integer id) throws SQLException {
+        PreparedStatement stmt = myConnection.prepareStatement(
+                "SELECT * FROM TB_CONTA WHERE ID_CONTA = ?"
+        );
+
+        stmt.setInt(1, id);
+
+        ResultSet rs = stmt.executeQuery();
+
+        try {
+            if (rs.next()) {
+                return new Conta(
+                        rs.getInt("ID_CONTA"),
+                        rs.getString("USUARIO"),
+                        rs.getString("EMAIL"),
+                        rs.getString("SENHA"),
+                        rs.getString("STATUS"),
+                        rs.getString("DATA_REGISTRO"),
+                        rs.getString("ULTIMO_ACESSO"),
+                        pessoaDAO.findById(rs.getInt("ID_PESSOA"))
+                );
+            }
+        } finally {
+            stmt.close();
+            rs.close();
+        }
+
+        return null;
+    }
+
 }
