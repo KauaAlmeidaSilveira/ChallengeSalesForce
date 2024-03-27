@@ -14,8 +14,8 @@ public class PedidoDAO {
 
     private final Connection myConnection;
 
-    public PedidoDAO() throws SQLException, ClassNotFoundException {
-        this.myConnection = new ConnectionFactory().getConnection();
+    public PedidoDAO(Connection connection) throws ClassNotFoundException, SQLException {
+        this.myConnection = connection;
     }
 
     public void insert(Pedido pedido) throws SQLException {
@@ -65,9 +65,9 @@ public class PedidoDAO {
             pedidos.add(
                     new Pedido(
                             rs.getLong("id_pedido"),
-                            new ContaDAO().findById(rs.getInt("id_conta")),
-                            new ServicoDAO().findById(rs.getInt("id_servico")),
-                            new PagamentoDAO().findById(rs.getLong("id_pagamento")),
+                            new ContaDAO(myConnection).findById(rs.getInt("id_conta")),
+                            new ServicoDAO(myConnection).findById(rs.getInt("id_servico")),
+                            new PagamentoDAO(myConnection).findById(rs.getLong("id_pagamento")),
                             rs.getString("data_pedido")
                     )
             );

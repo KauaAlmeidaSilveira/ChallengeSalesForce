@@ -1,10 +1,12 @@
 package dao;
 
+import connections.ConnectionFactory;
 import model.entities.Pagamento;
 import model.entities.Pedido;
 import model.entities.Servico;
 import model.entities.ServicoConta;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
@@ -12,17 +14,20 @@ import java.util.Scanner;
 
 public class PrincipalDAO {
 
-    private final ContaDAO contaDAO = new ContaDAO();
-    private final EmpresaDAO empresaDAO = new EmpresaDAO();
-    private final EnderecoDAO enderecoDAO = new EnderecoDAO();
-    private final PessoaDAO pessoaDAO = new PessoaDAO();
-    private final ServicoDAO servicoDAO = new ServicoDAO();
-    private final ServicoContaDAO servicoContaDAO = new ServicoContaDAO();
-    private final PedidoDAO pedidoDAO = new PedidoDAO();
-    private final PagamentoDAO pagamentoDAO = new PagamentoDAO();
+    private final Connection myConnection = new ConnectionFactory().getConnection();
+
+    private final ContaDAO contaDAO = new ContaDAO(myConnection);
+    private final EmpresaDAO empresaDAO = new EmpresaDAO(myConnection);
+    private final EnderecoDAO enderecoDAO = new EnderecoDAO(myConnection);
+    private final PessoaDAO pessoaDAO = new PessoaDAO(myConnection);
+    private final ServicoDAO servicoDAO = new ServicoDAO(myConnection);
+    private final ServicoContaDAO servicoContaDAO = new ServicoContaDAO(myConnection);
+    private final PedidoDAO pedidoDAO = new PedidoDAO(myConnection);
+    private final PagamentoDAO pagamentoDAO = new PagamentoDAO(myConnection);
 
     public PrincipalDAO() throws SQLException, ClassNotFoundException {
     }
+
 
     public ContaDAO getContaDAO() {
         return contaDAO;
@@ -65,7 +70,7 @@ public class PrincipalDAO {
         }
     }
 
-    public void assinarServico(Scanner sc, Integer idConta) throws SQLException {
+    public void assinarServico(Scanner sc, Integer idConta) throws SQLException, ClassNotFoundException {
 
 
         if (servicoDAO.findAll().isEmpty()) {
@@ -105,7 +110,7 @@ public class PrincipalDAO {
         }
     }
 
-    public void listarCadastros() throws SQLException {
+    public void listarCadastros() throws SQLException, ClassNotFoundException {
         System.out.println("Listar cadastros: ");
         contaDAO.findAll().forEach(System.out::println);
     }
@@ -122,7 +127,7 @@ public class PrincipalDAO {
     }
 
     public void listarPedidos() throws SQLException, ClassNotFoundException {
-        System.out.println("Histórico de pedidos: ");
+        System.out.println("Histórico de pedidos: \n");
         pedidoDAO.findAll().forEach(System.out::println);
     }
 }

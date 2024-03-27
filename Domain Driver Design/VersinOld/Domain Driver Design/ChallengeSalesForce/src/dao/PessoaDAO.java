@@ -14,14 +14,14 @@ public class PessoaDAO {
 
     private final Connection myConnection;
 
-    private final EnderecoDAO enderecoDAO = new EnderecoDAO();
-    private final EmpresaDAO empresaDAO = new EmpresaDAO();
-
-    public PessoaDAO() throws ClassNotFoundException, SQLException {
-        this.myConnection = new ConnectionFactory().getConnection();
+    public PessoaDAO(Connection connection) throws ClassNotFoundException, SQLException{
+        this.myConnection = connection;
     }
 
     public void insert(Pessoa pessoa) throws SQLException {
+
+        EnderecoDAO enderecoDAO = new EnderecoDAO(myConnection);
+        EmpresaDAO empresaDAO = new EmpresaDAO(myConnection);
 
         PreparedStatement stmt = myConnection.prepareStatement(
                 "INSERT INTO tb_pessoa (nome, celular, cargo, rg, id_endereco, id_empresa) " +
@@ -64,6 +64,9 @@ public class PessoaDAO {
     }
 
     public Pessoa findById(Integer id) throws SQLException {
+        EnderecoDAO enderecoDAO = new EnderecoDAO(myConnection);
+        EmpresaDAO empresaDAO = new EmpresaDAO(myConnection);
+
         PreparedStatement stmt = myConnection.prepareStatement(
                 "SELECT * FROM tb_pessoa WHERE id_pessoa = ?"
         );

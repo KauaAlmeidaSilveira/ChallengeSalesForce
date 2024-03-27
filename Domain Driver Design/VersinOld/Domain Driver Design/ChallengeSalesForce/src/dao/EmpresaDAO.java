@@ -1,19 +1,18 @@
 package dao;
 
+import model.entities.Empresa;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import connections.ConnectionFactory;
-import model.entities.Empresa;
-
 public class EmpresaDAO {
 
-    public final Connection myConnection;
+    private final Connection myConnection;
 
-    public EmpresaDAO() throws ClassNotFoundException, SQLException {
-        this.myConnection = new ConnectionFactory().getConnection();
+    public EmpresaDAO(Connection connection) {
+        this.myConnection = connection;
     }
 
     public void insert(Empresa empresa) throws SQLException {

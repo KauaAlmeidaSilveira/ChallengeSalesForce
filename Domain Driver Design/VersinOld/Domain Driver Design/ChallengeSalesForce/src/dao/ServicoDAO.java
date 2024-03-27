@@ -14,8 +14,8 @@ public class ServicoDAO {
 
     private final Connection myConnection;
 
-    public ServicoDAO() throws ClassNotFoundException, SQLException {
-        this.myConnection = new ConnectionFactory().getConnection();
+    public ServicoDAO(Connection connection) {
+        this.myConnection = connection;
     }
 
     public void insert(Servico servico) throws SQLException {

@@ -9,15 +9,16 @@ import java.util.List;
 
 public class ContaDAO {
 
-    public final Connection myConnection;
+    private final Connection myConnection;
 
-    private final PessoaDAO pessoaDAO = new PessoaDAO();
-
-    public ContaDAO() throws ClassNotFoundException, SQLException {
-        this.myConnection = new ConnectionFactory().getConnection();
+    public ContaDAO(Connection connection) throws ClassNotFoundException, SQLException {
+        this.myConnection = connection;
     }
 
-    public void insert(Conta conta) throws SQLException {
+    public void insert(Conta conta) throws SQLException, ClassNotFoundException {
+
+        PessoaDAO pessoaDAO = new PessoaDAO(myConnection);
+
         PreparedStatement stmt = myConnection.prepareStatement(
                 "INSERT INTO TB_CONTA (USUARIO, EMAIL, SENHA, DATA_REGISTRO, STATUS, ULTIMO_ACESSO, ID_PESSOA) " +
                         "VALUES (?, ?, ?, ?, ?, ?, ?)"
@@ -107,7 +108,8 @@ public class ContaDAO {
         return false;
     }
 
-    public List<Conta> findAll() throws SQLException {
+    public List<Conta> findAll() throws SQLException, ClassNotFoundException {
+        PessoaDAO pessoaDAO = new PessoaDAO(myConnection);
         PreparedStatement stmt = myConnection.prepareStatement(
                 "SELECT * FROM TB_CONTA"
         );
@@ -137,7 +139,8 @@ public class ContaDAO {
         return contas;
     }
 
-    public Conta findById(Integer id) throws SQLException {
+    public Conta findById(Integer id) throws SQLException, ClassNotFoundException {
+        PessoaDAO pessoaDAO = new PessoaDAO(myConnection);
         PreparedStatement stmt = myConnection.prepareStatement(
                 "SELECT * FROM TB_CONTA WHERE ID_CONTA = ?"
         );

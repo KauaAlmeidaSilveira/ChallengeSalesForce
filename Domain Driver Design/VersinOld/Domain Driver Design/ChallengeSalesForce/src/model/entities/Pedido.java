@@ -84,10 +84,10 @@ public class Pedido {
 
     @Override
     public String toString() {
-    return "Pedido \n" +
-            "Numero do pedido: " + id + "\n" +
-            servico +
-            pagamento +
-            "Data do pedido: " + dataPedido;
+        return "Pedido " + id + "# \n" +
+                "Data do pedido: " + dataPedido + "\n\n" +
+                servico + "\n" +
+                pagamento + "\n" +
+                "------------------------------------\n";
     }
 }

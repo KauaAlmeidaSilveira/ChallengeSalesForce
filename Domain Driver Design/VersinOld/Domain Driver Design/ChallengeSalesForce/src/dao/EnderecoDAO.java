@@ -14,8 +14,8 @@ public class EnderecoDAO {
 
     private final Connection myConnection;
 
-    public EnderecoDAO() throws ClassNotFoundException, SQLException {
-        this.myConnection = new ConnectionFactory().getConnection();
+    public EnderecoDAO(Connection connection){
+        this.myConnection = connection;
     }
 
     public void insert(Endereco endereco) throws SQLException {

@@ -83,10 +83,10 @@ public class Servico {
     @Override
     public String toString() {
         return "Servico: \n" +
-                "Id: " + id + '\n' +
                 "Nome: " + nome + '\n' +
+                "Numero do serviço: " + id + '\n' +
                 "Descricao: " + descricao + '\n' +
                 "Categoria: " + categoria + '\n' +
-                "Valor: " + valor + '\n';
+                "Valor: " + valor + "\n";
     }
 }

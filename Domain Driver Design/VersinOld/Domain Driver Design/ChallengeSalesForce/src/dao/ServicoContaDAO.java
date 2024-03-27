@@ -1,6 +1,5 @@
 package dao;
 
-import connections.ConnectionFactory;
 import model.entities.Servico;
 import model.entities.ServicoConta;
 
@@ -15,8 +14,8 @@ public class ServicoContaDAO {
 
     private final Connection myConnection;
 
-    public ServicoContaDAO() throws ClassNotFoundException, SQLException {
-        this.myConnection = new ConnectionFactory().getConnection();
+    public ServicoContaDAO(Connection connection) {
+        this.myConnection = connection;
     }
 
     public void insert(ServicoConta servicoConta) throws SQLException {
@@ -36,7 +35,7 @@ public class ServicoContaDAO {
     }
 
     public List<Servico> getMyServices(int idConta) throws SQLException, ClassNotFoundException {
-        ServicoDAO servicoDAO = new ServicoDAO();
+        ServicoDAO servicoDAO = new ServicoDAO(myConnection);
         PreparedStatement stmt = myConnection.prepareStatement(
                 "SELECT * FROM tb_servico_conta WHERE id_conta = ?"
         );
@@ -46,9 +45,9 @@ public class ServicoContaDAO {
 
         List<Servico> servicos = new ArrayList<>();
 
-        try{
+        try {
 
-            while (rs.next()){
+            while (rs.next()) {
                 rs.getInt("id_servico");
                 servicos.add(servicoDAO.findById(rs.getInt("id_servico")));
             }

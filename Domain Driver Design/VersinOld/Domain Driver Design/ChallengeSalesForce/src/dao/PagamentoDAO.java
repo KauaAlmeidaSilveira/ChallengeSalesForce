@@ -10,10 +10,10 @@ import java.sql.SQLException;
 
 public class PagamentoDAO {
 
-    public final Connection myConnection;
+    private final Connection myConnection;
 
-    public PagamentoDAO() throws SQLException, ClassNotFoundException {
-        this.myConnection = new ConnectionFactory().getConnection();
+    public PagamentoDAO(Connection connection) throws ClassNotFoundException, SQLException {
+        this.myConnection = connection;
     }
 
     public void insert(Pagamento pagamento) throws SQLException {
