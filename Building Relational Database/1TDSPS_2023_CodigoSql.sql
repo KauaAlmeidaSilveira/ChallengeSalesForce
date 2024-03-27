@@ -1,3 +1,8 @@
+-- Kaua Almeida Silveira - RM 552618
+-- Matheus Alexandre Benites Scotti - RM 553073
+-- Mariana Spinola - RM 553476
+
+-- Drop das tabelas, removendo todas as restricoes de chave estrangeira referenciadas em cascata.
 DROP TABLE TB_CONTA CASCADE CONSTRAINTS;
 DROP TABLE TB_PESSOA CASCADE CONSTRAINTS;
 DROP TABLE TB_ENDERECO CASCADE CONSTRAINTS;
@@ -7,8 +12,7 @@ DROP TABLE TB_SERVICO_CONTA CASCADE CONSTRAINTS;
 DROP TABLE TB_PEDIDO CASCADE CONSTRAINTS;
 DROP TABLE TB_PAGAMENTO  CASCADE CONSTRAINTS;
 
----
-
+-- Criacao da tabela TB_EMPRESA
 CREATE TABLE TB_EMPRESA (
     ID_EMPRESA NUMBER GENERATED ALWAYS AS IDENTITY,
     NOME VARCHAR2(25) NOT NULL,
@@ -19,11 +23,13 @@ CREATE TABLE TB_EMPRESA (
     FIM_JORNADA TIMESTAMP DEFAULT SYSDATE
 );
 
+
+-- Adiciona uma chave primaria na tabela TB_EMPRESA
 ALTER TABLE TB_EMPRESA
 ADD CONSTRAINT PK_TB_EMPRESA_ID_EMPRESA PRIMARY KEY (ID_EMPRESA);
 
----
 
+-- Criacao da tabela TB_ENDERECO
 CREATE TABLE TB_ENDERECO (
     ID_ENDERECO NUMBER GENERATED ALWAYS AS IDENTITY,
     RUA VARCHAR2(50) NOT NULL,
@@ -33,11 +39,12 @@ CREATE TABLE TB_ENDERECO (
     PAIS VARCHAR2(50)
 );
 
+-- Adiciona uma chave primaria na tabela TB_ENDERECO
 ALTER TABLE TB_ENDERECO
 ADD CONSTRAINT PK_TB_ENDERECO PRIMARY KEY (ID_ENDERECO);
 
----
 
+-- Criacao da tabela TB_PESSOA
 CREATE TABLE TB_PESSOA (
     ID_PESSOA NUMBER GENERATED ALWAYS AS IDENTITY,
     NOME VARCHAR2(50) NOT NULL,
@@ -50,21 +57,24 @@ CREATE TABLE TB_PESSOA (
     ID_EMPRESA NUMBER NOT NULL
 );
 
+-- Adiciona uma chave primaria na tabela TB_PESSOA
 ALTER TABLE TB_PESSOA
 ADD CONSTRAINT PK_TB_PESSOA PRIMARY KEY (ID_PESSOA);
 
+-- Adiciona uma chave estrangeira na tabela TB_PESSOA referenciando TB_EMPRESA
 ALTER TABLE TB_PESSOA
 ADD CONSTRAINT FK_TB_PESSOA_EMPRESA
 FOREIGN KEY (ID_EMPRESA)
 REFERENCES TB_EMPRESA(ID_EMPRESA);
 
+-- Adiciona uma chave estrangeira na tabela TB_PESSOA referenciando TB_ENDERECO
 ALTER TABLE TB_PESSOA
 ADD CONSTRAINT FK_TB_PESSOA_ENDERECO
 FOREIGN KEY (ID_ENDERECO)
 REFERENCES TB_ENDERECO(ID_ENDERECO);
 
----
 
+-- Criacao da tabela TB_CONTA
 CREATE TABLE TB_CONTA (
     ID_CONTA NUMBER GENERATED ALWAYS AS IDENTITY,
     USUARIO VARCHAR2(50),
@@ -76,16 +86,18 @@ CREATE TABLE TB_CONTA (
     ID_PESSOA NUMBER NOT NULL
 );
 
+-- Adiciona uma chave primaria na tabela TB_CONTA
 ALTER TABLE TB_CONTA
 ADD CONSTRAINT PK_TB_CONTA PRIMARY KEY (ID_CONTA);
 
+-- Adiciona uma chave estrangeira na tabela TB_CONTA referenciando TB_PESSOA
 ALTER TABLE TB_CONTA
 ADD CONSTRAINT FK_TB_CONTA_PESS0A
 FOREIGN KEY (ID_PESSOA)
 REFERENCES TB_PESSOA(ID_PESSOA);
 
----
 
+-- Criacao da tabela TB_SERVICO
 CREATE TABLE TB_SERVICO (
     ID_SERVICO NUMBER GENERATED ALWAYS AS IDENTITY,
     NOME VARCHAR2(50) NOT NULL,
@@ -94,11 +106,12 @@ CREATE TABLE TB_SERVICO (
     VALOR NUMBER(10, 2) NOT NULL
 );
 
+-- Adiciona uma chave primaria na tabela TB_SERVICO
 ALTER TABLE TB_SERVICO
 ADD CONSTRAINT PK_TB_SERVICO PRIMARY KEY (ID_SERVICO);
 
----
 
+-- Criacao da tabela TB_SERVICO_CONTA
 CREATE TABLE TB_SERVICO_CONTA (
     ID_SERVICO NUMBER NOT NULL,
     ID_CONTA NUMBER NOT NULL,
@@ -107,18 +120,20 @@ CREATE TABLE TB_SERVICO_CONTA (
     DATA_TERMINO DATE DEFAULT NULL
 );
 
+-- Adiciona uma chave estrangeira na tabela TB_SERVICO_CONTA referenciando TB_SERVICO
 ALTER TABLE TB_SERVICO_CONTA
 ADD CONSTRAINT FK_TB_SERVICO_CONTA_SERVICO
 FOREIGN KEY (ID_SERVICO)
 REFERENCES TB_SERVICO(ID_SERVICO);
 
+-- Adiciona uma chave estrangeira na tabela TB_SERVICO_CONTA referenciando TB_CONTA
 ALTER TABLE TB_SERVICO_CONTA
 ADD CONSTRAINT FK_TB_SERVICO_CONTA_CONTA
 FOREIGN KEY (ID_CONTA)
 REFERENCES TB_CONTA(ID_CONTA);
 
----
 
+-- Criacao da tabela TB_PAGAMENTO
 CREATE TABLE TB_PAGAMENTO (
     ID_PAGAMENTO NUMBER GENERATED ALWAYS AS IDENTITY,
     DATA_PAGAMENTO DATE DEFAULT SYSDATE NOT NULL,
@@ -130,11 +145,12 @@ CREATE TABLE TB_PAGAMENTO (
     STATUS VARCHAR2(20) NOT NULL
 );
 
+-- Adiciona uma chave primaria na tabela TB_PAGAMENTO
 ALTER TABLE TB_PAGAMENTO
 ADD CONSTRAINT PK_TB_PAGAMENTO PRIMARY KEY (ID_PAGAMENTO);
 
----
 
+-- Criacao da tabela TB_PEDIDO
 CREATE TABLE TB_PEDIDO (
     ID_PEDIDO NUMBER GENERATED ALWAYS AS IDENTITY,
     ID_CONTA NUMBER,
@@ -143,19 +159,23 @@ CREATE TABLE TB_PEDIDO (
     DATA_PEDIDO DATE DEFAULT SYSDATE NOT NULL
 );
 
+-- Adiciona uma chave primaria na tabela TB_PEDIDO
 ALTER TABLE TB_PEDIDO
 ADD CONSTRAINT PK_TB_PEDIDO PRIMARY KEY (ID_PEDIDO);
 
+-- Adiciona uma chave estrangeira na tabela TB_PEDIDO referenciando TB_CONTA
 ALTER TABLE TB_PEDIDO
 ADD CONSTRAINT FK_TB_PEDIDO_CONTA
 FOREIGN KEY (ID_CONTA)
 REFERENCES TB_CONTA(ID_CONTA);
 
+-- Adiciona uma chave estrangeira na tabela TB_PEDIDO referenciando TB_PAGAMENTO
 ALTER TABLE TB_PEDIDO
 ADD CONSTRAINT FK_TB_PEDIDO_PAGAMENTO
 FOREIGN KEY (ID_PAGAMENTO)
 REFERENCES TB_PAGAMENTO(ID_PAGAMENTO);
 
+-- Adiciona uma chave estrangeira na tabela TB_PEDIDO referenciando TB_SERVICO
 ALTER TABLE TB_PEDIDO
 ADD CONSTRAINT FK_TB_PEDIDO_SERVICO
 FOREIGN KEY (ID_SERVICO)
@@ -171,11 +191,21 @@ SELECT * FROM TB_PEDIDO;
 SELECT * FROM TB_PAGAMENTO;
 
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
-VALUES ('Vendas', 'Plataforma de vendas online, auxiliando empresas a gerenciar leads, oportunidades e clientes de forma eficiente e escal·vel.', 'Categoria Vendas', 585.00);
+VALUES ('Vendas', 'Plataforma de vendas online, auxiliando empresas a gerenciar leads, oportunidades e clientes de forma eficiente e escal√°vel.', 'Categoria Vendas', 585.00);
 
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
-VALUES ('Marketing', 'O serviÁo de marketing da Salesforce capacita empresas a criar, automatizar e analisar campanhas multicanais para alcanÁar e engajar clientes de forma eficaz.', 'Categoria  Marketing', 358.00);
+VALUES ('Marketing', 'O servi√ßo de marketing da Salesforce capacita empresas a criar, automatizar e analisar campanhas multicanais para alcan√ßar e engajar clientes de forma eficaz.', 'Categoria  Marketing', 358.00);
 
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
-VALUES ('Slack', 'Salesforce Slack integra comunicaÁ„o e colaboraÁ„o em equipe, facilitando a troca de informaÁıes e a coordenaÁ„o de projetos de forma eficiente.', 'Categoria comunicaÁ„o/colaboraÁ„o empresarial', 300.00);
+VALUES ('Slack', 'Salesforce Slack integra comunica√ß√£o e colabora√ß√£o em equipe, facilitando a troca de informa√ß√µes e a coordena√ß√£o de projetos de forma eficiente.', 'Categoria comunica√ß√£o/colabora√ß√£o empresarial', 300.00);
+
+INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
+VALUES ('Salesforce Einstein Analytics', 'Fornece insights preditivos e an√°lises avan√ßadas para ajudar as empresas a tomar decis√µes mais informadas e impulsionar o crescimento.', 'Categoria An√°lise Preditiva', 600.00);
+
+INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
+VALUES ('Salesforce Commerce Cloud', 'Salesforce Commerce Cloud √© uma plataforma de com√©rcio digital que permite √†s empresas criar experi√™ncias de compra online personalizadas e escal√°veis.', 'Categoria Com√©rcio Digital', 450.00);
+
+INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
+VALUES ('Salesforce Service Cloud', 'Salesforce Service Cloud permite que as empresas forne√ßam suporte ao cliente de maneira r√°pida e personalizada atrav√©s de v√°rios canais.', 'Categoria Suporte ao Cliente', 500.00);
+
 
