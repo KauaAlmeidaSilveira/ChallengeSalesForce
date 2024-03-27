@@ -1,7 +1,5 @@
 package model.entities;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Conta {
@@ -17,14 +15,14 @@ public class Conta {
     private Pessoa pessoa;
 
     public Conta(String email, String senha, Pessoa pessoa) {
-        this.usuario = pessoa.getNome()+"@force.com";
+        this.usuario = pessoa.getNome();
         this.email = email;
         this.senha = senha;
         this.pessoa = pessoa;
         this.status = "Ativo";
     }
 
-    public Conta(Integer id, String email, String senha){
+    public Conta(Integer id, String email, String senha) {
         this.id = id;
         this.email = email;
         this.senha = senha;
@@ -124,9 +122,9 @@ public class Conta {
         String senhaEscondida = "*".repeat(size);
 
         return "\nConta " + "\n" +
-                "Id da conta: "+ id + "\n" +
+                "Id da conta: " + id + "\n" +
                 "Id do proprietario: " + pessoa.getId() + "\n" +
-                "Usuario: "+ usuario + "\n" +
+                "Usuario: " + usuario + "\n" +
                 "Email: " + email + "\n" +
                 "Senha: " + senhaEscondida;
     }

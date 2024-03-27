@@ -58,6 +58,8 @@ public class Program {
                 break;
             }
 
+            System.out.println("");
+
             switch (opcao) {
                 case 1:
                     principalDAO.findAllServicos();

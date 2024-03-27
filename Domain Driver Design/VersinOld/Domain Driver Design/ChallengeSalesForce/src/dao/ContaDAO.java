@@ -1,9 +1,11 @@
 package dao;
 
-import connections.ConnectionFactory;
 import model.entities.Conta;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +27,7 @@ public class ContaDAO {
         );
 
         stmt.setString(1, conta.getUsuario());
-        stmt.setString(2, conta.getEmail());
+        stmt.setString(2, conta.getEmail().toLowerCase());
         stmt.setString(3, conta.getSenha());
         stmt.setString(4, conta.getDataRegistro());
         stmt.setString(5, conta.getStatus());
@@ -42,7 +44,7 @@ public class ContaDAO {
 
         try {
             stmt = myConnection.prepareStatement("SELECT * FROM TB_CONTA WHERE EMAIL = ?");
-            stmt.setString(1, email);
+            stmt.setString(1, email.toLowerCase());
             rs = stmt.executeQuery();
 
             if (rs.next()) {
@@ -65,7 +67,7 @@ public class ContaDAO {
 
         try {
             stmt = myConnection.prepareStatement("SELECT * FROM TB_CONTA WHERE EMAIL = ?");
-            stmt.setString(1, email);
+            stmt.setString(1, email.toLowerCase());
             rs = stmt.executeQuery();
 
             if (rs.next()) {
@@ -90,7 +92,7 @@ public class ContaDAO {
             stmt = myConnection.prepareStatement(
                     "SELECT * FROM TB_CONTA WHERE EMAIL = ? AND SENHA = ?"
             );
-            stmt.setString(1, email);
+            stmt.setString(1, email.toLowerCase());
             stmt.setString(2, senha);
             rs = stmt.executeQuery();
 
