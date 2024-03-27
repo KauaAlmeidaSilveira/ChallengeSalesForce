@@ -74,7 +74,7 @@ public class Program {
                     break;
 
                 case 4:
-                    principalDAO.listarPedidos();
+                    principalDAO.listarMeusPedidos(conta.getId());
                     break;
 
                 case 5:

@@ -121,11 +121,11 @@ public class Conta {
         int size = senha.length();
         String senhaEscondida = "*".repeat(size);
 
-        return "\nConta " + "\n" +
-                "Id da conta: " + id + "\n" +
-                "Id do proprietario: " + pessoa.getId() + "\n" +
+        return "Conta " + "\n" +
+                "Numero da conta: " + id + "\n" +
+                "Nome do proprietario: " + pessoa.getNome() + "\n" +
                 "Usuario: " + usuario + "\n" +
                 "Email: " + email + "\n" +
-                "Senha: " + senhaEscondida;
+                "Senha: " + senhaEscondida + "\n";
     }
 }

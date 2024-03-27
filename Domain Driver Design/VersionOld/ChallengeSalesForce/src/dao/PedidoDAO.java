@@ -1,14 +1,14 @@
 package dao;
 
 
-import model.entities.Pedido;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import model.entities.Pedido;
 
 public class PedidoDAO {
 
@@ -51,6 +51,7 @@ public class PedidoDAO {
 
 
     public List<Pedido> findAll() throws SQLException, ClassNotFoundException {
+
         PreparedStatement stmt = myConnection.prepareStatement(
                 """
                         SELECT * FROM TB_PEDIDO
@@ -76,5 +77,40 @@ public class PedidoDAO {
         stmt.close();
 
         return pedidos;
+    }
+    
+    public List<Pedido> getMyPedidos(Integer idConta) throws SQLException, ClassNotFoundException{
+
+        ContaDAO contaDAO = new ContaDAO(myConnection);
+        ServicoDAO servicoDAO = new ServicoDAO(myConnection);
+        PagamentoDAO pagamentoDAO = new PagamentoDAO(myConnection);
+
+    	PreparedStatement stmt = myConnection.prepareStatement(
+                "SELECT * FROM tb_pedido WHERE id_conta = ?"
+        );
+        stmt.setInt(1, idConta);
+    	
+        ResultSet rs = stmt.executeQuery();
+        
+        List<Pedido> pedidos = new ArrayList<>();
+        
+        try {
+
+            while (rs.next()) {
+                pedidos.add(new Pedido(
+                		rs.getLong("id_pedido"),
+                        contaDAO.findById(rs.getInt("id_conta")),
+                        servicoDAO.findById(rs.getInt("id_servico")),
+                        pagamentoDAO.findById(rs.getLong("id_pagamento")),
+                		rs.getString("data_pedido")));
+            }
+
+        } finally {
+            stmt.close();
+            rs.close();
+        }
+        
+		return pedidos;
+    	
     }
 }

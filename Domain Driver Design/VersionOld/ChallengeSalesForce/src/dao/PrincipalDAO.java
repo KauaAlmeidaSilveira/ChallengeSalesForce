@@ -126,8 +126,8 @@ public class PrincipalDAO {
         }
     }
 
-    public void listarPedidos() throws SQLException, ClassNotFoundException {
+    public void listarMeusPedidos(Integer idConta) throws SQLException, ClassNotFoundException {
         System.out.println("Histórico de pedidos: \n");
-        pedidoDAO.findAll().forEach(System.out::println);
+        pedidoDAO.getMyPedidos(idConta).forEach(System.out::println);
     }
 }

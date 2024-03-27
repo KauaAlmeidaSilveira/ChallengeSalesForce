@@ -86,6 +86,7 @@ public class Pedido {
     public String toString() {
         return "Pedido " + id + "# \n" +
                 "Data do pedido: " + dataPedido + "\n\n" +
+                conta + "\n" +
                 servico + "\n" +
                 pagamento + "\n" +
                 "------------------------------------\n";
