@@ -7,6 +7,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PedidoDAO {
 
@@ -48,6 +50,31 @@ public class PedidoDAO {
     }
 
 
+    public List<Pedido> findAll() throws SQLException, ClassNotFoundException {
+        PreparedStatement stmt = myConnection.prepareStatement(
+                """
+                        SELECT * FROM TB_PEDIDO
+                    """
+        );
 
+        ResultSet rs = stmt.executeQuery();
 
+        List<Pedido> pedidos = new ArrayList<>();
+
+        while (rs.next()) {
+            pedidos.add(
+                    new Pedido(
+                            rs.getLong("id_pedido"),
+                            new ContaDAO().findById(rs.getInt("id_conta")),
+                            new ServicoDAO().findById(rs.getInt("id_servico")),
+                            new PagamentoDAO().findById(rs.getLong("id_pagamento")),
+                            rs.getString("data_pedido")
+                    )
+            );
+        }
+
+        stmt.close();
+
+        return pedidos;
+    }
 }

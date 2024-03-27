@@ -72,7 +72,7 @@ public class Program {
                     break;
 
                 case 4:
-                    System.out.println("Histórico de pedidos: ");
+                    principalDAO.listarPedidos();
                     break;
 
                 case 5:

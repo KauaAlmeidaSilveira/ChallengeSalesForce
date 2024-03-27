@@ -81,4 +81,13 @@ public class Pedido {
     public int hashCode() {
         return Objects.hash(id, conta, servico, pagamento, dataPedido);
     }
+
+    @Override
+    public String toString() {
+    return "Pedido \n" +
+            "Numero do pedido: " + id + "\n" +
+            servico +
+            pagamento +
+            "Data do pedido: " + dataPedido;
+    }
 }

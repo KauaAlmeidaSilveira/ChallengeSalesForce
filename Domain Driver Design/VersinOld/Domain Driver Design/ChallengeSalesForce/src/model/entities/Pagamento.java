@@ -115,4 +115,17 @@ public class Pagamento {
     public int hashCode() {
         return Objects.hash(id, dataPagamento, valorTotal, formaPagamento, parcelas, valorParcelas, descricao, status);
     }
+
+    @Override
+    public String toString() {
+        return "Pagamento: \n" +
+                "Numero do pagamento: " + id + "\n" +
+                "Data do Pagamento: " + dataPagamento + '\n' +
+                "Valor total: " + valorTotal + '\n' +
+                "Forma de pagamento: " + formaPagamento + '\n' +
+                "Parcelas: " + parcelas + '\n' +
+                "Valor das parcelas: " + valorParcelas + '\n' +
+                "Descrição: " + descricao + '\n' +
+                "Status: " + status + '\n';
+    }
 }

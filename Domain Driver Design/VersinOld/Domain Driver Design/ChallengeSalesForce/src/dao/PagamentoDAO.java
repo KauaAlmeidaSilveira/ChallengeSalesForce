@@ -22,7 +22,7 @@ public class PagamentoDAO {
                 """
                             INSERT INTO TB_PAGAMENTO (data_pagamento, valor_total, forma_pagamento, parcelas, valor_parcelas, descricao, status)
                             VALUES (TO_DATE(?, 'YYYY-MM-DD'), ?, ?, ?, ?, ?, ?)
-                        """, new String[] {"id_pagamento"}
+                        """, new String[]{"id_pagamento"}
         );
 
         stmt.setString(1, pagamento.getDataPagamento());
@@ -39,7 +39,7 @@ public class PagamentoDAO {
 
             ResultSet generatedKeys = stmt.getGeneratedKeys();
             if (generatedKeys.next()) {
-                 pagamento.setId(generatedKeys.getLong(1));
+                pagamento.setId(generatedKeys.getLong(1));
             } else {
                 throw new SQLException("Erro ao obter o ID do pagamento.");
             }
@@ -51,4 +51,39 @@ public class PagamentoDAO {
     }
 
 
+    public Pagamento findById(long idPagamento) {
+        try {
+            PreparedStatement stmt = myConnection.prepareStatement(
+                    """
+                                SELECT * FROM TB_PAGAMENTO
+                                WHERE id_pagamento = ?
+                            """
+            );
+
+            stmt.setLong(1, idPagamento);
+
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                Pagamento pagamento = new Pagamento(
+                        rs.getLong("id_pagamento"),
+                        rs.getString("data_pagamento"),
+                        rs.getDouble("valor_total"),
+                        rs.getString("forma_pagamento"),
+                        rs.getInt("parcelas"),
+                        rs.getDouble("valor_parcelas"),
+                        rs.getString("descricao"),
+                        rs.getString("status")
+                );
+
+                stmt.close();
+                return pagamento;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 }
