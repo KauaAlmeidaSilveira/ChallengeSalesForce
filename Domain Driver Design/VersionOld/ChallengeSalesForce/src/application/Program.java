@@ -43,7 +43,7 @@ public class Program {
 
         while (true) {
             System.out.println("\nMenu:\n" +
-                    "1 - Todos nossos serviços\n" +
+                    "1 - Listar todos nossos serviços\n" +
                     "2 - Assinar um serviço\n" +
                     "3 - Listar meus serviços\n" +
                     "4 - Histórico de pedidos\n" +

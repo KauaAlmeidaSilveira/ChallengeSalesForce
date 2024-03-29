@@ -13,8 +13,9 @@ public class Servico {
     public Servico() {
     }
 
-    public Servico(String nome, String categoria, Double valor) {
+    public Servico(String nome, String descricao, String categoria, Double valor) {
         this.nome = nome;
+        this.descricao = descricao;
         this.categoria = categoria;
         this.valor = valor;
     }

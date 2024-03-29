@@ -189,23 +189,3 @@ SELECT * FROM TB_SERVICO;
 SELECT * FROM TB_SERVICO_CONTA;
 SELECT * FROM TB_PEDIDO;
 SELECT * FROM TB_PAGAMENTO;
-
-INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
-VALUES ('Vendas', 'Plataforma de vendas online, auxiliando empresas a gerenciar leads, oportunidades e clientes de forma eficiente e escalável.', 'Categoria Vendas', 585.00);
-
-INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
-VALUES ('Marketing', 'O serviço de marketing da Salesforce capacita empresas a criar, automatizar e analisar campanhas multicanais para alcançar e engajar clientes de forma eficaz.', 'Categoria  Marketing', 358.00);
-
-INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
-VALUES ('Slack', 'Salesforce Slack integra comunicação e colaboração em equipe, facilitando a troca de informações e a coordenação de projetos de forma eficiente.', 'Categoria comunicação/colaboração empresarial', 300.00);
-
-INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
-VALUES ('Salesforce Einstein Analytics', 'Fornece insights preditivos e análises avançadas para ajudar as empresas a tomar decisões mais informadas e impulsionar o crescimento.', 'Categoria Análise Preditiva', 600.00);
-
-INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
-VALUES ('Salesforce Commerce Cloud', 'Salesforce Commerce Cloud é uma plataforma de comércio digital que permite às empresas criar experiências de compra online personalizadas e escaláveis.', 'Categoria Comércio Digital', 450.00);
-
-INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR)
-VALUES ('Salesforce Service Cloud', 'Salesforce Service Cloud permite que as empresas forneçam suporte ao cliente de maneira rápida e personalizada através de vários canais.', 'Categoria Suporte ao Cliente', 500.00);
-
-

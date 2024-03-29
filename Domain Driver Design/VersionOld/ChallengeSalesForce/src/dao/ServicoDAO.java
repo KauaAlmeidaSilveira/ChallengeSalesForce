@@ -20,12 +20,13 @@ public class ServicoDAO {
     public void insert(Servico servico) throws SQLException {
 
         PreparedStatement stmt = myConnection.prepareStatement(
-                "INSERT INTO tb_servico (nome, categoria, valor) values ( ?, ?, ?)"
+                "INSERT INTO tb_servico (nome, descricao, categoria, valor) values ( ?, ?, ?, ?)"
         );
 
         stmt.setString(1, servico.getNome());
-        stmt.setString(2, servico.getCategoria());
-        stmt.setDouble(3, servico.getValor());
+        stmt.setString(2, servico.getDescricao());
+        stmt.setString(3, servico.getCategoria());
+        stmt.setDouble(4, servico.getValor());
 
         stmt.execute();
         stmt.close();
