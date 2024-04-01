@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D8E3DF47-BC3A-6129-8912-F2BBC4D4F6FA" name="tb_endereco">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>C31A92E1-8428-5B05-A135-3EA15A7F13BA</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Endereco" id="9F781B4C-493E-4AB9-42CF-A6022815E839">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>2C3C4E61-E2BE-9E55-7169-AC47BF21E08C</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Rua" id="A88FA957-A60C-2854-A205-11C234E08997">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>7C469056-F129-F420-DCA3-FC9A2A9FDE62</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cidade" id="14C6D7F4-CE6E-52AE-C730-0DD5130ECC3C">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>077222D4-C2E2-3B02-DBBC-252CE6ECC32C</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Estado" id="B193EEF0-5F48-AA80-F24A-C804D188A6DE">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>3DD2E2BD-A893-502F-72CF-0B30752FFF10</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cep" id="85AC0B09-7C7C-7E28-9B43-AFE725F4CD1B">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[99999999 ou 99999-999]]></commentInRDBMS>
+<generatorID>FC30D87C-A725-8A74-E906-4BF33D88EBA2</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9 CHAR</dataTypeSize>
+<ownDataTypeParameters>9 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Pais" id="75D04603-CF9F-3A1F-383E-8C56F53ADC67">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[USA
+BR
+]]></commentInRDBMS>
+<generatorID>91ED8285-B9A8-609C-334A-00431E800516</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DA3CAFB3-1442-618F-8CBE-9426EC5DD006" name="tb_endereco_PK">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>6D0ABFED-671C-193D-024B-0CA5C67008AA</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F781B4C-493E-4AB9-42CF-A6022815E839"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

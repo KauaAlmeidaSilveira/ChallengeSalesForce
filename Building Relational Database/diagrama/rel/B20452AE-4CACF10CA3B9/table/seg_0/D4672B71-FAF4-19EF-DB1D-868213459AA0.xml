@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D4672B71-FAF4-19EF-DB1D-868213459AA0" name="tb_empresa">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>9FD0109D-FDE8-635B-0718-23C0504B4DF0</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Empresa" id="E5254D34-9765-7BFF-A5AF-32AEF5066DBE">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>66B444CF-95F9-FB4F-894A-C7550235E7CD</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="A4E28A91-E079-C36A-2788-FA89F5109A02">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>335F968B-7EC6-3453-2EF3-719FD1FD456D</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Departamento" id="3161D21E-D58A-A261-0270-93659A021DBB">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>E1D2DF05-5A85-3B88-EE2B-373F4B0A1A7E</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Divisao" id="21F00617-9FF3-E053-1B1C-A8580D198F09">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>3A27FC2B-1959-E8B2-59E4-364B57D78A50</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Num_Funcionario" id="1C914CF9-5D29-FD04-E84B-6952F78AA2B9">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[9999999999]]></commentInRDBMS>
+<generatorID>90BB6120-43BF-31CA-E21B-2C4197C08C9A</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Inicio_Jornada" id="7291C848-A2CC-0DE5-EC0E-C1801C81F0CE">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[06:00]]></commentInRDBMS>
+<generatorID>DD8EA99D-16DC-96C2-9D82-6B6153D41BF6</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fim_Jornada" id="D4B308F4-3EF1-6381-BCC6-7A58A52974E2">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[23:00]]></commentInRDBMS>
+<generatorID>F9351626-4ACB-0B5D-C58C-C3C7D8DE1944</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="544EDAD0-7DF5-9073-DF86-CC2F14F25456" name="tb_empresa_PK">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>FB323A7C-37C7-D8EA-EA86-2B0F690B2ED5</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E5254D34-9765-7BFF-A5AF-32AEF5066DBE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

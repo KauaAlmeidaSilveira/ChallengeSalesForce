@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ECF966A8-DABF-DDA2-AFA1-9FBA4D2E65ED" name="tb_pagamento">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>0E305DB8-9823-AC18-8F44-82248543E912</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Pagamento" id="6731FCC3-3660-B9BE-DD20-14D143B29027">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>6DC6F2A9-797A-D14F-DF71-A0CEFA7A66C6</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataPagamento" id="40B2835D-D018-45D7-21A9-BBA12DF30FF3">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 22/11/2004 19:23:10]]></commentInRDBMS>
+<generatorID>1099E315-2D0C-04E9-651E-3D5FD1B991D1</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ValorTotal" id="3B8BAA4C-7E20-59F1-D130-440754197920">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>DB37750C-9C53-2C89-3352-3627D10B0D34</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="formaPagamento" id="D94D979C-7AAE-0864-8B79-ADAB6E1EE0ED">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cartão Debito
+Boleto
+Pix]]></commentInRDBMS>
+<generatorID>16790408-3E1E-5BAB-8098-39B31E1FAA0D</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Parcelas" id="4DB71270-0B93-04A9-E8B5-A195F742027A">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>EB1D60EB-7374-9BF2-CD4D-342324FE2491</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ValorParcelas" id="03A8B83D-5A58-F153-4BE6-AB3B52C8FF25">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>402E50DB-25A3-D188-AF64-EE52744E6BAE</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Descricao" id="4F4FD9B4-B8D9-2FE6-6B34-9918D8517E94">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>F0C7DD13-D7B9-14B3-EC30-0313910674B4</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Status" id="CD167D05-3AB3-9C4F-8744-A0D57FE9B048">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>8D264B8B-F64A-38F2-9738-BDBC1DC036BF</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E2134AFF-0480-098E-343B-D52321970F76" name="tb_pagamento_PK">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>59CC8E2F-0D34-053D-5C95-C172535B4938</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6731FCC3-3660-B9BE-DD20-14D143B29027"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

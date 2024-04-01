@@ -1,0 +1,154 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EEED82A2-87C3-4630-CC05-C66FC5B9025B" name="tb_conta">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>164C2C74-11A8-4A72-D080-CB1C2332D223</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Conta" id="50BBD07A-EA27-5D89-AB95-F1BDD9A06F82">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>B224B6F0-E57D-12A3-FB86-A0F82AABC00D</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Usuario" id="C1C7001F-64FD-4294-244F-2598A4BBE861">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: comecoEmail@force.com]]></commentInRDBMS>
+<generatorID>E199A809-15ED-B7B7-EB23-8C9AC5613483</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Email" id="01C946E0-0BC6-511B-A8FB-9F53C6B65DDA">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: email@gmail.com]]></commentInRDBMS>
+<generatorID>5A86F1A5-0C42-B880-2743-5EBF2EB1B269</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Senha" id="CAC3C9F6-DAC6-0A6C-7558-58B3771764BA">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>B9779845-12E3-94F7-BE2F-A98AE0FE028F</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12 CHAR</dataTypeSize>
+<ownDataTypeParameters>12 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Status" id="66BB9038-9269-531E-E41B-BF48A163318D">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[ATIVO, INATIVO]]></commentInRDBMS>
+<generatorID>9F0A7D4C-E6DC-BC17-1E15-B14F9F64FADB</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data_Registro" id="FB6D50A4-675E-7C84-4D74-9AC966D6E63D">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 20/11/2004 19:50:52]]></commentInRDBMS>
+<generatorID>3703B102-26A7-6C91-09E5-67D270F82253</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ultimo_Acesso" id="6EECC14D-96EC-C9C9-F8AA-F6617E8852FF">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 25/11/2004 19:50:52]]></commentInRDBMS>
+<generatorID>4114CAE2-42EE-2478-F8DB-D878249A9ECF</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tb_pessoa_ID_Pessoa" id="686689A6-C854-66FC-8B52-AA5071491786">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>D9DB0236-3AE1-34AA-C560-347377134F3B</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EB98EF7D-BD2E-EB6C-D5CC-F18D58D08AE3" referredColumn="EE8CD875-06C5-AE56-8D91-96D4A2CC85E4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F4AAE236-7DD9-D266-7E3D-244541A8BAC9" name="tb_conta_PK">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>1C1E2795-8C3B-4742-8CB3-F8B878B5EDB2</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="50BBD07A-EA27-5D89-AB95-F1BDD9A06F82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="907F46ED-CB73-98EE-8C3A-FA379B27FA4A" name="tb_conta__IDX">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>E5F97B6E-5295-2F5E-9853-0F97ACFD852C</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="686689A6-C854-66FC-8B52-AA5071491786"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F7F73053-56E2-52C7-0391-7A8950AC65E5" name="tb_conta_tb_pessoa_FK">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>E5F97B6E-5295-2F5E-9853-0F97ACFD852C</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="686689A6-C854-66FC-8B52-AA5071491786"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

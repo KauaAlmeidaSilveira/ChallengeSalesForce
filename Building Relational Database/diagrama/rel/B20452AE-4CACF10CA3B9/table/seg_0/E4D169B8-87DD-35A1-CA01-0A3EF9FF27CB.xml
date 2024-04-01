@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E4D169B8-87DD-35A1-CA01-0A3EF9FF27CB" name="tb_servico_conta">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>EB1FB2CC-BF3F-38CF-D65C-E715C8AF29AE</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Servico" id="048D7594-1672-299A-5565-2ED0706177F4">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>EAA957A1-48FD-5DBF-3DE4-619784100D81</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B818F538-97C9-2751-C7EE-00519F041EEF" referredColumn="0C32D8BC-5B24-A009-62C7-08C5C0D3914A"/>
+</associations>
+</Column>
+<Column name="ID_Conta" id="12C85CB3-B521-92D8-9E1E-E418E872856C">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>B206D657-BBEA-E887-04D5-D780E4D73486</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9B954150-817F-B2D8-AED2-028DC551E0CC" referredColumn="50BBD07A-EA27-5D89-AB95-F1BDD9A06F82"/>
+</associations>
+</Column>
+<Column name="Status" id="0FE7E5EB-002C-211F-55D1-F3810E02B0B5">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[ATIVO, INATIVO]]></commentInRDBMS>
+<generatorID>BA95F75E-CAB6-5090-08EC-BDF028A4603D</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data_Inicio" id="1792FA69-1D4F-8576-93A3-77FE225522BF">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 20/11/2004 19:50:52]]></commentInRDBMS>
+<generatorID>E995D442-FC46-A79E-D0E6-928C9FCDBC3B</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data_Termino" id="DBAAFDF4-A6F3-52E5-2897-9691D42C60C6">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: 20/11/2004 19:50:52]]></commentInRDBMS>
+<generatorID>A8D0F789-0F34-B586-7B87-3350D178B765</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6BD378DE-7AE5-E671-1FAE-D0C070B29A65" name="tb_servico_conta_PK">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>16D1D087-22FC-BB74-8B22-58438871E57D</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="048D7594-1672-299A-5565-2ED0706177F4"/>
+<colUsage columnID="12C85CB3-B521-92D8-9E1E-E418E872856C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7E352E78-7690-C0A1-4AB3-68ADFCC97F55" name="tb_servico_conta_tb_servico_FK">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>9E84E43A-14AA-544E-F86D-1B10EE3AFD0B</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="048D7594-1672-299A-5565-2ED0706177F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0EA08631-C9EA-97F9-6223-D9D949549565" name="tb_servico_conta_tb_conta_FK">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-03-29 20:39:28 UTC</createdTime>
+<generatorID>D5242E0F-6132-8D6B-80CC-1CA79FDD0FB8</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12C85CB3-B521-92D8-9E1E-E418E872856C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
