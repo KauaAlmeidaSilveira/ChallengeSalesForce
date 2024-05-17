@@ -1,11 +1,17 @@
 package com.fiap.salesForce.controllers;
 
-import com.fiap.salesForce.dto.LoginRequestDTO;
-import com.fiap.salesForce.dto.RegisterRequestDTO;
-import com.fiap.salesForce.dto.ResponseDTO;
+import com.fiap.salesForce.dto.*;
+import com.fiap.salesForce.dto.Register.RegisterRequestDTO;
 import com.fiap.salesForce.model.Conta;
+import com.fiap.salesForce.model.Empresa;
+import com.fiap.salesForce.model.Endereco;
+import com.fiap.salesForce.model.Pessoa;
 import com.fiap.salesForce.repositories.ContaRepository;
 import com.fiap.salesForce.security.TokenService;
+import com.fiap.salesForce.services.ContaService;
+import com.fiap.salesForce.services.EmpresaService;
+import com.fiap.salesForce.services.EnderecoService;
+import com.fiap.salesForce.services.PessoaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -14,27 +20,30 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
 public class AuthController {
 
-    private final ContaRepository repository;
+    private final PessoaService pessoaService;
+    private final ContaRepository contaRepository;
     private final PasswordEncoder passwordEncoder;
     private final TokenService tokenService;
+    private final ContaService contaService;
+    private final EnderecoService enderecoService;
+    private final EmpresaService empresaService;
+
 
     @PostMapping("/login")
     public ResponseEntity login(@RequestBody LoginRequestDTO body) {
-        Conta conta = this.repository.findByEmail(body.email()).orElseThrow(() -> new RuntimeException("Conta not Found !!"));
+        Conta conta = this.contaRepository.findByEmail(body.email()).orElseThrow(() -> new RuntimeException("Conta not Found !!"));
 
         if (passwordEncoder.matches(body.senha(), conta.getSenha())) {
             String token = this.tokenService.generateToken(conta);
             conta.setUltimoAcesso(LocalDateTime.now());
-            this.repository.save(conta);
+            this.contaRepository.save(conta);
             return ResponseEntity.ok(new ResponseDTO(conta.getUsuario(), token));
         }
 
@@ -42,25 +51,18 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity register(@RequestBody RegisterRequestDTO body) {
-        Optional<Conta> conta = this.repository.findByEmail(body.email());
+    public ResponseEntity<ResponseDTO> register(@RequestBody RegisterRequestDTO body) {
+        EnderecoDTO enderecoDTO = enderecoService.insert(body.endereco());
+        EmpresaDTO empresaDTO = empresaService.insert(body.empresa());
+        PessoaDTO pessoaDTO = pessoaService.insert(body.pessoa(), enderecoDTO, empresaDTO);
 
-        if (conta.isEmpty()) {
-            Conta newUser = new Conta();
-            newUser.setSenha(passwordEncoder.encode(body.senha()));
-            newUser.setEmail(body.email());
-            newUser.setUsuario(body.usuario());
-            newUser.setStatus("Ativo");
-            newUser.setDataRegistro(LocalDate.now());
-            newUser.setUltimoAcesso(LocalDateTime.now());
-            newUser.setId_pessoa(1L);
-            this.repository.save(newUser);
-
-            String token = this.tokenService.generateToken(newUser);
-            return ResponseEntity.ok(new ResponseDTO(newUser.getUsuario(), token));
+        Conta conta = new Conta();
+        if (pessoaDTO.getId_pessoa() != null) {
+            contaService.insert(body.conta(), pessoaDTO, conta);
         }
 
-        return ResponseEntity.badRequest().build();
+        String token = this.tokenService.generateToken(conta);
+        return ResponseEntity.ok(new ResponseDTO(conta.getUsuario(), token));
     }
 
 }

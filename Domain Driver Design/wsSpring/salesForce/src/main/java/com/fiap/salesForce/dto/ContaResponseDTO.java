@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ContaDTO {
+public class ContaResponseDTO {
     private Long id_conta;
     private String usuario;
     private String email;
@@ -23,7 +23,7 @@ public class ContaDTO {
     private LocalDateTime ultimoAcesso;
     private Long id_pessoa;
 
-    public ContaDTO(Conta conta){
+    public ContaResponseDTO(Conta conta){
         this.id_conta = conta.getId_conta();
         this.usuario = conta.getUsuario();
         this.email = conta.getEmail();

@@ -1,9 +1,7 @@
 package com.fiap.salesForce.controllers;
 
-import com.fiap.salesForce.dto.ContaDTO;
-import com.fiap.salesForce.dto.ServicoDTO;
+import com.fiap.salesForce.dto.ContaResponseDTO;
 import com.fiap.salesForce.services.ContaService;
-import com.fiap.salesForce.services.ServicoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +18,7 @@ public class ContaController {
     private ContaService contaService;
 
     @GetMapping
-    public ResponseEntity<List<ContaDTO>> findAll() {
+    public ResponseEntity<List<ContaResponseDTO>> findAll() {
         return ResponseEntity.ok(contaService.findAll());
     }
 
