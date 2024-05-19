@@ -27,20 +27,13 @@ public class PessoaService {
 
     @Transactional
     public PessoaDTO insert(PessoaRegisterDTO body, EnderecoDTO enderecoDTO, EmpresaDTO empresaDTO) {
-        Optional<Pessoa> pessoa = this.pessoaRepository.findByRg(body.getRg());
-
-        if (pessoa.isEmpty()) {
             Pessoa newPessoa = new Pessoa();
             newPessoa.setNome(body.getNome());
-            newPessoa.setCelular(body.getCelular());
+            newPessoa.setSobrenome(body.getSobrenome());
             newPessoa.setCargo(body.getCargo());
-            newPessoa.setRg(body.getRg());
             newPessoa.setId_empresa(enderecoDTO.getId_endereco());
             newPessoa.setId_endereco(empresaDTO.getId_empresa());
             this.pessoaRepository.save(newPessoa);
             return new PessoaDTO(newPessoa);
-        }
-
-        return null;
     }
 }

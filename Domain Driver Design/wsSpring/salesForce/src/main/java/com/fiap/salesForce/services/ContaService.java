@@ -5,6 +5,7 @@ import com.fiap.salesForce.dto.PessoaDTO;
 import com.fiap.salesForce.dto.Register.ContaRegisterDTO;
 import com.fiap.salesForce.model.Conta;
 import com.fiap.salesForce.repositories.ContaRepository;
+import com.fiap.salesForce.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -32,11 +33,12 @@ public class ContaService {
 
     @Transactional
     public ContaResponseDTO insert(ContaRegisterDTO body, PessoaDTO pessoaDTO, Conta newUser) {
-        Optional<Conta> conta = this.contaRepository.findByEmail(body.getEmail());
-        if (conta.isEmpty()) {
+        Conta conta = this.contaRepository.findByEmail(body.getEmail()).orElse(null);
+
+        if (conta == null) {
             newUser.setSenha(passwordEncoder.encode(body.getSenha()));
             newUser.setEmail(body.getEmail());
-            newUser.setUsuario(body.getUsuario());
+            newUser.setUsuario(pessoaDTO.getNome() + "." + pessoaDTO.getSobrenome());
             newUser.setStatus("Ativo");
             newUser.setDataRegistro(LocalDate.now());
             newUser.setUltimoAcesso(LocalDateTime.now());
@@ -44,6 +46,7 @@ public class ContaService {
             this.contaRepository.save(newUser);
             return new ContaResponseDTO(newUser);
         }
+
         return null;
     }
 

@@ -11,7 +11,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class PessoaRegisterDTO {
     private String nome;
-    private String celular;
-    private String rg;
+    private String sobrenome;
     private String cargo;
 }

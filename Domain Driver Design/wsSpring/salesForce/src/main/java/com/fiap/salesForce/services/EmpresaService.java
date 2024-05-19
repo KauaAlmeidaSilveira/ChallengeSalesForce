@@ -26,7 +26,7 @@ public class EmpresaService {
     public EmpresaDTO insert(EmpresaRegisterDTO body) {
         Empresa newEmpresa = new Empresa();
         newEmpresa.setNome(body.getNome());
-        newEmpresa.setDepartamento(body.getDepartamento());
+        newEmpresa.setNumFuncionario(body.getNumFuncionario());
         empresaRepository.save(newEmpresa);
         return new EmpresaDTO(newEmpresa);
     }

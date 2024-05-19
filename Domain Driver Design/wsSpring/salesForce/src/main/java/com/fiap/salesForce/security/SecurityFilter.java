@@ -2,6 +2,7 @@ package com.fiap.salesForce.security;
 
 import com.fiap.salesForce.model.Conta;
 import com.fiap.salesForce.repositories.ContaRepository;
+import com.fiap.salesForce.services.exceptions.ResourceNotFoundException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -29,7 +30,7 @@ public class SecurityFilter extends OncePerRequestFilter {
         var login = tokenService.validateToken(token);
 
         if (login != null) {
-            Conta conta = contaRepository.findByEmail(login).orElseThrow(() -> new RuntimeException("Conta Not Found"));
+            Conta conta = contaRepository.findByEmail(login).orElseThrow(() -> new ResourceNotFoundException("Conta não encontrada"));
             var authorities = Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
             var authentication = new UsernamePasswordAuthenticationToken(conta, null, authorities);
             SecurityContextHolder.getContext().setAuthentication(authentication);

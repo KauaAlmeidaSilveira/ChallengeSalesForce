@@ -25,10 +25,6 @@ public class EnderecoService {
     @Transactional
     public EnderecoDTO insert(EnderecoRegisterDTO body) {
         Endereco newEndereco = new Endereco();
-        newEndereco.setRua(body.getRua());
-        newEndereco.setCep(body.getCep());
-        newEndereco.setCidade(body.getCidade());
-        newEndereco.setEstado(body.getEstado());
         newEndereco.setPais(body.getPais());
         enderecoRepository.save(newEndereco);
         return new EnderecoDTO(newEndereco);

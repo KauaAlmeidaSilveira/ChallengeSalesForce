@@ -13,6 +13,7 @@ import lombok.Setter;
 public class PessoaDTO {
     private Long id_pessoa;
     private String nome;
+    private String sobrenome;
     private String apelido;
     private String telefone;
     private String celular;
@@ -24,6 +25,7 @@ public class PessoaDTO {
     public PessoaDTO(Pessoa pessoa) {
         this.id_pessoa = pessoa.getId_pessoa();
         this.nome = pessoa.getNome();
+        this.sobrenome = pessoa.getSobrenome();
         this.apelido = pessoa.getApelido();
         this.telefone = pessoa.getTelefone();
         this.celular = pessoa.getCelular();

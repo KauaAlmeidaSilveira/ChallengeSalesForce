@@ -10,9 +10,5 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class EnderecoRegisterDTO {
-    private String rua;
-    private String cidade;
-    private String estado;
-    private String cep;
     private String pais;
 }

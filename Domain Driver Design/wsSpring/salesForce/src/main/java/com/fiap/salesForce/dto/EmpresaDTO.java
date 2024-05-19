@@ -15,7 +15,7 @@ public class EmpresaDTO {
     private String nome;
     private String departamento;
     private String divisao;
-    private Integer numFuncionario;
+    private String numFuncionario;
     private String inicioJornada;
     private String fimJornada;
 

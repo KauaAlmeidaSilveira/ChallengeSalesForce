@@ -17,6 +17,7 @@ public class Pessoa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_pessoa;
     private String nome;
+    private String sobrenome;
     private String apelido;
     private String telefone;
     private String celular;
