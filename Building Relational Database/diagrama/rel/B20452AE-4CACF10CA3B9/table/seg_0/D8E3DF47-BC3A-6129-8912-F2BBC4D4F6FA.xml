@@ -25,6 +25,7 @@
 <createdTime>2024-03-29 20:39:28 UTC</createdTime>
 <generatorID>7C469056-F129-F420-DCA3-FC9A2A9FDE62</generatorID>
 <ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -37,6 +38,7 @@
 <createdTime>2024-03-29 20:39:28 UTC</createdTime>
 <generatorID>077222D4-C2E2-3B02-DBBC-252CE6ECC32C</generatorID>
 <ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -49,6 +51,7 @@
 <createdTime>2024-03-29 20:39:28 UTC</createdTime>
 <generatorID>3DD2E2BD-A893-502F-72CF-0B30752FFF10</generatorID>
 <ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -56,12 +59,13 @@
 <ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="cep" id="85AC0B09-7C7C-7E28-9B43-AFE725F4CD1B">
+<Column name="CEP" id="85AC0B09-7C7C-7E28-9B43-AFE725F4CD1B">
 <createdBy>Kaua</createdBy>
 <createdTime>2024-03-29 20:39:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[99999999 ou 99999-999]]></commentInRDBMS>
 <generatorID>FC30D87C-A725-8A74-E906-4BF33D88EBA2</generatorID>
 <ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -77,7 +81,6 @@ BR
 ]]></commentInRDBMS>
 <generatorID>91ED8285-B9A8-609C-334A-00431E800516</generatorID>
 <ownerDesignName>diagrama</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>

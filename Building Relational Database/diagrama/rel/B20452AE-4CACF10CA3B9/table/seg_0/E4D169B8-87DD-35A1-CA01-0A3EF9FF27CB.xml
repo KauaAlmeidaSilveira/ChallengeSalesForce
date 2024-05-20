@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="ID_Servico" id="048D7594-1672-299A-5565-2ED0706177F4">
+<Column name="tb_servico_ID_Servico" id="048D7594-1672-299A-5565-2ED0706177F4">
 <createdBy>Kaua</createdBy>
 <createdTime>2024-03-29 20:39:28 UTC</createdTime>
 <generatorID>EAA957A1-48FD-5DBF-3DE4-619784100D81</generatorID>
@@ -17,14 +17,14 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="B818F538-97C9-2751-C7EE-00519F041EEF" referredColumn="0C32D8BC-5B24-A009-62C7-08C5C0D3914A"/>
 </associations>
 </Column>
-<Column name="ID_Conta" id="12C85CB3-B521-92D8-9E1E-E418E872856C">
+<Column name="tb_conta_ID_Conta" id="12C85CB3-B521-92D8-9E1E-E418E872856C">
 <createdBy>Kaua</createdBy>
 <createdTime>2024-03-29 20:39:28 UTC</createdTime>
 <generatorID>B206D657-BBEA-E887-04D5-D780E4D73486</generatorID>
@@ -33,7 +33,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>

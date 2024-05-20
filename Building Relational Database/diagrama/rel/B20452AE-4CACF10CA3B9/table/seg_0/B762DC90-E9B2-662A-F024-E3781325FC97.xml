@@ -72,6 +72,18 @@
 <ownDataTypeParameters>,10,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Img_url" id="4E95059C-348E-A71E-B055-5BE4A8BC9777">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-05-20 15:02:35 UTC</createdTime>
+<generatorID>E5041332-3EE2-0469-436D-DA7FA37A2E65</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="37E56321-EDE1-6C28-118B-F138BECFA631" name="tb_servico_PK">

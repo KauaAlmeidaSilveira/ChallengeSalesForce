@@ -65,6 +65,7 @@
 <commentInRDBMS><![CDATA[Ex: +55 (11) 96368-9880]]></commentInRDBMS>
 <generatorID>FC3910C3-7194-9F9D-BE61-71822204A397</generatorID>
 <ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -90,6 +91,7 @@
 <commentInRDBMS><![CDATA[Ex: 55.555.555-5 ou 555555555]]></commentInRDBMS>
 <generatorID>444F3F87-BEB4-083A-786E-4679F46D1D57</generatorID>
 <ownerDesignName>diagrama</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -106,7 +108,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -122,12 +124,24 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="5B51A746-66A3-A1A2-0954-2197E2DA90D2" referredColumn="E5254D34-9765-7BFF-A5AF-32AEF5066DBE"/>
 </associations>
+</Column>
+<Column name="Sobrenome" id="6DA625AE-3F25-8304-DE50-FA70DDABC26B">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-05-20 15:02:35 UTC</createdTime>
+<generatorID>5CF870DC-9939-BD71-4D3F-32D88581FE29</generatorID>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

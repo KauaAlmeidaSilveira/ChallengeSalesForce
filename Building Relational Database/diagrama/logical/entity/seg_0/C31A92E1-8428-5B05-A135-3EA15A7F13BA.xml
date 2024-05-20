@@ -3,6 +3,9 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:11:08 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,6 +19,9 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:38:16 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -26,6 +32,10 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:41:36 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -36,6 +46,10 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:44:02 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -46,17 +60,25 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:44:25 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>30 CHAR</dataTypeSize>
 <ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cep" id="FC30D87C-A725-8A74-E906-4BF33D88EBA2">
+<Attribute name="CEP" id="FC30D87C-A725-8A74-E906-4BF33D88EBA2">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:44:46 UTC</createdTime>
 <commentInRDBMS><![CDATA[99999999 ou 99999-999]]></commentInRDBMS>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -70,7 +92,9 @@
 BR
 ]]></commentInRDBMS>
 <ownerDesignName>diagrama</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -83,6 +107,10 @@ BR
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:41:33 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="false"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>2C3C4E61-E2BE-9E55-7169-AC47BF21E08C</attributeRef>

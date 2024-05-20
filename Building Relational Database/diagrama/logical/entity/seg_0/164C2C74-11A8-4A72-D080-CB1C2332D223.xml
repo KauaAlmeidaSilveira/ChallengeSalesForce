@@ -3,6 +3,9 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:11:20 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,6 +19,9 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:56:26 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -27,7 +33,9 @@
 <createdTime>2023-10-08 23:56:40 UTC</createdTime>
 <commentInRDBMS><![CDATA[Ex: comecoEmail@force.com]]></commentInRDBMS>
 <ownerDesignName>diagrama</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -39,6 +47,9 @@
 <createdTime>2023-10-08 23:58:16 UTC</createdTime>
 <commentInRDBMS><![CDATA[Ex: email@gmail.com]]></commentInRDBMS>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -49,6 +60,9 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-09 00:00:19 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -60,6 +74,9 @@
 <createdTime>2023-11-01 22:39:50 UTC</createdTime>
 <commentInRDBMS><![CDATA[ATIVO, INATIVO]]></commentInRDBMS>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -71,6 +88,9 @@
 <createdTime>2023-10-09 00:00:36 UTC</createdTime>
 <commentInRDBMS><![CDATA[Ex: 20/11/2004 19:50:52]]></commentInRDBMS>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -82,6 +102,9 @@
 <createdTime>2023-10-09 00:01:26 UTC</createdTime>
 <commentInRDBMS><![CDATA[Ex: 25/11/2004 19:50:52]]></commentInRDBMS>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -93,12 +116,15 @@
 <createdTime>2023-11-30 14:04:52 UTC</createdTime>
 <generatorID>E5F97B6E-5295-2F5E-9853-0F97ACFD852C</generatorID>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <referedAttribute>43DE73D7-EDB3-9C61-C0A3-98655C17263D</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -106,6 +132,10 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:56:37 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="false"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>B224B6F0-E57D-12A3-FB86-A0F82AABC00D</attributeRef>

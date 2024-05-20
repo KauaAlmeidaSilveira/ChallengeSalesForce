@@ -1,21 +1,15 @@
-SELECT * FROM TB_CONTA;
-DESC TB_CONTA;
-SELECT * FROM TB_ENDERECO;
-DESC TB_ENDERECO;
-SELECT * FROM TB_EMPRESA;
-DESC TB_EMPRESA;
-SELECT * FROM TB_PAGAMENTO;
-DESC TB_PAGAMENTO;
-SELECT * FROM TB_PEDIDO;
-DESC TB_PEDIDO;
-SELECT * FROM TB_PESSOA;
-DESC TB_PESSOA;
-SELECT * FROM TB_SERVICO;
-DESC TB_SERVICO;
-SELECT * FROM TB_SERVICO_CONTA;
-DESC TB_SERVICO_CONTA;
+-- Kaua Almeida Silveira - RM 552618
+-- Matheus Alexandre Benites Scotti - RM 553073
+-- Mariana Spinola - RM 553476
 
+DELETE FROM TB_CONTA;
+DELETE FROM TB_ENDERECO;
+DELETE FROM TB_EMPRESA;
+DELETE FROM TB_PESSOA;
+DELETE FROM TB_SERVICO;
+DELETE FROM TB_SERVICO_CONTA;
 
+--------------------- INSERTS ---------------------
 
 -- INSERT TB_EMPRESA
 INSERT INTO TB_EMPRESA (NOME, DEPARTAMENTO, DIVISAO, NUM_FUNCIONARIO, INICIO_JORNADA, FIM_JORNADA) VALUES
@@ -43,7 +37,7 @@ INSERT INTO TB_ENDERECO (RUA, CIDADE, ESTADO, CEP, PAIS) VALUES
 
 -- INSERT TB_PESSOA
 INSERT INTO TB_PESSOA (NOME, SOBRENOME, APELIDO, TELEFONE, CELULAR, CARGO, RG, ID_ENDERECO, ID_EMPRESA) VALUES
-('Fernando', 'Almeida', 'Nando', '987654326', '19987654326', 'Analista de Sistemas', '123456794', 1, 1);
+('Teste', 'teste', 'testinho', '987654326', '19987654326', 'Analista de teste', '123456794', 1, 1);
 INSERT INTO TB_PESSOA (NOME, SOBRENOME, APELIDO, TELEFONE, CELULAR, CARGO, RG, ID_ENDERECO, ID_EMPRESA) VALUES
 ('Luiza', 'Costa', 'Lu', '987654327', '19987654327', 'Gerente de RH', '123456795', 2, 2);
 INSERT INTO TB_PESSOA (NOME, SOBRENOME, APELIDO, TELEFONE, CELULAR, CARGO, RG, ID_ENDERECO, ID_EMPRESA) VALUES
@@ -53,58 +47,125 @@ INSERT INTO TB_PESSOA (NOME, SOBRENOME, APELIDO, TELEFONE, CELULAR, CARGO, RG, I
 INSERT INTO TB_PESSOA (NOME, SOBRENOME, APELIDO, TELEFONE, CELULAR, CARGO, RG, ID_ENDERECO, ID_EMPRESA) VALUES
 ('Bruno', 'Lima', 'Bruninho', '987654330', '19987654330', 'Coordenador de Logística', '123456798', 5, 5);
 
--- INSERT TB_PAGAMENTO
-INSERT INTO TB_PAGAMENTO (DATA_PAGAMENTO, VALOR_TOTAL, FORMA_PAGAMENTO, PARCELAS, VALOR_PARCELAS, DESCRICAO, STATUS) VALUES
-(TO_DATE('2024-05-01', 'YYYY-MM-DD'), 1500.00, 'Cartão de Crédito', 3, 500.00, 'Pagamento de curso de TI', 'Pago');
-INSERT INTO TB_PAGAMENTO (DATA_PAGAMENTO, VALOR_TOTAL, FORMA_PAGAMENTO, PARCELAS, VALOR_PARCELAS, DESCRICAO, STATUS) VALUES
-(TO_DATE('2024-05-10', 'YYYY-MM-DD'), 500.00, 'Boleto', 1, 500.00, 'Pagamento de mensalidade', 'Pendente');
-INSERT INTO TB_PAGAMENTO (DATA_PAGAMENTO, VALOR_TOTAL, FORMA_PAGAMENTO, PARCELAS, VALOR_PARCELAS, DESCRICAO, STATUS) VALUES
-(TO_DATE('2024-05-15', 'YYYY-MM-DD'), 2000.00, 'Transferência Bancária', 2, 1000.00, 'Pagamento de software', 'Pago');
-INSERT INTO TB_PAGAMENTO (DATA_PAGAMENTO, VALOR_TOTAL, FORMA_PAGAMENTO, PARCELAS, VALOR_PARCELAS, DESCRICAO, STATUS) VALUES
-(TO_DATE('2024-05-20', 'YYYY-MM-DD'), 750.00, 'Dinheiro', 1, 750.00, 'Pagamento de material de escritório', 'Pendente');
-INSERT INTO TB_PAGAMENTO (DATA_PAGAMENTO, VALOR_TOTAL, FORMA_PAGAMENTO, PARCELAS, VALOR_PARCELAS, DESCRICAO, STATUS) VALUES
-(TO_DATE('2024-05-25', 'YYYY-MM-DD'), 1200.00, 'Cartão de Débito', 4, 300.00, 'Pagamento de serviços de marketing', 'Pago');
-
 -- INSERT TB_SERVICO
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('Customer 360', 'Plataforma de gestão de relacionamento com o cliente.', 'CRM', 1000.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/placeholder11.svg');
+('Customer 360', 'Plataforma de gestão de relacionamento com o cliente.', 'CRM', 999.50, 'https://www.salesforce.com/content/dam/web/global/svg-icons/placeholder11.svg');
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('IA', 'Inteligência artificial para análise de dados e automação de processos.', 'IA', 1500.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/placeholder12.svg');
+('IA', 'Inteligência artificial para análise de dados e automação de processos.', 'IA', 1499.20, 'https://www.salesforce.com/content/dam/web/global/svg-icons/placeholder12.svg');
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('Pequenas Empresas', 'Soluções personalizadas para pequenas empresas.', 'SMB', 800.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/product-smb-day.svg');
+('Pequenas Empresas', 'Soluções personalizadas para pequenas empresas.', 'SMB', 799.60, 'https://www.salesforce.com/content/dam/web/global/svg-icons/product-smb-day.svg');
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('Vendas', 'Ferramentas para gestão e automação de vendas.', 'CRM', 1200.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/sales-day.svg');
+('Vendas', 'Ferramentas para gestão e automação de vendas.', 'CRM', 1199.30, 'https://www.salesforce.com/content/dam/web/global/svg-icons/sales-day.svg');
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('Atendimento ao Cliente', 'Plataforma de atendimento ao cliente multicanal.', 'CRM', 1000.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/service-day.svg');
+('Atendimento ao Cliente', 'Plataforma de atendimento ao cliente multicanal.', 'CRM', 999.80, 'https://www.salesforce.com/content/dam/web/global/svg-icons/service-day.svg');
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('Marketing', 'Ferramentas para automação de marketing e análise de campanhas.', 'Marketing', 1300.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/marketing-day.svg');
+('Marketing', 'Ferramentas para automação de marketing e análise de campanhas.', 'Marketing', 1299.70, 'https://www.salesforce.com/content/dam/web/global/svg-icons/marketing-day.svg');
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('Commerce', 'Soluções para comércio eletrônico e gestão de lojas virtuais.', 'Commerce', 1500.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/commerce-day.svg');
+('Commerce', 'Soluções para comércio eletrônico e gestão de lojas virtuais.', 'Commerce', 1499.30, 'https://www.salesforce.com/content/dam/web/global/svg-icons/commerce-day.svg');
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('Data Cloud', 'Armazenamento e análise de grandes volumes de dados na nuvem.', 'Cloud', 2000.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/placeholder29.svg');
+('Data Cloud', 'Armazenamento e análise de grandes volumes de dados na nuvem.', 'Cloud', 1999.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/placeholder29.svg');
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('Tableau', 'Plataforma de visualização e análise de dados.', 'Analytics', 1800.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/placeholder1.svg');
+('Tableau', 'Plataforma de visualização e análise de dados.', 'Analytics', 1799.40, 'https://www.salesforce.com/content/dam/web/global/svg-icons/placeholder1.svg');
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('Mulesoft', 'Integração de sistemas e APIs.', 'Integration', 1700.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/integration-day.svg');
+('Mulesoft', 'Integração de sistemas e APIs.', 'Integration', 1699.10, 'https://www.salesforce.com/content/dam/web/global/svg-icons/integration-day.svg');
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('Slack', 'Ferramenta de comunicação empresarial.', 'Collaboration', 900.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/placeholder13.svg');
+('Slack', 'Ferramenta de comunicação empresarial.', 'Collaboration', 899.90, 'https://www.salesforce.com/content/dam/web/global/svg-icons/placeholder13.svg');
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('Plataforma Einstein 1', 'Inteligência artificial para análise preditiva e recomendações.', 'AI', 2000.00, 'https://www.salesforce.com/content/dam/web/global/svg-icons/platform-day.svg');
+('Plataforma Einstein 1', 'Inteligência artificial para análise preditiva e recomendações.', 'AI', 1999.20, 'https://www.salesforce.com/content/dam/web/global/svg-icons/platform-day.svg');
 INSERT INTO TB_SERVICO (NOME, DESCRICAO, CATEGORIA, VALOR, IMG_URL) VALUES
-('Sustentabilidade', 'Soluções para gestão de sustentabilidade empresarial.', 'Sustainability', 1600.00, 'https://www.salesforce.com/content/dam/web/global/icons/product/products-sustainability-day.svg');
+('Sustentabilidade', 'Soluções para gestão de sustentabilidade empresarial.', 'Sustainability', 1599.10, 'https://www.salesforce.com/content/dam/web/global/icons/product/products-sustainability-day.svg');
+
+-- INSERT TB_CONTA
+INSERT INTO TB_CONTA (USUARIO, EMAIL, SENHA, STATUS, DATA_REGISTRO, ULTIMO_ACESSO, ID_PESSOA) 
+VALUES ('Teste.teste', 'teste@gmail.com', '$2a$10$X0/hhoivbg79BRZQfbtAZOJ1hsVDXmpWa0zdjHA2sVtexoRdzNzWa', 'Ativo', SYSDATE, SYSTIMESTAMP, 1);
+
+-- INSERT TB_SERVICO_CONTA
+INSERT INTO TB_SERVICO_CONTA (ID_SERVICO, ID_CONTA, STATUS, DATA_INICIO, DATA_TERMINO) VALUES
+(1, 1,'Ativo', TO_DATE('2024-05-20', 'YYYY-MM-DD'),  TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+
+INSERT INTO TB_SERVICO_CONTA (ID_SERVICO, ID_CONTA, STATUS, DATA_INICIO, DATA_TERMINO) VALUES
+(2, 1,'Ativo', TO_DATE('2024-05-20', 'YYYY-MM-DD'),  TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+
+INSERT INTO TB_SERVICO_CONTA (ID_SERVICO, ID_CONTA, STATUS, DATA_INICIO, DATA_TERMINO) VALUES
+(3, 1,'Ativo', TO_DATE('2024-05-20', 'YYYY-MM-DD'),  TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+
+--------------------- UPDATES ---------------------
+
+UPDATE tb_pessoa
+SET apelido = 'Silveira'
+WHERE id_pessoa = 3;
+
+UPDATE tb_servico
+SET categoria = 'IA'
+WHERE nome = 'Plataforma Einstein 1';
+
+UPDATE tb_empresa
+SET nome = 'Start Solução', departamento = 'TI'
+where id_empresa = 5;
+
+--------------------- DELETES ---------------------
+
+DELETE tb_pessoa
+WHERE id_pessoa = 2;
+
+DELETE tb_endereco 
+WHERE id_endereco = 2;
+
+DELETE tb_empresa 
+WHERE id_empresa = 2;
+
+--------------------- RELATORIOS - CONSULTA DE DADOS ---------------------
+
+// Ordenado pelo valor de forma decrescente
+SELECT * 
+FROM tb_servico tb
+ORDER BY tb.valor DESC;
+
+// Selecionando todos os servicos, trazendo
+// apenas o nome e os valores arredondados
+SELECT tb.nome, ROUND(tb.valor) as Valor_Arrendondado
+FROM tb_servico tb;
+
+// Contando cada serviço por categoria
+SELECT tb.categoria, COUNT(*) as QUANTIDADE 
+from tb_servico tb
+GROUP BY tb.categoria;
+
+// Selecionando todos os servicos, trazendo
+// apenas o nome e os valores arredondados
+// ordenando de forma decrescente
+SELECT Nome_Servico, Valor_Arrendondado
+FROM (
+    SELECT tb.nome as Nome_Servico, ROUND(tb.valor) as Valor_Arrendondado
+    FROM tb_servico tb
+)
+ORDER BY Valor_Arrendondado DESC;
 
 
--- INSERT TB_PEDIDO
-INSERT INTO TB_PEDIDO (ID_CONTA, ID_PAGAMENTO, ID_SERVICO) VALUES
-(1, 1, 1);
-INSERT INTO TB_PEDIDO (ID_CONTA, ID_PAGAMENTO, ID_SERVICO) VALUES
-(2, 2, 2);
-INSERT INTO TB_PEDIDO (ID_CONTA, ID_PAGAMENTO, ID_SERVICO) VALUES
-(3, 3, 3);
-INSERT INTO TB_PEDIDO (ID_CONTA, ID_PAGAMENTO, ID_SERVICO) VALUES
-(4, 4, 4);
-INSERT INTO TB_PEDIDO (ID_CONTA, ID_PAGAMENTO, ID_SERVICO) VALUES
-(5, 5, 5);
+// Selecionando todas as pessoas, trazendo
+// seu nome e sobrenome, a rua onde moram
+// e o nome da empresa em que trabalham
+SELECT p.nome, p.sobrenome, end.rua, emp.nome as Nome_Empresa
+FROM tb_pessoa p
+INNER JOIN tb_endereco end
+ON p.id_endereco = end.id_endereco
+INNER JOIN tb_empresa emp
+ON p.id_empresa = emp.id_empresa;
+
+
+SELECT * FROM TB_CONTA;
+DESC TB_CONTA;
+SELECT * FROM TB_ENDERECO;
+DESC TB_ENDERECO;
+SELECT * FROM TB_EMPRESA;
+DESC TB_EMPRESA;
+SELECT * FROM TB_PESSOA;
+DESC TB_PESSOA;
+SELECT * FROM TB_SERVICO;
+DESC TB_SERVICO;
+SELECT * FROM TB_SERVICO_CONTA;
+DESC TB_SERVICO_CONTA;
+
 
 
 

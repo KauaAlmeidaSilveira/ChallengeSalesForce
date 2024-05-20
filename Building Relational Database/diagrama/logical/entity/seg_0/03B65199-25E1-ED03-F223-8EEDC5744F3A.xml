@@ -3,6 +3,9 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-09 00:20:05 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,6 +19,9 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-09 00:20:13 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -27,6 +33,9 @@
 <createdTime>2023-10-09 00:20:27 UTC</createdTime>
 <commentInRDBMS><![CDATA[Einstein]]></commentInRDBMS>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -38,6 +47,9 @@
 <createdTime>2023-10-09 00:21:40 UTC</createdTime>
 <commentInRDBMS><![CDATA[Serviço de IA Einstein]]></commentInRDBMS>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -49,6 +61,9 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-09 00:35:22 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -59,6 +74,9 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-11-30 15:32:21 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -66,12 +84,29 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,10,2</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Img_url" id="E5041332-3EE2-0469-436D-DA7FA37A2E65">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-05-20 15:00:10 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="AC0A5857-2286-9880-2899-DDC4F9C868C9" name="Servico PK">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-09 00:20:23 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="false"/>
+</engineerTo>
 <pk>true</pk>
 <newElementsIDs>34AAE957-055D-4763-DC98-64EF4DAB562B</newElementsIDs>
 <usedAttributes>

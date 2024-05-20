@@ -3,6 +3,9 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:11:02 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,6 +19,9 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:11:46 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -26,16 +32,35 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:12:25 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Sobrenome" id="5CF870DC-9939-BD71-4D3F-32D88581FE29">
+<createdBy>Kaua</createdBy>
+<createdTime>2024-05-20 14:58:16 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="Apelido" id="75405CB4-5FBB-42E9-79FA-84B7D537EB7A">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:18:48 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -48,6 +73,9 @@
 <createdTime>2023-10-08 23:19:23 UTC</createdTime>
 <commentInRDBMS><![CDATA[Ex: 9999-9999 ou 99999999]]></commentInRDBMS>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -60,6 +88,10 @@
 <createdTime>2023-10-08 23:26:30 UTC</createdTime>
 <commentInRDBMS><![CDATA[Ex: +55 (11) 96368-9880]]></commentInRDBMS>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -70,6 +102,9 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-11-16 15:07:55 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -81,6 +116,10 @@
 <createdTime>2023-10-09 13:57:49 UTC</createdTime>
 <commentInRDBMS><![CDATA[Ex: 55.555.555-5 ou 555555555]]></commentInRDBMS>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -92,24 +131,30 @@
 <createdTime>2023-11-30 14:02:25 UTC</createdTime>
 <generatorID>96436D97-88DF-DC74-4103-9884FE50CCF8</generatorID>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <referedAttribute>2C3C4E61-E2BE-9E55-7169-AC47BF21E08C</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ID_Empresa" id="9C167DD9-40AC-93E1-BC37-EDD2EDA3AF1E">
 <createdBy>Kauã</createdBy>
 <createdTime>2023-11-30 14:03:07 UTC</createdTime>
 <generatorID>A8985BC0-CF21-584B-0A19-915EDCC56C10</generatorID>
 <ownerDesignName>diagrama</ownerDesignName>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="true"/>
+</engineerTo>
 <referedAttribute>66B444CF-95F9-FB4F-894A-C7550235E7CD</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -117,6 +162,10 @@
 <createdBy>Kauã</createdBy>
 <createdTime>2023-10-08 23:12:46 UTC</createdTime>
 <ownerDesignName>diagrama</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="B20452AE-7828-C1E5-0F28-4CACF10CA3B9" value="false"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>43DE73D7-EDB3-9C61-C0A3-98655C17263D</attributeRef>
